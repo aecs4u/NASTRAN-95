@@ -1,0 +1,37 @@
+# Build directories
+build/
+build-*/
+cmake-build-*/
+
+# Build artifacts
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.mod
+*.smod
+
+# CMake artifacts
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+_deps/
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# NASTRAN runtime files
+*.pch
+*.op2
+*.f04
+*.f06
+*.log
+SCRATCH/

@@ -1,0 +1,5 @@
+      SUBROUTINE FINWRT (FILE)
+C     STUB FUNCTION - TODO: Implement
+      INTEGER FILE
+      RETURN
+      END

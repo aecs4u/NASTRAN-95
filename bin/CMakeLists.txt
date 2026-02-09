@@ -10,6 +10,7 @@ add_executable(nastran
 )
 
 # Link all NASTRAN libraries
+# Force include all symbols from legacy library to resolve circular dependencies
 target_link_libraries(nastran
   PRIVATE nastran_common
   PRIVATE nastran_system
@@ -18,6 +19,8 @@ target_link_libraries(nastran
   PRIVATE nastran_solvers
   PRIVATE nastran_utilities
   PRIVATE nastran_blockdata
+  PRIVATE -Wl,--whole-archive nastran_legacy -Wl,--no-whole-archive
+  PRIVATE nastran_analysis
 )
 
 # Link external dependencies

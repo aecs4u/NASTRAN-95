@@ -15,7 +15,7 @@ C
       DATA COMND   /
      1                4HSOLV    , 28    ,  0    ,  5    , 20    , 14  /
       DATA SLASH   /  1H/       /
-      DATA RDMAP 1 /
+      DATA RDMAP1  /
      1 4HALTE,4HR   ,4H  (G,4HP1) ,4H$   ,13*4H    ,
      2 4HPARA,4HM   ,4H  //,4H*NOP,4H*/AL,4HWAYS,4H=-1 ,4H$   ,4H    ,
      * 4H    ,8*4H    ,
@@ -30,7 +30,7 @@ C
      8 4H    ,4H    ,4H  DY,4HNS,D,4HYNAM,4HICS/,4HALWA,4HYS $,4H    ,
      * 4H    ,8*4H    ,
      9 4HCOND,4H    ,4H  LB,4HSTP,,4HDRY ,4H$   ,12*4H     /
-      DATA RDMAP 2 /
+      DATA RDMAP2  /
      O 4HALTE,4HR   ,4H  (P,4HLOT),4H $  ,13*4H    ,
      1 4HALTE,4HR   ,4H  (C,4HOND),4H $  ,13*4H    ,
      2 4HCOND,4H    ,4H  LB,4HSOL,,4HNOSI,4HMP $,12*4H    ,
@@ -42,7 +42,7 @@ C
      * 4HS*!*,4HKMTX,4H*!*M,4HMTX*,4H $  , 4*4H    ,
      8 4HEQUI,4HV   ,4H  KN,4HOS,K,4HGG/N,4HOSIM,4HP $ ,4H    ,4H    ,
      * 4H    ,8*4H      /
-      DATA RDMAP 3 /
+      DATA RDMAP3  /
      9 4HEQUI,4HV   ,4H  MN,4HOS,M,4HGG/N,4HOSIM,4HP $ ,4H    ,4H    ,
      * 4H    ,8*4H    ,
      O 4HCOND,4H    ,4H  LB,4HSTP,,4HNOSI,4HMP $,12*4H    ,
@@ -56,15 +56,15 @@ C
      5 4HCHKP,4HNT  ,4H  MG,4HG $ ,14*4H    ,
      6 4HALTE,4HR   ,4H  (G,4HP4) ,4H$   ,13*4H    ,
      7 4HCOND,4H    ,4H  LB,4HSEND,4H,DRY,4H $  ,12*4H     /
-      DATA RDMAP 4 /
+      DATA RDMAP4  /
      8 4HALTE,4HR   ,4H  (S,4HDR2),4H $  ,13*4H            /
-      DATA OCT 1   /
+      DATA OCT1    /
      1                   18    ,         0    ,         1  ,
      2                   19    ,         0    ,         2  ,
      3                   21    ,         0    ,         1  ,
      4                   22    ,         0    ,         2  ,
      5                   23    ,         0    ,         2  /
-      DATA PTBS 1  /
+      DATA PTBS1   /
      1          1  , 11  , 11  ,  5  ,     1  ,         0  ,  0  ,
      2          4  , 43  , 45  ,  8  ,4HNAME  ,         0  ,  0  ,
      3          9  , 13  , 13  ,  3  ,4HSTEP  ,         0  ,  0  ,
@@ -83,7 +83,7 @@ C
      6         21  , 16  , 17  ,  3  ,4HNANO  ,         0  ,  0  ,
      7         22  , 15  , 16  ,  3  ,4HNANO  ,         0  ,  0  ,
      8         24  , 13  , 13  ,  3  ,4HSTEP  ,         0  ,  0  /
-      DATA PTBS 2  /
+      DATA PTBS2   /
      1         26  , 11  , 11  ,  5  ,     4  ,         0  ,  0  ,
      2         28  , 11  , 11  ,  6  ,     5  ,         0  ,  0  /
       DATA SUBNAM  / 4HASCM,2H05  /

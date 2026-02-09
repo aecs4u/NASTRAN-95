@@ -43,7 +43,8 @@ C
    50 WRITE  (NOUT,60)
    60 FORMAT (1H )
 C
-      IF (MACH.EQ.4 .AND. NOSBE.GT.0) CALL LINK (-1,NOSBE,1)
+C     TODO: LINK intrinsic requires CHARACTER args in modern gfortran
+C      IF (MACH.EQ.4 .AND. NOSBE.GT.0) CALL LINK (-1,NOSBE,1)
       GO TO 90
 C
    70 J = 5

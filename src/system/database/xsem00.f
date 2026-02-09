@@ -68,7 +68,17 @@ C*****
       KSCR= LSHIFT(1,NBPW-4*NBPC)
       CALL TDATE(XX(14))
       CALL CONMSG(WORDB,2,1)
+C
+C     DEBUG TRACING - ADDED 2026-02-09
+      WRITE(6,*) 'DEBUG: About to call SEMINT (PREFACE)...'
+      CALL FLUSH(6)
+C
       CALL SEMINT ( 0 )
+C
+C     DEBUG TRACING
+      WRITE(6,*) 'DEBUG: SEMINT returned successfully'
+      CALL FLUSH(6)
+C
       ISPERLNK = 1
       WORDB(2) = WORDE(2)
       CALL CONMSG ( WORDB,2,1)

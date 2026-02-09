@@ -10,6 +10,13 @@ file(GLOB IO_SOURCES io/*.f)
 file(GLOB DATABASE_SOURCES database/*.f)
 file(GLOB PLATFORM_SOURCES platform/*.f)
 
+# Temporarily exclude problematic files with gfortran parser issues
+# TODO: Fix FORTRAN 77 DATA statement parsing in ascm0*.f files
+list(FILTER DATABASE_SOURCES EXCLUDE REGEX "ascm01\\.f$")
+list(FILTER DATABASE_SOURCES EXCLUDE REGEX "ascm05\\.f$")
+list(FILTER DATABASE_SOURCES EXCLUDE REGEX "ascm06\\.f$")
+list(FILTER DATABASE_SOURCES EXCLUDE REGEX "ascm07\\.f$")
+
 # I/O subsystem library (GINO layer - 122 files)
 if(IO_SOURCES)
   add_library(nastran_io ${IO_SOURCES})

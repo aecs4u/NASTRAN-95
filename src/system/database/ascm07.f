@@ -14,7 +14,7 @@ C
       DATA COMND    /
      1                4HBREC  , 21    ,  0    , 13    , 26    ,  6  /
       DATA SLASH    / 1H/     /
-      DATA RDMAP 1  /
+      DATA RDMAP1   /
      1 4HALTE,4HR   ,4H  (S,4HOLVE,4H) $ ,13*4H    ,
      2 4HPARA,4HM   ,4H  //,4H*NOP,4H*/AL,4HWAYS,4H=-1 ,4H$   ,4H    ,
      * 4H    , 8*4H    ,
@@ -30,7 +30,7 @@ C
      * 4H    , 8*4H    ,
      9 4HEQUI,4HV   ,4H  PS,4HS,PS,4H/ALW,4HAYS ,4H$   ,4H    ,4H    ,
      * 4H    , 8*4H        /
-      DATA RDMAP 2 /
+      DATA RDMAP2  /
      O 4HEQUI,4HV   ,4H  PO,4HS,PO,4H/ALW,4HAYS ,4H$   ,4H    ,4H    ,
      * 4H    , 8*4H    ,
      1 4HEQUI,4HV   ,4H  YS,4HS,YS,4H/ALW,4HAYS ,4H$   ,4H    ,4H    ,
@@ -46,13 +46,13 @@ C
      * 4H$   , 8*4H    ,
      8 4HADD ,4H    ,4H  QG,4H ,QG,4HS/QG,4HT/  ,4H(1.0,4H,0.0,4H)/(1,
      * 4H.0,0,4H.0) ,4H$   ,6*4H      /
-      DATA RDMAP 3 /
+      DATA RDMAP3  /
      9 4HEQUI,4HV   ,4H  QG,4HT,QG,4H /AL,4HWAYS,4H $  ,4H    ,4H    ,
      * 4H    , 8*4H    ,
      O 4HEQUI,4HV   ,4H  CA,4HSECC,4H,CAS,4HEXX/,4HALWA,4HYS $,4H    ,
      * 4H    , 8*4H    ,
      1 4HALTE,4HR   ,4H  (R,4HEPT),4H $  ,13*4H        /
-      DATA OCT 1   /
+      DATA OCT1    /
      1                    3    ,    983040    ,        12  ,
      2                    4    ,    983040    ,        12  ,
      3                    5    ,    524288    ,        12  ,
@@ -66,7 +66,7 @@ C
      1                   15    ,   1769472    ,         0  ,
      2                   20    ,    458752    ,         0  ,
      3                   21    ,    458752    ,         0  /
-      DATA PTBS 1  /
+      DATA PTBS1   /
      1          1  , 11  , 11  ,  0  ,     1  ,         0  ,  0  ,
      2          5  ,  1  ,  1  ,  0  ,4HNAME  ,         0  ,  0  ,
      3          5  , 19  , 21  ,  0  ,4HNAME  ,   1048576  ,  0  ,
@@ -85,7 +85,7 @@ C
      6          6  , 49  , 49  ,  4  ,4HDYNT  ,    196608  ,  0  ,
      7          6  , 54  , 54  ,  4  ,4HSOL   ,         0  ,  0  ,
      8          6  , 60  , 60  ,  8  ,4HNAME  ,         0  ,  0  /
-      DATA PTBS 2  /
+      DATA PTBS2   /
      1          7  , 11  , 15  ,  0  ,4HNAME  ,    458752  ,  0  ,
      2         12  , 14  , 14  ,  3  ,4HSTEP  ,         0  ,  0  ,
      3         13  , 29  , 29  ,  4  ,4HPREC  ,         0  ,  0  ,

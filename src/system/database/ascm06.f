@@ -14,7 +14,7 @@ C
      1               4HRECO    , 17    , 15    ,  1    , 31    ,  0  ,
      2               4HMREC    , 17    , 15    ,  1    , 31    ,  0  /
       DATA SLASH   / 1H/       /
-      DATA RDMAP 1 /
+      DATA RDMAP1  /
      1 4HFILE,4H    ,4H  U1,4H=APP,4HEND/,4HU2=A,4HPPEN,4HD/U3,4H=APP,
      * 4HEND/,4HU4=A,4HPPEN,4HD/U5,4H=APP,4HEND ,4H$   ,4H    ,4H    ,
      2 4HPARA,4HM   ,4H  //,4H*ADD,4H*/IL,4HOOP/,4H0/0 ,4H$   ,4H    ,
@@ -32,7 +32,7 @@ C
      * 4HOQG/,4HNOSO,4HRT2 ,4H$   , 5*4H    ,
      9 4HEQUI,4HV   ,4H  OP,4HG1,O,4HPG/N,4HOSOR,4HT2 $,4H    ,4H    ,
      * 4H    , 8*4H        /
-      DATA RDMAP 2 /
+      DATA RDMAP2  /
      O 4HCOND,4H    ,4H  NS,4HT2ST,4HP,NO,4HSORT,4H2 $ ,4H    ,4H    ,
      * 4H    , 8*4H    ,
      1 4HSDR3,4H    ,4H  OU,4HGV1 ,4H,OPG,4H1,OQ,4HG1,,,4H,/OU,4HGV ,,
@@ -51,7 +51,7 @@ C
      3               4HSTEP       /
       DATA OCT  1  /
      1                    9    ,    262144    ,         0     /
-      DATA PTBS 1  /
+      DATA PTBS1   /
      1          3  , 13  , 13  ,  3  ,4HSTEP  ,         0  ,  0  ,
      2          4  , 11  , 15  ,  2  ,4HCASE  ,         0  ,  0  ,
      3          4  , 18  , 18  ,  5  ,4HGORL  ,         0  ,  0  ,
@@ -70,7 +70,7 @@ C
      6          5  , 57  , 59  ,  8  ,4HNAME  ,         0  ,  0  ,
      7          6  , 11  , 11  ,  4  ,4HSOL   ,         0  ,  0  ,
      8          6  , 16  , 21  ,  0  ,4HNAME  ,   1769472  ,  0  /
-      DATA PTBS 2  /
+      DATA PTBS2   /
      1          8  , 11  , 11  ,  6  ,4HOVEC  ,         0  ,  0  ,
      2          8  , 18  , 18  ,  5  ,4HOVC2  ,         0  ,  0  ,
      3         10  , 15  , 15  ,  3  ,4HSTEP  ,         0  ,  0  ,

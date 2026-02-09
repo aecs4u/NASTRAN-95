@@ -25,7 +25,7 @@
 !         Consolidates constants from original NASTRAN-95 codebase
 !===============================================================================
 module constants_module
-  use precision_module, only: dp, sp, ip
+  use precision_module, only: dp, sp, ip, long
   implicit none
 
   ! ===========================================================================

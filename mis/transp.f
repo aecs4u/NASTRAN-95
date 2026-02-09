@@ -1,0 +1,5 @@
+      SUBROUTINE TRANSP (FILE, N)
+C     STUB FUNCTION - TODO: Implement  
+      INTEGER FILE, N
+      RETURN
+      END

@@ -61,12 +61,19 @@ set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -cpp")  # Enable preprocessor
 
 if(CMAKE_Fortran_COMPILER_ID MATCHES "GNU")
   # GFortran flags
-  set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -ffree-form -fimplicit-none")
-  set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -Wall -Wextra -pedantic")
-  set(CMAKE_Fortran_FLAGS_DEBUG "-g -O0 -fcheck=all -fbacktrace")
+  # Note: Removed -ffree-form to allow auto-detection (.f = fixed, .f90 = free)
+  # Note: Removed -fimplicit-none to support legacy FORTRAN 77 code
+  set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -std=legacy")  # Allow legacy features
+  set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -fdec")  # Enable DEC extensions (CARRIAGECONTROL, etc.)
+  set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -fallow-invalid-boz")  # Allow old BOZ syntax (e.g., 'F1111'X)
+  set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -ffixed-line-length-none")  # No line length limit
+  set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -fd-lines-as-comments")  # Treat 'D' lines as comments
+  set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -fno-range-check")  # Don't check constant ranges
+  set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -Wall -Wno-tabs -Wno-conversion")  # Warn but allow tabs and conversions
+  set(CMAKE_Fortran_FLAGS_DEBUG "-g -O0 -fcheck=bounds -fbacktrace")
   set(CMAKE_Fortran_FLAGS_RELEASE "-O3 -march=native -funroll-loops")
 
-  # Educational/debugging aids
+  # Educational/debugging aids (relaxed for legacy code)
   set(CMAKE_Fortran_FLAGS_DEBUG "${CMAKE_Fortran_FLAGS_DEBUG} -ffpe-trap=invalid,zero,overflow")
 
 elseif(CMAKE_Fortran_COMPILER_ID MATCHES "Intel")
@@ -182,6 +189,7 @@ endif()
 include_directories(
   ${CMAKE_Fortran_MODULE_DIRECTORY}
   ${CMAKE_SOURCE_DIR}/src/common
+  ${CMAKE_SOURCE_DIR}/src/common/include  # FORTRAN 77 .COM include files
 )
 
 # ==============================================================================
@@ -211,6 +219,9 @@ add_subdirectory(src/utilities)
 
 # Block data initialization (converted to modules)
 add_subdirectory(src/blockdata)
+
+# Legacy/uncategorized files (temporary - 735 files)
+add_subdirectory(src/legacy)
 
 # Main executable
 add_subdirectory(bin)

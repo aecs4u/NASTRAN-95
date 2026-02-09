@@ -29,7 +29,7 @@ C
       DATA SLASH    / 1H/       /
       DATA ISAVE    /
      1     3,13,1, 19,8,2, 26,13,3, 26,15,2, 26,17,1, 27,5,1, 28,4,3  /
-      DATA RDMAP 1  /
+      DATA RDMAP1   /
      1 4HALTE,4HR   ,4H  (B,4HEGIN,4H) $ ,13*4H    ,
      2 4HPARA,4HM   ,4H  //,4H*NOP,4H*/AL,4HLWAY,4HS=-1,4H $  ,4H    ,
      * 4H    ,8*4H    ,
@@ -43,7 +43,7 @@ C
      * 4H    ,8*4H    ,
      8 4HLABE,4HL   ,4H  LB,4HSBEG,4H $  ,13*4H    ,
      9 4HCOND,4H    ,4H  LB,4HLIS,,4HDRY ,4H$   ,12*4H    /
-      DATA RDMAP 2  /
+      DATA RDMAP2   /
      O 4HSSG1,4H    ,4H  SL,4HT,BG,4HPDT,,4HCSTM,4H,SIL,4H,EST,4H,MPT,
      * 4H,GPT,4HT,ED,4HT,MG,4HG,CA,4HSECC,4H,DIT,4H,/PG,4H,,,,,4H/   ,
      1 4H    ,4H    ,4H  LU,4HSET/,4HNSKI,4HP $ ,12*4H    ,
@@ -56,7 +56,7 @@ C
      7 4HALTE,4HR   ,4H  (S,4HDR) ,4H$   ,13*4H    ,
      8 4HSUBP,4HH1  ,4H  CA,4HSECC,4H,EQE,4HXIN,,4HUSET,4H,BGP,4HDT,C,
      * 4HSTM,,4HGPSE,4HTS,E,4HLSET,4HS//S,4H,N,D,4HRY/ ,4H    ,4H    /
-      DATA RDMAP 3  /
+      DATA RDMAP3   /
      9 4H    ,4H    ,4H  *N,4HAME ,4H   *,4H/XPL,4HOTID,4H !*P,4HVEC*,
      * 4H $  ,8*4H    ,
      O 4HCOND,4H    ,4H  LB,4HSEND,4H,DRY,4H $  ,12*4H    ,
@@ -70,14 +70,14 @@ C
      * 4HDRY/,4H*XXX,4HXXXX,4HX*!*,4HKMTX,4H*!*M,4HMTX*,4H!*PV,4HEC*/,
      7 4H    ,4H    ,4H  *B,4HMTX*,4H!*K4,4HMX* ,4H$   ,4H    ,4H    ,
      * 4H    ,8*4H    /
-      DATA RDMAP 4  /
+      DATA RDMAP4   /
      8 4HLODA,4HPP  ,4H  PL,4H,/!*,4HNAME,4H    ,4H*/S,,4HN,DR,4HY $ ,
      * 4H    ,8*4H    ,
      9 4HEQUI,4HV   ,4H  CA,4HSESS,4H,CAS,4HECC/,4HALWA,4HYS $,4H    ,
      * 4H    ,8*4H    /
       DATA XTRA     /
      1 4HSAVE,4HNAME,4HRUN      /
-      DATA OCT 1    /
+      DATA OCT1     /
      1                     9    ,    524288    ,         0     ,
      2                    10    ,    983040    ,        12     ,
      3                    11    ,    983040    ,        12     ,
@@ -91,7 +91,7 @@ C
      1                    24    ,   1572864    ,        12     ,
      2                    25    ,   1572864    ,        12     ,
      3                    28    ,    524288    ,         8     /
-      DATA PTBS 1   /
+      DATA PTBS1    /
      1           1  , 11  , 11  ,  7  ,     4  ,         0  ,  0  ,
      2           6  , 11  , 11  ,  8  ,     1  ,         0  ,  0  ,
      3           7  , 22  , 23  ,  3  ,4HRUN   ,         0  ,  0  ,
