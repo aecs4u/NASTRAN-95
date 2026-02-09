@@ -78,9 +78,19 @@
 #define SMALL_TOL 1.0D-18
 #define LARGE_TOL 1.0D-7
 
-! Element-specific literals
+! Element-specific literals (TRIA3)
 #define LITERAL_1E_M7 1.0D-7
 #define LITERAL_5_6 0.833333333D0
+
+! Element-specific literals (BAR mass matrix)
+#define LITERAL_01 0.01D0
+#define LITERAL_13 13.0D0
+#define LITERAL_22 22.0D0
+#define LITERAL_35 35.0D0
+#define LITERAL_54 54.0D0
+#define LITERAL_156 156.0D0
+#define LITERAL_175 175.0D0
+#define LITERAL_420 420.0D0
 
 ! Open core addressing (IHEX uses this)
 #define CORE_ADJUST /2
@@ -137,9 +147,19 @@
 #define SMALL_TOL 1.0E-18
 #define LARGE_TOL 1.0E-7
 
-! Element-specific literals
+! Element-specific literals (TRIA3)
 #define LITERAL_1E_M7 1.0E-7
 #define LITERAL_5_6 0.833333333
+
+! Element-specific literals (BAR mass matrix)
+#define LITERAL_01 0.01
+#define LITERAL_13 13.0
+#define LITERAL_22 22.0
+#define LITERAL_35 35.0
+#define LITERAL_54 54.0
+#define LITERAL_156 156.0
+#define LITERAL_175 175.0
+#define LITERAL_420 420.0
 
 ! Open core addressing (no adjustment for single precision)
 #define CORE_ADJUST

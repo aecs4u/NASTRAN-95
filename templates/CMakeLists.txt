@@ -99,20 +99,30 @@ add_custom_target(generate_tria3_elements
 )
 
 #===============================================================================
-# Future Template Generations (Commented Out - Templates Not Yet Created)
+# BAR Element Template Generation
 #===============================================================================
 
-# # BAR Element
-# generate_precision_variant(
-#   ${TEMPLATE_DIR}/bar_template.f90
-#   ${GENERATED_DIR}/bard.f
-#   DOUBLE
-# )
-# generate_precision_variant(
-#   ${TEMPLATE_DIR}/bar_template.f90
-#   ${GENERATED_DIR}/bars.f
-#   SINGLE
-# )
+generate_precision_variant(
+  ${TEMPLATE_DIR}/bar_template.f90
+  ${GENERATED_DIR}/bard.f
+  DOUBLE
+)
+
+generate_precision_variant(
+  ${TEMPLATE_DIR}/bar_template.f90
+  ${GENERATED_DIR}/bars.f
+  SINGLE
+)
+
+# Create custom target to build BAR variants
+add_custom_target(generate_bar_elements
+  DEPENDS ${GENERATED_DIR}/bard.f ${GENERATED_DIR}/bars.f
+  COMMENT "Generating BAR element precision variants"
+)
+
+#===============================================================================
+# Future Template Generations (Commented Out - Templates Not Yet Created)
+#===============================================================================
 
 # # QUAD4 Element
 # generate_precision_variant(
@@ -159,7 +169,7 @@ add_custom_target(generate_tria3_elements
 add_custom_target(verify_templates
   COMMAND ${CMAKE_COMMAND} -E echo "Verifying generated files..."
   COMMAND bash ${CMAKE_SOURCE_DIR}/scripts/verify_generated.sh
-  DEPENDS generate_rod_elements generate_tria3_elements
+  DEPENDS generate_rod_elements generate_tria3_elements generate_bar_elements
   COMMENT "Verifying template-generated files match originals"
 )
 
@@ -187,5 +197,6 @@ message(STATUS "")
 message(STATUS "Targets:")
 message(STATUS "  make generate_rod_elements   - Generate ROD precision variants")
 message(STATUS "  make generate_tria3_elements - Generate TRIA3 precision variants")
+message(STATUS "  make generate_bar_elements   - Generate BAR precision variants")
 message(STATUS "  make verify_templates        - Verify generated vs original")
 message(STATUS "  make clean_generated         - Remove all generated files")
