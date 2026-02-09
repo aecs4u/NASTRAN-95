@@ -77,20 +77,30 @@ add_custom_target(generate_rod_elements
 )
 
 #===============================================================================
-# Future Template Generations (Commented Out - Templates Not Yet Created)
+# TRIA3 Element Template Generation
 #===============================================================================
 
-# # TRIA3 Element
-# generate_precision_variant(
-#   ${TEMPLATE_DIR}/tria3_template.f90
-#   ${GENERATED_DIR}/tria3d.f
-#   DOUBLE
-# )
-# generate_precision_variant(
-#   ${TEMPLATE_DIR}/tria3_template.f90
-#   ${GENERATED_DIR}/tria3s.f
-#   SINGLE
-# )
+generate_precision_variant(
+  ${TEMPLATE_DIR}/tria3_template.f90
+  ${GENERATED_DIR}/tria3d.f
+  DOUBLE
+)
+
+generate_precision_variant(
+  ${TEMPLATE_DIR}/tria3_template.f90
+  ${GENERATED_DIR}/tria3s.f
+  SINGLE
+)
+
+# Create custom target to build TRIA3 variants
+add_custom_target(generate_tria3_elements
+  DEPENDS ${GENERATED_DIR}/tria3d.f ${GENERATED_DIR}/tria3s.f
+  COMMENT "Generating TRIA3 element precision variants"
+)
+
+#===============================================================================
+# Future Template Generations (Commented Out - Templates Not Yet Created)
+#===============================================================================
 
 # # BAR Element
 # generate_precision_variant(
@@ -149,7 +159,7 @@ add_custom_target(generate_rod_elements
 add_custom_target(verify_templates
   COMMAND ${CMAKE_COMMAND} -E echo "Verifying generated files..."
   COMMAND bash ${CMAKE_SOURCE_DIR}/scripts/verify_generated.sh
-  DEPENDS generate_rod_elements
+  DEPENDS generate_rod_elements generate_tria3_elements
   COMMENT "Verifying template-generated files match originals"
 )
 
@@ -175,6 +185,7 @@ message(STATUS "  Generated directory: ${GENERATED_DIR}")
 message(STATUS "  Fortran compiler: ${CMAKE_Fortran_COMPILER}")
 message(STATUS "")
 message(STATUS "Targets:")
-message(STATUS "  make generate_rod_elements - Generate ROD precision variants")
-message(STATUS "  make verify_templates      - Verify generated vs original")
-message(STATUS "  make clean_generated       - Remove all generated files")
+message(STATUS "  make generate_rod_elements   - Generate ROD precision variants")
+message(STATUS "  make generate_tria3_elements - Generate TRIA3 precision variants")
+message(STATUS "  make verify_templates        - Verify generated vs original")
+message(STATUS "  make clean_generated         - Remove all generated files")

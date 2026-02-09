@@ -51,6 +51,7 @@
 #define TRANS_FUNC TRANSD
 #define GMMAT_FUNC GMMATD
 #define HMAT_FUNC HMATD
+#define MPYA3_FUNC MPYA3D
 
 ! Type conversion
 #define CAST_FUNC(X) DBLE(X)
@@ -63,6 +64,7 @@
 #define FOUR 4.0D0
 #define FIVE 5.0D0
 #define SIX 6.0D0
+#define TWELVE 12.0D0
 #define HALF 0.5D0
 #define THIRD 0.333333333333333D0
 #define QUARTER 0.25D0
@@ -75,6 +77,10 @@
 #define TOLERANCE 1.0D-10
 #define SMALL_TOL 1.0D-18
 #define LARGE_TOL 1.0D-7
+
+! Element-specific literals
+#define LITERAL_1E_M7 1.0D-7
+#define LITERAL_5_6 0.833333333D0
 
 ! Open core addressing (IHEX uses this)
 #define CORE_ADJUST /2
@@ -104,6 +110,7 @@
 #define TRANS_FUNC TRANSS
 #define GMMAT_FUNC GMMATS
 #define HMAT_FUNC HMATS
+#define MPYA3_FUNC MPYA3S
 
 ! Type conversion
 #define CAST_FUNC(X) X
@@ -116,6 +123,7 @@
 #define FOUR 4.0
 #define FIVE 5.0
 #define SIX 6.0
+#define TWELVE 12.0
 #define HALF 0.5
 #define THIRD 0.333333
 #define QUARTER 0.25
@@ -128,6 +136,10 @@
 #define TOLERANCE 1.0E-6
 #define SMALL_TOL 1.0E-18
 #define LARGE_TOL 1.0E-7
+
+! Element-specific literals
+#define LITERAL_1E_M7 1.0E-7
+#define LITERAL_5_6 0.833333333
 
 ! Open core addressing (no adjustment for single precision)
 #define CORE_ADJUST
