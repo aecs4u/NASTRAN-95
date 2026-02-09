@@ -92,6 +92,23 @@
 #define LITERAL_175 175.0D0
 #define LITERAL_420 420.0D0
 
+! Element-specific literals (QUAD4)
+#define GAUSS_CONST 0.57735026918962D0
+#define LITERAL_1_6 1.6D0
+#define LITERAL_28 28.0D0
+#define LITERAL_71 71.0D0
+#define LITERAL_415 415.0D0
+
+! Element-specific helper functions (QUAD4)
+#define Q4SHP_FUNC Q4SHPD
+#define Q4BMG_FUNC Q4BMGD
+#define Q4GMG_FUNC Q4GMGD
+#define Q4NRM_FUNC Q4NRMD
+#define TRPLM_FUNC TRPLMD
+#define TLDR_FUNC TLDRD
+#define TERMS_FUNC TERMSD
+#define ANGTR_FUNC ANGTRD
+
 ! Open core addressing (IHEX uses this)
 #define CORE_ADJUST /2
 
@@ -160,6 +177,23 @@
 #define LITERAL_156 156.0
 #define LITERAL_175 175.0
 #define LITERAL_420 420.0
+
+! Element-specific literals (QUAD4)
+#define GAUSS_CONST 0.57735026918962
+#define LITERAL_1_6 1.6
+#define LITERAL_28 28.0
+#define LITERAL_71 71.0
+#define LITERAL_415 415.0
+
+! Element-specific helper functions (QUAD4)
+#define Q4SHP_FUNC Q4SHPS
+#define Q4BMG_FUNC Q4BMGS
+#define Q4GMG_FUNC Q4GMGS
+#define Q4NRM_FUNC Q4NRMS
+#define TRPLM_FUNC TRPLMS
+#define TLDR_FUNC TLDRS
+#define TERMS_FUNC TERMSS
+#define ANGTR_FUNC ANGTRS
 
 ! Open core addressing (no adjustment for single precision)
 #define CORE_ADJUST
