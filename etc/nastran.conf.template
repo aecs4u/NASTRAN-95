@@ -1,0 +1,153 @@
+# ==============================================================================
+# NASTRAN-95 Configuration File
+# ==============================================================================
+# Copy this file to one of the following locations:
+#   1. $HOME/.nastran/nastran.conf  (user-specific)
+#   2. $NASTRAN_ROOT/etc/nastran.conf  (installation-specific)
+#   3. /etc/nastran/nastran.conf  (system-wide)
+#
+# Or specify with: nastran.sh --config /path/to/config
+#
+# This file uses bash syntax and is sourced by nastran.sh
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Installation Paths
+# ------------------------------------------------------------------------------
+
+# NASTRAN root directory (auto-detected if not set)
+# NASTRAN_ROOT="/path/to/NASTRAN-95"
+
+# Main NASTRAN executable
+# NASTRAN_EXEC="${NASTRAN_ROOT}/bin/nastran"
+
+# Input file checker (optional)
+# NASTRAN_CHKFIL="${NASTRAN_ROOT}/bin/chkfil.exe"
+
+# Rigid format definitions directory
+# NASTRAN_RFDIR="${NASTRAN_ROOT}/rf"
+
+# ------------------------------------------------------------------------------
+# Memory Allocation
+# ------------------------------------------------------------------------------
+
+# In-memory database allocation (words)
+# Larger values speed up analysis but require more RAM
+# Default: 12000000 words (~96 MB for double precision)
+# Recommended for large models (50K+ elements): 50000000 words (~400 MB)
+DB_MEMORY=12000000
+
+# Open core memory allocation (words)
+# Working memory for computational operations
+# Default: 2000000 words (~16 MB for double precision)
+# Recommended for large models: 10000000 words (~80 MB)
+OPEN_CORE=2000000
+
+# ------------------------------------------------------------------------------
+# File Locations (Advanced)
+# ------------------------------------------------------------------------------
+
+# Temporary work directory base (default: system TMPDIR or /tmp)
+# WORK_DIR_BASE="/fast/scratch"
+
+# ------------------------------------------------------------------------------
+# Execution Options
+# ------------------------------------------------------------------------------
+
+# Default execution mode: "interactive" or "batch"
+# In interactive mode, prompts for options
+# In batch mode, uses all defaults
+# DEFAULT_MODE="batch"
+
+# Verbose output (true/false)
+# VERBOSE=false
+
+# ------------------------------------------------------------------------------
+# Parallel Execution (if compiled with OpenMP)
+# ------------------------------------------------------------------------------
+
+# Number of OpenMP threads for parallel element processing
+# Set to number of CPU cores for best performance
+# Leave unset to use OpenMP default (usually all available cores)
+# export OMP_NUM_THREADS=8
+
+# OpenMP thread affinity (optional, for NUMA systems)
+# export OMP_PROC_BIND=true
+# export OMP_PLACES=cores
+
+# ------------------------------------------------------------------------------
+# Performance Tuning
+# ------------------------------------------------------------------------------
+
+# Use external BLAS/LAPACK (if compiled with external libraries)
+# Examples: OpenBLAS, MKL, ATLAS
+# export LD_LIBRARY_PATH="/opt/openblas/lib:$LD_LIBRARY_PATH"
+
+# Intel MKL configuration (if using Intel MKL)
+# export MKL_NUM_THREADS=8
+# export MKL_DYNAMIC=false
+
+# ------------------------------------------------------------------------------
+# Output Options
+# ------------------------------------------------------------------------------
+
+# Enable plot file generation (true/false)
+# ENABLE_PLOT=false
+
+# Enable punch file generation (true/false)
+# ENABLE_PUNCH=false
+
+# Enable checkpoint/restart capability (true/false)
+# ENABLE_CHECKPOINT=false
+
+# ------------------------------------------------------------------------------
+# Debugging and Profiling
+# ------------------------------------------------------------------------------
+
+# Enable profiling output (if compiled with ENABLE_PROFILING)
+# ENABLE_PROFILING=false
+
+# Profile output file
+# PROFILE_OUTPUT="nastran_profile.txt"
+
+# Enable debug output (very verbose)
+# DEBUG=false
+
+# ------------------------------------------------------------------------------
+# Environment Variables for NASTRAN
+# ------------------------------------------------------------------------------
+
+# Additional environment variables can be set here
+# They will be exported before NASTRAN execution
+
+# Example: Set stack size limit
+# ulimit -s unlimited
+
+# Example: Floating point exception handling
+# export FPE_TRAP="invalid,zero,overflow"
+
+# ==============================================================================
+# Example Configurations
+# ==============================================================================
+
+# --- Small Models (< 1,000 elements) ---
+# DB_MEMORY=5000000
+# OPEN_CORE=1000000
+
+# --- Medium Models (1,000 - 10,000 elements) ---
+# DB_MEMORY=12000000
+# OPEN_CORE=2000000
+
+# --- Large Models (10,000 - 50,000 elements) ---
+# DB_MEMORY=50000000
+# OPEN_CORE=10000000
+# OMP_NUM_THREADS=8
+
+# --- Very Large Models (50,000+ elements) ---
+# DB_MEMORY=200000000
+# OPEN_CORE=50000000
+# OMP_NUM_THREADS=16
+
+# ==============================================================================
+# End of Configuration
+# ==============================================================================
