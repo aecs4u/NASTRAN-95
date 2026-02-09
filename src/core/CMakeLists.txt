@@ -1,66 +1,92 @@
 # ==============================================================================
-# Core - Algorithms, Matrices, Analysis Drivers
+# Core - Algorithms, Matrices, Solvers
 # ==============================================================================
-# Core computational algorithms from original mis/ directory
-# Includes ALG family, MMA family, and analysis drivers
+# Core computational algorithms and utilities
+# Migrated from mis/ directory in Phase 3
 # ==============================================================================
 
-# Algorithms library (ALG family - consolidated)
-add_library(nastran_algorithms
-  algorithms/spline_module.f90
-  algorithms/pressure_iteration_module.f90
-  algorithms/streamline_module.f90
-  # Additional algorithm modules as they are refactored
-)
+# Collect algorithm files (ALG family)
+file(GLOB ALG_SOURCES algorithms/*.f)
 
-target_link_libraries(nastran_algorithms
-  PUBLIC nastran_common
-)
+# Collect matrix operation files (MMA family)
+file(GLOB MATRIX_SOURCES matrices/*.f)
 
-# Matrix operations library (MMA family - consolidated)
-add_library(nastran_matrices
-  matrices/matrix_module.f90
-  matrices/sparse_matrix_module.f90
-  # Additional matrix modules as they are refactored
-)
+# Collect solver files
+file(GLOB SOLVER_SOURCES solvers/*.f)
 
-target_link_libraries(nastran_matrices
-  PUBLIC nastran_common
-)
+# Algorithms library (ALG family - 39 files)
+if(ALG_SOURCES)
+  add_library(nastran_algorithms ${ALG_SOURCES})
 
-if(USE_EXTERNAL_BLAS)
-  target_link_libraries(nastran_matrices
-    PUBLIC ${BLAS_LIBRARIES}
-    PUBLIC ${LAPACK_LIBRARIES}
+  target_link_libraries(nastran_algorithms
+    PUBLIC nastran_common
   )
+
+  message(STATUS "Core/Algorithms: Found ${CMAKE_MATCH_COUNT} files")
 endif()
 
-# Analysis drivers
-add_library(nastran_analysis
-  analysis/asdmap.f90
-  analysis/dbase.f90
-)
+# Matrix operations library (MMA family - 49 files)
+if(MATRIX_SOURCES)
+  add_library(nastran_matrices ${MATRIX_SOURCES})
 
-target_link_libraries(nastran_analysis
-  PUBLIC nastran_common
-  PUBLIC nastran_system
-  PUBLIC nastran_algorithms
-  PUBLIC nastran_matrices
-)
+  target_link_libraries(nastran_matrices
+    PUBLIC nastran_common
+  )
+
+  if(USE_EXTERNAL_BLAS)
+    target_link_libraries(nastran_matrices
+      PUBLIC ${BLAS_LIBRARIES}
+      PUBLIC ${LAPACK_LIBRARIES}
+    )
+  endif()
+
+  message(STATUS "Core/Matrices: Found ${CMAKE_MATCH_COUNT} files")
+endif()
+
+# Core solvers library (41 files - legacy routines from mis/)
+if(SOLVER_SOURCES)
+  add_library(nastran_core_solvers ${SOLVER_SOURCES})
+
+  target_link_libraries(nastran_core_solvers
+    PUBLIC nastran_common
+    PUBLIC nastran_matrices
+  )
+
+  if(USE_EXTERNAL_BLAS)
+    target_link_libraries(nastran_core_solvers
+      PUBLIC ${LAPACK_LIBRARIES}
+    )
+  endif()
+
+  message(STATUS "Core/Solvers: Found ${CMAKE_MATCH_COUNT} files")
+endif()
 
 # Combined core library (convenience target)
 add_library(nastran_core INTERFACE)
 target_link_libraries(nastran_core INTERFACE
-  nastran_algorithms
-  nastran_matrices
-  nastran_analysis
+  $<$<TARGET_EXISTS:nastran_algorithms>:nastran_algorithms>
+  $<$<TARGET_EXISTS:nastran_matrices>:nastran_matrices>
+  $<$<TARGET_EXISTS:nastran_core_solvers>:nastran_core_solvers>
 )
 
 # Installation
-install(TARGETS
-  nastran_algorithms
-  nastran_matrices
-  nastran_analysis
-  ARCHIVE DESTINATION lib
-  LIBRARY DESTINATION lib
-)
+if(TARGET nastran_algorithms)
+  install(TARGETS nastran_algorithms
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+  )
+endif()
+
+if(TARGET nastran_matrices)
+  install(TARGETS nastran_matrices
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+  )
+endif()
+
+if(TARGET nastran_core_solvers)
+  install(TARGETS nastran_core_solvers
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+  )
+endif()

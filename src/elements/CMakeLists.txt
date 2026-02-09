@@ -2,80 +2,110 @@
 # Elements - Finite Element Implementations
 # ==============================================================================
 # Element libraries: shell, beam, aero, solid
-# Original source: mis/ directory (element-specific files)
+# Migrated from mis/ directory in Phase 3
 # ==============================================================================
 
-# Shell elements (QUAD4, SQUD42, IFS3)
-add_library(nastran_elements_shell
-  shell/quad4s.f90
-  shell/quad4d.f90
-  shell/squd42_module.f90
-  shell/ifs3p.f90
-)
+# Collect element files by type
+file(GLOB BEAM_SOURCES beam/*.f)
+file(GLOB SHELL_SOURCES shell/*.f)
+file(GLOB SOLID_SOURCES solid/*.f)
+file(GLOB AERO_SOURCES aero/*.f)
 
-target_link_libraries(nastran_elements_shell
-  PUBLIC nastran_common
-  PUBLIC nastran_core
-)
+# Beam elements library (ROD, BAR - 58 files)
+if(BEAM_SOURCES)
+  add_library(nastran_elements_beam ${BEAM_SOURCES})
 
-if(ENABLE_OPENMP)
-  target_link_libraries(nastran_elements_shell
-    PUBLIC OpenMP::OpenMP_Fortran
+  target_link_libraries(nastran_elements_beam
+    PUBLIC nastran_common
+    PUBLIC nastran_matrices
   )
+
+  list(LENGTH BEAM_SOURCES BEAM_COUNT)
+  message(STATUS "Elements/Beam: Found ${BEAM_COUNT} files")
 endif()
 
-# Beam/Rod elements
-add_library(nastran_elements_beam
-  beam/rod.f90
-  beam/beam.f90
-  beam/bar.f90
-)
+# Shell elements library (QUAD, TRIA - 129 files)
+if(SHELL_SOURCES)
+  add_library(nastran_elements_shell ${SHELL_SOURCES})
 
-target_link_libraries(nastran_elements_beam
-  PUBLIC nastran_common
-  PUBLIC nastran_core
-)
+  target_link_libraries(nastran_elements_shell
+    PUBLIC nastran_common
+    PUBLIC nastran_matrices
+  )
 
-# Aeroelastic elements (AMG, APD, AMP families)
-add_library(nastran_elements_aero
-  aero/aeroelastic_blade_module.f90
-  aero/aeroelastic_panel_module.f90
-  # Consolidated from amgb1*, amgt1*, apd*, amp* files
-)
+  if(ENABLE_OPENMP AND TARGET OpenMP::OpenMP_Fortran)
+    target_link_libraries(nastran_elements_shell PUBLIC OpenMP::OpenMP_Fortran)
+  endif()
 
-target_link_libraries(nastran_elements_aero
-  PUBLIC nastran_common
-  PUBLIC nastran_core
-  PUBLIC nastran_algorithms
-)
+  list(LENGTH SHELL_SOURCES SHELL_COUNT)
+  message(STATUS "Elements/Shell: Found ${SHELL_COUNT} files")
+endif()
 
-# Solid elements (HEX, TETRA, WEDGE)
-add_library(nastran_elements_solid
-  solid/hex.f90
-  solid/tetra.f90
-  solid/wedge.f90
-)
+# Solid elements library (IHEX, HEX - 18 files)
+if(SOLID_SOURCES)
+  add_library(nastran_elements_solid ${SOLID_SOURCES})
 
-target_link_libraries(nastran_elements_solid
-  PUBLIC nastran_common
-  PUBLIC nastran_core
-)
+  target_link_libraries(nastran_elements_solid
+    PUBLIC nastran_common
+    PUBLIC nastran_matrices
+  )
+
+  if(ENABLE_OPENMP AND TARGET OpenMP::OpenMP_Fortran)
+    target_link_libraries(nastran_elements_solid PUBLIC OpenMP::OpenMP_Fortran)
+  endif()
+
+  list(LENGTH SOLID_SOURCES SOLID_COUNT)
+  message(STATUS "Elements/Solid: Found ${SOLID_COUNT} files")
+endif()
+
+# Aeroelastic elements library (AMG, APD, AMP - 57 files)
+if(AERO_SOURCES)
+  add_library(nastran_elements_aero ${AERO_SOURCES})
+
+  target_link_libraries(nastran_elements_aero
+    PUBLIC nastran_common
+    PUBLIC nastran_matrices
+    PUBLIC nastran_algorithms
+  )
+
+  list(LENGTH AERO_SOURCES AERO_COUNT)
+  message(STATUS "Elements/Aero: Found ${AERO_COUNT} files")
+endif()
 
 # Combined elements library (convenience target)
 add_library(nastran_elements INTERFACE)
 target_link_libraries(nastran_elements INTERFACE
-  nastran_elements_shell
-  nastran_elements_beam
-  nastran_elements_aero
-  nastran_elements_solid
+  $<$<TARGET_EXISTS:nastran_elements_beam>:nastran_elements_beam>
+  $<$<TARGET_EXISTS:nastran_elements_shell>:nastran_elements_shell>
+  $<$<TARGET_EXISTS:nastran_elements_solid>:nastran_elements_solid>
+  $<$<TARGET_EXISTS:nastran_elements_aero>:nastran_elements_aero>
 )
 
 # Installation
-install(TARGETS
-  nastran_elements_shell
-  nastran_elements_beam
-  nastran_elements_aero
-  nastran_elements_solid
-  ARCHIVE DESTINATION lib
-  LIBRARY DESTINATION lib
-)
+if(TARGET nastran_elements_beam)
+  install(TARGETS nastran_elements_beam
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+  )
+endif()
+
+if(TARGET nastran_elements_shell)
+  install(TARGETS nastran_elements_shell
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+  )
+endif()
+
+if(TARGET nastran_elements_solid)
+  install(TARGETS nastran_elements_solid
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+  )
+endif()
+
+if(TARGET nastran_elements_aero)
+  install(TARGETS nastran_elements_aero
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+  )
+endif()

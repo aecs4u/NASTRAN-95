@@ -6,7 +6,7 @@
 
 # Main NASTRAN executable
 add_executable(nastran
-  ${CMAKE_SOURCE_DIR}/src/system/platform/nastrn.f90
+  ${CMAKE_SOURCE_DIR}/src/system/platform/nastrn.f
 )
 
 # Link all NASTRAN libraries

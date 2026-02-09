@@ -1,80 +1,68 @@
 # ==============================================================================
-# Utilities - Parser, Output, Helpers, Profiling
+# Utilities - Parser, Output, Helpers
 # ==============================================================================
-# Support utilities from mis/, um/ directories
+# Migrated from mis/, um/, utility/ directories in Phase 3
 # ==============================================================================
 
-# Input parser
-add_library(nastran_parser
-  parser/input_module.f90
-  parser/numtyp.f90
-  parser/fornum.f90
-)
+# Collect utility files by type
+file(GLOB PARSER_SOURCES parser/*.f)
+file(GLOB OUTPUT_SOURCES output/*.f)
+file(GLOB HELPER_SOURCES helpers/*.f)
 
-target_link_libraries(nastran_parser
-  PUBLIC nastran_common
-)
+# Input parser (35 files)
+if(PARSER_SOURCES)
+  add_library(nastran_parser ${PARSER_SOURCES})
 
-# Output formatting
-add_library(nastran_output
-  output/exio_module.f90
-  output/format_module.f90
-)
-
-target_link_libraries(nastran_output
-  PUBLIC nastran_common
-  PUBLIC nastran_system
-)
-
-# Helper utilities (sort, search, etc.)
-add_library(nastran_helpers
-  helpers/sort_module.f90
-  helpers/search_module.f90
-  helpers/sub1.f90
-)
-
-target_link_libraries(nastran_helpers
-  PUBLIC nastran_common
-)
-
-# Profiling utilities (optional)
-if(ENABLE_PROFILING)
-  add_library(nastran_profiling
-    profiling/timer_module.f90
-    profiling/profile_module.f90
-  )
-
-  target_link_libraries(nastran_profiling
+  target_link_libraries(nastran_parser
     PUBLIC nastran_common
   )
+
+  list(LENGTH PARSER_SOURCES PARSER_COUNT)
+  message(STATUS "Utilities/Parser: Found ${PARSER_COUNT} files")
+endif()
+
+# Output formatting (167 files)
+if(OUTPUT_SOURCES)
+  add_library(nastran_output ${OUTPUT_SOURCES})
+
+  target_link_libraries(nastran_output
+    PUBLIC nastran_common
+    PUBLIC nastran_system
+  )
+
+  list(LENGTH OUTPUT_SOURCES OUTPUT_COUNT)
+  message(STATUS "Utilities/Output: Found ${OUTPUT_COUNT} files")
+endif()
+
+# Helper utilities (108 files - sorting, packing, MCB, etc.)
+if(HELPER_SOURCES)
+  add_library(nastran_helpers ${HELPER_SOURCES})
+
+  target_link_libraries(nastran_helpers
+    PUBLIC nastran_common
+  )
+
+  list(LENGTH HELPER_SOURCES HELPER_COUNT)
+  message(STATUS "Utilities/Helpers: Found ${HELPER_COUNT} files")
 endif()
 
 # Combined utilities library (convenience target)
 add_library(nastran_utilities INTERFACE)
 target_link_libraries(nastran_utilities INTERFACE
-  nastran_parser
-  nastran_output
-  nastran_helpers
+  $<$<TARGET_EXISTS:nastran_parser>:nastran_parser>
+  $<$<TARGET_EXISTS:nastran_output>:nastran_output>
+  $<$<TARGET_EXISTS:nastran_helpers>:nastran_helpers>
 )
-
-if(ENABLE_PROFILING)
-  target_link_libraries(nastran_utilities INTERFACE
-    nastran_profiling
-  )
-endif()
 
 # Installation
-install(TARGETS
-  nastran_parser
-  nastran_output
-  nastran_helpers
-  ARCHIVE DESTINATION lib
-  LIBRARY DESTINATION lib
-)
+if(TARGET nastran_parser)
+  install(TARGETS nastran_parser ARCHIVE DESTINATION lib LIBRARY DESTINATION lib)
+endif()
 
-if(ENABLE_PROFILING)
-  install(TARGETS nastran_profiling
-    ARCHIVE DESTINATION lib
-    LIBRARY DESTINATION lib
-  )
+if(TARGET nastran_output)
+  install(TARGETS nastran_output ARCHIVE DESTINATION lib LIBRARY DESTINATION lib)
+endif()
+
+if(TARGET nastran_helpers)
+  install(TARGETS nastran_helpers ARCHIVE DESTINATION lib LIBRARY DESTINATION lib)
 endif()

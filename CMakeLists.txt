@@ -203,6 +203,9 @@ add_subdirectory(src/elements)
 # Matrix solvers (direct, iterative, eigenvalue)
 add_subdirectory(src/solvers)
 
+# Analysis modules (static, dynamic, modal)
+add_subdirectory(src/analysis)
+
 # Utilities (parser, output formatting, helpers)
 add_subdirectory(src/utilities)
 
