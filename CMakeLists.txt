@@ -41,10 +41,16 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 option(BUILD_SHARED_LIBS "Build shared libraries instead of static" OFF)
 option(ENABLE_OPENMP "Enable OpenMP parallelization for element loops" ON)
 option(USE_EXTERNAL_BLAS "Use external optimized BLAS/LAPACK (recommended)" ON)
+option(USE_MUMPS "Enable MUMPS sparse direct solver backend" OFF)
+option(MUMPS_USE_MPI "Link MUMPS backend with MPI Fortran runtime" ON)
 option(BUILD_EXAMPLES "Build example programs" ON)
 option(BUILD_TESTS "Build unit tests" ON)
 option(BUILD_DOCUMENTATION "Build Doxygen documentation" OFF)
 option(ENABLE_PROFILING "Enable performance profiling instrumentation" OFF)
+
+set(MUMPS_ROOT "" CACHE PATH "Root directory of a MUMPS installation")
+set(MUMPS_INCLUDE_DIR "" CACHE PATH "Directory containing dmumps_struc.h")
+set(MUMPS_LIBRARIES "" CACHE STRING "Semicolon-separated list of MUMPS/ScaLAPACK libraries")
 
 # ==============================================================================
 # Compiler Flags
@@ -89,6 +95,78 @@ if(USE_EXTERNAL_BLAS)
   message(STATUS "Using external LAPACK: ${LAPACK_LIBRARIES}")
 else()
   message(STATUS "Using internal linear algebra routines (slower)")
+endif()
+
+# MUMPS (optional sparse direct solver backend)
+if(USE_MUMPS)
+  if(MUMPS_USE_MPI)
+    find_package(MPI REQUIRED COMPONENTS Fortran)
+  endif()
+
+  if(NOT MUMPS_INCLUDE_DIR)
+    if(MUMPS_ROOT)
+      find_path(MUMPS_INCLUDE_DIR
+        NAMES dmumps_struc.h
+        HINTS ${MUMPS_ROOT}
+        PATH_SUFFIXES include include/mumps
+      )
+    else()
+      find_path(MUMPS_INCLUDE_DIR NAMES dmumps_struc.h)
+    endif()
+  endif()
+
+  if(NOT MUMPS_LIBRARIES)
+    set(_mumps_lib_hints)
+    if(MUMPS_ROOT)
+      list(APPEND _mumps_lib_hints ${MUMPS_ROOT})
+    endif()
+
+    find_library(MUMPS_DMUMPS_LIBRARY
+      NAMES dmumps
+      HINTS ${_mumps_lib_hints}
+      PATH_SUFFIXES lib lib64
+    )
+    find_library(MUMPS_COMMON_LIBRARY
+      NAMES mumps_common
+      HINTS ${_mumps_lib_hints}
+      PATH_SUFFIXES lib lib64
+    )
+    find_library(MUMPS_PORD_LIBRARY
+      NAMES pord
+      HINTS ${_mumps_lib_hints}
+      PATH_SUFFIXES lib lib64
+    )
+
+    if(MUMPS_DMUMPS_LIBRARY AND MUMPS_COMMON_LIBRARY AND MUMPS_PORD_LIBRARY)
+      set(MUMPS_LIBRARIES
+        "${MUMPS_DMUMPS_LIBRARY};${MUMPS_COMMON_LIBRARY};${MUMPS_PORD_LIBRARY}"
+        CACHE STRING "Semicolon-separated list of MUMPS/ScaLAPACK libraries"
+        FORCE
+      )
+    endif()
+  endif()
+
+  if(NOT MUMPS_INCLUDE_DIR OR NOT MUMPS_LIBRARIES)
+    message(FATAL_ERROR
+      "USE_MUMPS=ON but MUMPS was not fully configured.\n"
+      "Set MUMPS_INCLUDE_DIR (path with dmumps_struc.h) and MUMPS_LIBRARIES "
+      "(e.g. dmumps;mumps_common;pord;scalapack;blas/lapack)."
+    )
+  endif()
+
+  add_library(MUMPS::MUMPS INTERFACE IMPORTED)
+  set_target_properties(MUMPS::MUMPS PROPERTIES
+    INTERFACE_INCLUDE_DIRECTORIES "${MUMPS_INCLUDE_DIR}"
+    INTERFACE_LINK_LIBRARIES "${MUMPS_LIBRARIES}"
+  )
+
+  if(MUMPS_USE_MPI)
+    target_link_libraries(MUMPS::MUMPS INTERFACE MPI::MPI_Fortran)
+  endif()
+
+  add_compile_definitions(NASTRAN_HAVE_MUMPS=1)
+  message(STATUS "MUMPS enabled: include=${MUMPS_INCLUDE_DIR}")
+  message(STATUS "MUMPS libraries: ${MUMPS_LIBRARIES}")
 endif()
 
 # OpenMP (for parallel element loops)
@@ -232,6 +310,7 @@ message(STATUS " Options:")
 message(STATUS "   Shared libraries:  ${BUILD_SHARED_LIBS}")
 message(STATUS "   OpenMP parallel:   ${ENABLE_OPENMP}")
 message(STATUS "   External BLAS:     ${USE_EXTERNAL_BLAS}")
+message(STATUS "   MUMPS backend:     ${USE_MUMPS}")
 message(STATUS "   Build examples:    ${BUILD_EXAMPLES}")
 message(STATUS "   Build tests:       ${BUILD_TESTS}")
 message(STATUS "   Profiling:         ${ENABLE_PROFILING}")

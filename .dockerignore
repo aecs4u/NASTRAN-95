@@ -1,0 +1,15 @@
+.git
+.gitignore
+build
+cmake-build-*
+*.o
+*.mod
+*.a
+*.so
+*.log
+*.out
+*.plt
+*.pun
+*.dic
+*.nptp
+.DS_Store

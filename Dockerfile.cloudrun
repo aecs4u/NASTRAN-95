@@ -1,0 +1,23 @@
+FROM python:3.12-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    APP_HOME=/app \
+    CLOUD_RUN_MODE=job \
+    RUN_ROOT=/workspace \
+    NASTRAN_CMD_TEMPLATE="/app/bin/nastran.sh --batch {problem}"
+
+WORKDIR /app
+
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends bash ca-certificates && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY . /app
+
+RUN chmod +x /app/deploy/cloudrun/entrypoint.sh && \
+    chmod +x /app/bin/nastran.sh || true
+
+RUN pip install --no-cache-dir google-cloud-storage==2.19.0
+
+ENTRYPOINT ["/app/deploy/cloudrun/entrypoint.sh"]

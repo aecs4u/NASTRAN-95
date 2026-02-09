@@ -1,0 +1,27 @@
+apiVersion: run.googleapis.com/v1
+kind: Job
+metadata:
+  name: nastran95-job
+spec:
+  template:
+    spec:
+      taskCount: 1
+      template:
+        spec:
+          maxRetries: 1
+          timeoutSeconds: 3600
+          containers:
+            - image: us-central1-docker.pkg.dev/PROJECT_ID/REPO/nastran95-cloudrun:latest
+              resources:
+                limits:
+                  cpu: "2"
+                  memory: "2Gi"
+              env:
+                - name: PROBLEM_NAME
+                  value: d01000a
+                - name: INPUT_GCS_URI
+                  value: gs://your-input-bucket/nastran/d01000a.inp
+                - name: OUTPUT_GCS_URI
+                  value: gs://your-output-bucket/nastran/results/d01000a
+                - name: NASTRAN_CMD_TEMPLATE
+                  value: /app/bin/nastran.sh --batch {problem}

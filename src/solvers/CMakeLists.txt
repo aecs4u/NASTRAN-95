@@ -61,11 +61,31 @@ target_link_libraries(nastran_solvers INTERFACE
   nastran_solvers_eigenvalue
 )
 
+# Backend adapters (MUMPS, GPU, etc.)
+add_library(nastran_solvers_backends
+  backends/linalg_backend_mumps_module.f90
+)
+
+target_link_libraries(nastran_solvers_backends
+  PUBLIC nastran_common
+)
+
+if(USE_MUMPS)
+  target_link_libraries(nastran_solvers_backends
+    PUBLIC MUMPS::MUMPS
+  )
+endif()
+
+target_link_libraries(nastran_solvers INTERFACE
+  nastran_solvers_backends
+)
+
 # Installation
 install(TARGETS
   nastran_solvers_direct
   nastran_solvers_iterative
   nastran_solvers_eigenvalue
+  nastran_solvers_backends
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
 )
