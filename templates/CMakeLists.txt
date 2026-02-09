@@ -143,32 +143,45 @@ add_custom_target(generate_quad4_elements
 )
 
 #===============================================================================
-# Future Template Generations (Commented Out - Templates Not Yet Created)
+# IHEX Element Template Generation (Hexahedral solid: main + helper)
 #===============================================================================
 
-# # IHEX Main Element
-# generate_precision_variant(
-#   ${TEMPLATE_DIR}/ihex_main_template.f90
-#   ${GENERATED_DIR}/ihexd.f
-#   DOUBLE
-# )
-# generate_precision_variant(
-#   ${TEMPLATE_DIR}/ihex_main_template.f90
-#   ${GENERATED_DIR}/ihexs.f
-#   SINGLE
-# )
+# IHEX Main Element
+generate_precision_variant(
+  ${TEMPLATE_DIR}/ihex_template.f90
+  ${GENERATED_DIR}/ihexd.f
+  DOUBLE
+)
 
-# # IHEX Helper
-# generate_precision_variant(
-#   ${TEMPLATE_DIR}/ihex_helper_template.f90
-#   ${GENERATED_DIR}/ihexsd.f
-#   DOUBLE
-# )
-# generate_precision_variant(
-#   ${TEMPLATE_DIR}/ihex_helper_template.f90
-#   ${GENERATED_DIR}/ihexss.f
-#   SINGLE
-# )
+generate_precision_variant(
+  ${TEMPLATE_DIR}/ihex_template.f90
+  ${GENERATED_DIR}/ihexs.f
+  SINGLE
+)
+
+# IHEX Helper (shape functions)
+generate_precision_variant(
+  ${TEMPLATE_DIR}/ihexs_template.f90
+  ${GENERATED_DIR}/ihexsd.f
+  DOUBLE
+)
+
+generate_precision_variant(
+  ${TEMPLATE_DIR}/ihexs_template.f90
+  ${GENERATED_DIR}/ihexss.f
+  SINGLE
+)
+
+# Create custom target to build IHEX variants
+add_custom_target(generate_ihex_elements
+  DEPENDS ${GENERATED_DIR}/ihexd.f ${GENERATED_DIR}/ihexs.f
+          ${GENERATED_DIR}/ihexsd.f ${GENERATED_DIR}/ihexss.f
+  COMMENT "Generating IHEX element precision variants (main + helper)"
+)
+
+#===============================================================================
+# Phase 2 Complete - All Element Templates Generated
+#===============================================================================
 
 #===============================================================================
 # Verification Target
@@ -179,7 +192,7 @@ add_custom_target(generate_quad4_elements
 add_custom_target(verify_templates
   COMMAND ${CMAKE_COMMAND} -E echo "Verifying generated files..."
   COMMAND bash ${CMAKE_SOURCE_DIR}/scripts/verify_generated.sh
-  DEPENDS generate_rod_elements generate_tria3_elements generate_bar_elements generate_quad4_elements
+  DEPENDS generate_rod_elements generate_tria3_elements generate_bar_elements generate_quad4_elements generate_ihex_elements
   COMMENT "Verifying template-generated files match originals"
 )
 
@@ -209,5 +222,6 @@ message(STATUS "  make generate_rod_elements   - Generate ROD precision variants
 message(STATUS "  make generate_tria3_elements - Generate TRIA3 precision variants")
 message(STATUS "  make generate_bar_elements   - Generate BAR precision variants")
 message(STATUS "  make generate_quad4_elements - Generate QUAD4 precision variants")
+message(STATUS "  make generate_ihex_elements  - Generate IHEX precision variants (main + helper)")
 message(STATUS "  make verify_templates        - Verify generated vs original")
 message(STATUS "  make clean_generated         - Remove all generated files")

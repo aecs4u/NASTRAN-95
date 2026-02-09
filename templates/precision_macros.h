@@ -109,6 +109,9 @@
 #define TERMS_FUNC TERMSD
 #define ANGTR_FUNC ANGTRD
 
+! Element-specific helper functions (IHEX)
+#define IHEXS_FUNC IHEXSD
+
 ! Open core addressing (IHEX uses this)
 #define CORE_ADJUST /2
 
@@ -194,6 +197,9 @@
 #define TLDR_FUNC TLDRS
 #define TERMS_FUNC TERMSS
 #define ANGTR_FUNC ANGTRS
+
+! Element-specific helper functions (IHEX)
+#define IHEXS_FUNC IHEXSS
 
 ! Open core addressing (no adjustment for single precision)
 #define CORE_ADJUST
