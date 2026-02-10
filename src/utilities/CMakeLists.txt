@@ -4,10 +4,10 @@
 # Migrated from mis/, um/, utility/ directories in Phase 3
 # ==============================================================================
 
-# Collect utility files by type
-file(GLOB PARSER_SOURCES parser/*.f)
-file(GLOB OUTPUT_SOURCES output/*.f)
-file(GLOB HELPER_SOURCES helpers/*.f)
+# Collect utility files by type (include both .f and .f90)
+file(GLOB PARSER_SOURCES parser/*.f parser/*.f90)
+file(GLOB OUTPUT_SOURCES output/*.f output/*.f90)
+file(GLOB HELPER_SOURCES helpers/*.f helpers/*.f90)
 
 # Input parser (35 files)
 if(PARSER_SOURCES)

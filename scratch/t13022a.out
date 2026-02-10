@@ -1,0 +1,247 @@
+ DEBUG: NASTRAN main program starting...
+
+
+
+
+
+
+                                  ****
+                                *      *
+                               *        *
+                               *  N A S T R A N
+                               *        *
+                                *      *
+                                  ****
+
+
+                             SUN COMPUTER SYSTEMS    
+                                SOLARIS VERSION
+
+                          SYSTEM RELEASE -  1995 ED.
+
+                                DISTRIBUTED BY
+
+         COMPUTER SOFTWARE MANAGEMENT AND INFORMATION CENTER (COSMIC)
+                 UNIVERSITY OF GEORGIA, ATHENS, GEORGIA 30602
+                 PHONE: (706)542-3265      FAX: (706)542-4807
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     2
+                                                                                                                                    
+0                                                                                                                                   
+                                                                                                         
+                                                                                                         
+                         INSTALLATION CENTER USER INFORMATION GIVEN IN THIS SECTION                      
+                                                                                                         
+                                     *********************************************                       
+                                     *                                           *                       
+                                     *  PLEASE READ THE COMMENT IN DEMO PROBLEM  *                       
+                                     *  D01002A ABOUT SYSTEM TIMING CONSTANTS    *                       
+                                     *                                           *                       
+                                     *********************************************                       
+                                                                                                         
+                         ===X=    TOP OF PAGE REQUEST IF 'X' IS REPLACED BY '='                          
+                                                                                                         
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     3
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    D E C K    E C H O                                                  
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     ID    T13022A,NASTRAN                                                           
+     APP   DISP                                                                      
+     DIAG  38                                                                        
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  520
+     SOL   13                                                                        
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  397
+     TIME  20                                                                        
+     $                                                                               
+     $   THIS PROBLEM DEMONSTRATES THE EFFECTS OF PRESSURE ON THE DYNAMICS OF        
+     $   PRE-STIFFENED STRUCTURE USEING CPSE3 AND CPSE4 DIFFERNTIAL STIFFNESS        
+     $   ELEMENTS                                                                    
+     $                                                                               
+     $   THIS FREE-FREE UNIT LENGTH CYLINDER PROBLEM GIVES THE FOLLOWING             
+     $   NATURAL FREQUENCIES (HZ)                                                    
+     $                                                                               
+     $        WITHOUT THE PRESSURE        WITH  THE PRESSURE                         
+     $        STIFFNESS ELEMENTS          STIFFNESS ELEMENTS                         
+     $        --------------------        ------------------                         
+     $               3.4432                     0.0053                               
+     $               4.6821                     5.3927                               
+     $              13.2614                    13.6570                               
+     $              22.4341                    22.6865                               
+     $              33.1777                    33.3529                               
+     $              46.1936                    46.3210                               
+     $              61.9870                    62.0752                               
+     $              81.8336                    81.8986                               
+     $                                                                               
+     $   THE FOLLOWING DMAP ALTER ALLOWS SOL 13 TO USE DIFFERENT BOUNDARY            
+     $   CONDITION SPC'S FOR THE STATIC SOLUTION (SUBCASE 1 AND 2) AND THE           
+     $   NORMAL MODE SOLUTION (SUBCASE 3)                                            
+     $                                                                               
+     $   THIS DMAP ALTER WILL CAUSE A NUMBER OF WARNING MESSAGES OF POTENTIAL        
+     $   ERRORS PRINTED, BUT IT WORKS OK                                             
+     $                                                                               
+     ALTER  117 $  AFTER OFP MODULE AND BEFORE DPD IN RIGID FORMAT 13                
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  350
+     GP4    CASECC,GEOM4,EQEXIN,GPDT,BGPDT,CSTM,GPST/RG,YS,USET,ASET,OGPST/          
+            LUSET/S,N,MPCF1/S,N,MPCF2/,S,N,SINGLE/S,N,OMIT/S,N,REACT/                
+            S,N,NSKIP/S,N,REPEAT/S,N,NOSET/S,N,NOL/S,N,NOA/C,Y,ASETOUT/              
+            S,N,AUTOSPC $                                                            
+     PARAM  //*AND*/NOSR/SINGLE/REACT $                                              
+     PURGE  GM/MPCF1/GO,KOO,LOO,PO,UOOV,RUOV/OMIT/PS,KFS,KSS/SINGLE/QG/NOSR $        
+     OFP    OGPST,,,,,//S,N,CARDNO $                                                 
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     4
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    D E C K    E C H O                                                  
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     LABEL  LBL15D $                                                                 
+     EQUIV  KGG,KNN/MPCF1 $                                                          
+     COND   LBL16D,MPCF1 $                                                           
+     MCE1   USET,RG/GM $                                                             
+     MCE2   USET,GM,KGG,,,/KNN,,, $                                                  
+     LABEL  LBL16D $                                                                 
+     EQUIV  KNN,KFF/SINGLE $                                                         
+     COND   LBL17D,SINGLE $                                                          
+     SCE1   USET,KNN,,,/KFF,KFS,KSS,,, $                                             
+     LABEL  LBL17D $                                                                 
+     EQUIV  KFF,KAA/OMIT $                                                           
+     COND   LBL18D,OMIT $                                                            
+     SMP1   USET,KFF,,,/GO,KAA,KOO,LOO,,,,, $                                        
+     LABEL  LBL18D $                                                                 
+     EQUIV  KDGG,KDNN/MPCF2 /MGG,MNN/MPCF2 $                                         
+     COND   LBL19D,MPCF2 $                                                           
+     MCE2   USET,GM,KDGG,MGG,,/KDNN,MNN,, $                                          
+     LABEL  LBL19D $                                                                 
+     EQUIV  KDNN,KDFF/SINGLE /MNN,MFF/SINGLE $                                       
+     COND   LBL20D,SINGLE $                                                          
+     SCE1   USET,KDNN,MNN,,/KDFF,KDFS,KDSS,MFF,, $                                   
+     LABEL  LBL20D $                                                                 
+     EQUIV  KDFF,KDAA/OMIT /MFF,MAA/OMIT $                                           
+     COND   LBL21D,OMIT $                                                            
+     SMP2   USET,GO,KDFF/KDAA $                                                      
+     SMP2   USET,GO,MFF/MAA $                                                        
+     LABEL  LBL21D $                                                                 
+     PARAM  //*ADD*/DSCOSET/-1/0 $                                                   
+     PARAM  //*MPY*/NDSKIP/0/0 $                                                     
+     DSMG2  MPT,KAA,KDAA,KFS,KDFS,KSS,KDSS,PL,PS,YS,UOOV/KBLL,KBFS,KBSS,             
+            PBL,PBS,YBS,UBOOV/S,N,NDSKIP/S,N,REPEATD/DSCOSET $                       
+     ENDALTER $                                                                      
+     $                                                                               
+     CEND                                                                            
+1     FREE-FREE UNIT LENGTH PRESSURIZED CYLINDER, QUARTER MODEL             /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     5
+      NASTRAN TEST PROBLEM NO. T13-02-2A                                                                                            
+0     NORMAL MODES WITH DIFFERENTIAL STIFFNESS USING CPSE3/4 ELEMENTS                                                               
+0                                        C A S E    C O N T R O L   D E C K   E C H O                                               
+                 CARD                                                                                                               
+                 COUNT                                                                                                              
+                  1      TITLE    = FREE-FREE UNIT LENGTH PRESSURIZED CYLINDER, QUARTER MODEL            
+                  2      SUBTITLE = NASTRAN TEST PROBLEM NO. T13-02-2A                                   
+                  3      LABEL  = NORMAL MODES WITH DIFFERENTIAL STIFFNESS USING CPSE3/4 ELEMENTS        
+                  4      ECHO   = BOTH                                                                   
+                  5      DISP   = ALL                                                                    
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  6      $                                                                               
+                  7      SUBCASE  1                                                                      
+                  8      LABEL  = STATIC SOLUTION                                                        
+                  9      LOAD   = 1                                                                      
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                 10      SPC    = 1                                                                      
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                 11      OLOAD  = ALL                                                                    
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                 12      $                                                                               
+                 13      SUBCASE  2                                                                      
+                 14      LABEL  = SECOND ORDER STATICS SOLUTION                                          
+                 15      SPC    = 4                                                                      
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                 16      DSCOEFFICIENT = DEFAULT                                                         
+                 17      $                                                                               
+                 18      SUBCASE  3                                                                      
+                 19      LABEL  = NORMAL MODES WITH DIFFERENTIAL STIFFNESS                               
+                 20      SPC    = 4                                                                      
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                 21      METHOD = 1                                                                      
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+1     FREE-FREE UNIT LENGTH PRESSURIZED CYLINDER, QUARTER MODEL             /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     6
+      NASTRAN TEST PROBLEM NO. T13-02-2A                                                                                            
+0     NORMAL MODES WITH DIFFERENTIAL STIFFNESS USING CPSE3/4 ELEMENTS                                                               
+0                                        C A S E    C O N T R O L   D E C K   E C H O                                               
+                 CARD                                                                                                               
+                 COUNT                                                                                                              
+                 22      $                                                                               
+                 23      BEGIN BULK                                                                      
+1     FREE-FREE UNIT LENGTH PRESSURIZED CYLINDER, QUARTER MODEL             /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     7
+      NASTRAN TEST PROBLEM NO. T13-02-2A                                                                                            
+0     NORMAL MODES WITH DIFFERENTIAL STIFFNESS USING CPSE3/4 ELEMENTS                                                               
+0                                             I N P U T   B U L K   D A T A   D E C K   E C H O                                     
+                                                                                                                                    
+                                  ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++                  
+
+ *** ILLEGAL CHARACTER ENCOUNTERED IN INPUT CARD
+    ',      1. 0. 0.                                                                 '
+0*** SYSTEM FATAL MESSAGE 219, MISSING ENDDATA CARD.  IMHERE =    170
+
+
+                        TOTAL COUNT=      2
+0*** USER INFORMATION MESSAGE 207, BULK DATA DECK IS NOT SORTED. NASTRAN WILL RE-ORDER THE INPUT DECK.
+1     FREE-FREE UNIT LENGTH PRESSURIZED CYLINDER, QUARTER MODEL             /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     8
+      NASTRAN TEST PROBLEM NO. T13-02-2A                                                                                            
+0     NORMAL MODES WITH DIFFERENTIAL STIFFNESS USING CPSE3/4 ELEMENTS                                                               
+0                                                 S O R T E D   B U L K    D A T A    E C H O                                       
+                     CARD                                                                                                           
+                     COUNT        ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++                  
+                    1-        CORD2C,100.     0. 0.  0. 0. 1.                                                 
+                    2-        PARAM,COUPMASS,1                                                                
+                              ENDDATA
+0*** USER FATAL MESSAGE 300, DATA ERROR IN FIELD UNDERLINED.
+          POSSIBLE ERROR IN EXPONENT
+          ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++
+          CORD2C,100.     0. 0.  0. 0. 1.                                                 
+                          ========                                                        
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+0*** USER FATAL MESSAGE 300, DATA ERROR IN FIELD UNDERLINED.
+          POSSIBLE ERROR IN EXPONENT
+          ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++
+          CORD2C,100.     0. 0.  0. 0. 1.                                                 
+                                  ========                                                
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+0*** USER FATAL MESSAGE 307, ILLEGAL NAME FOR BULK DATA CARD CORD2C,1
+0*** USER FATAL MESSAGE 307, ILLEGAL NAME FOR BULK DATA CARD PARAM,CO
+  ERRTRC CALLED
+  NAME=WRTMSG  
+  IVAL=         100
+
+
+
+
+                                        * * * END OF JOB * * *
+1
+ JOB TITLE =  FREE-FREE UNIT LENGTH PRESSURIZED CYLINDER, QUARTER MODEL          
+ DATE:  2/10/**
+ END TIME: 12: 4:16
+ TOTAL WALL CLOCK TIME      0 SEC.
+ 

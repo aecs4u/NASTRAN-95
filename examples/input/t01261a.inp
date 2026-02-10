@@ -1,7 +1,7 @@
 ID    T01261A,NASTRAN                                                           
 DIAG  40                                                                        
 SOL   1,0                                                                       
-APP   DISP                                                                      
+$ APP   DISP                                                                      
 TIME  30                                                                        
 CEND                                                                            
 TITLE    = COMP01 **COSMIC** QUAD4 FLAT PLATE TEST                              

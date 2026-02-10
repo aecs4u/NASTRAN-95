@@ -2,7 +2,7 @@ NASTRAN FILES=(INP1,INP2)
 ID    T01301A,NASTRAN                                                           
 SOL   1                                                                         
 TIME  10                                                                        
-APP   DISP                                                                      
+$ APP   DISP                                                                      
 $DIAG 15,-2,-14                                                                 
 ALTER      110                                                                  
 DATABASE   EQEXIN,BGPDT,GEOM2,CSTM,OUGV1,,//C,N,15/C,N,+1/C,N,+1  $             

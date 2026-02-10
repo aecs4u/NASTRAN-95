@@ -76,9 +76,10 @@ C     NOTE - THE CURRENT CALL TO CPUTIM MUST GIVE A TIME VALUE BIGGER
 C     THAN PREVIOUS CPUTIME CALL. OTHERWISE, CALLING ROUTINE MAY GET    
 C     INTO TROUBLE, SUCH AS DIVIDED BY ZERO.        
 C        
-      REAL ARRAY(2)
+      REAL ARRAY(2), ETIME
       T = ETIME(ARRAY)
-C     T now contains total CPU time (user+system)
+C     Use user time (ARRAY(1)) if system time not available
+      IF (ARRAY(2) .LE. 0.0) T = ARRAY(1)
       IF (IFLAG .NE. 0) GO TO 30        
       ICPUSC = T + .49        
       GO TO 40        

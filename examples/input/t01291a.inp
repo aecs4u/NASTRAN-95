@@ -1,7 +1,7 @@
 ID    T01291A,NASTRAN                                                           
 DIAG  40                                                                        
 SOL   1,0                                                                       
-APP   DISP                                                                      
+$ APP   DISP                                                                      
 TIME  30                                                                        
 CEND                                                                            
 TITLE    = COMPO5 QUAD4 4-NODE SHELL ROOF TEST LAMINATED COMPOSITE SHELL        
@@ -178,7 +178,7 @@ PCOMP   1                                                               +PC1
 +PC4    1       .03125  -45.0   YES                     45.0    YES             
 PLOAD4  1       2       90.0                            THRU    65      +PL1    
 +PL1    2       0.0     0.0     -1.0                                            
-CRIGD1  1       81      5001                                                    
+RBE2    1       81      5001                                                    
 SPC1    1       12      1       2       3       4       5       6       +SP10001
 +SP100017       8       9                                                       
 SPC1    1       26      1       10      19      28      37      46      +SP10005

@@ -1,0 +1,115 @@
+     NASTRAN  FILES=(INPT1,INPT2)                                                    
+
+
+
+
+
+
+                                  ****
+                                *      *
+                               *        *
+                               *  N A S T R A N
+                               *        *
+                                *      *
+                                  ****
+
+
+                             SUN COMPUTER SYSTEMS    
+                                SOLARIS VERSION
+
+                          SYSTEM RELEASE -  1995 ED.
+
+                                DISTRIBUTED BY
+
+         COMPUTER SOFTWARE MANAGEMENT AND INFORMATION CENTER (COSMIC)
+                 UNIVERSITY OF GEORGIA, ATHENS, GEORGIA 30602
+                 PHONE: (706)542-3265      FAX: (706)542-4807
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     2
+                                                                                                                                    
+0                                                                                                                                   
+                                                                                                         
+                                                                                                         
+                         INSTALLATION CENTER USER INFORMATION GIVEN IN THIS SECTION                      
+                                                                                                         
+                                     *********************************************                       
+                                     *                                           *                       
+                                     *  PLEASE READ THE COMMENT IN DEMO PROBLEM  *                       
+                                     *  D01002A ABOUT SYSTEM TIMING CONSTANTS    *                       
+                                     *                                           *                       
+                                     *********************************************                       
+                                                                                                         
+                         ===X=    TOP OF PAGE REQUEST IF 'X' IS REPLACED BY '='                          
+                                                                                                         
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     3
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    D E C K    E C H O                                                  
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     ID    T00001A,NASTRAN                                                           
+     $                                                                               
+     $     THIS DEMO PROBLEM DEMONSTRATES AN EASY WAY TO GENERATE VARIOUS            
+     $     FORMS OF NASTRAN GINO DATA BLOCKS USING THE NEW INPUTT4 MODULE,           
+     $     AND TO ALTER DATA BLOCK TRAILER BY THE NEW MATGEN, OPTION 10              
+     $                                                                               
+     $     TO COPY FROM INP1 THE FOLLOWING MATRICES                                  
+     $        A 4X4 SQUARE      MATRIX OF FORM 1 TO SQR                              
+     $        A 2X5 RECTANGULAR MATRIX OF FORM 2 TO REC                              
+     $        A 1X6 DIAGONAL    MATRIX OF FORM 3 TO DI1                              
+     $        A 5X5 DIAONGL     MATRIX OF FORM 2 TO DI5                              
+     $        A 4X4 SYMMETRIC   MATRIX OF FORM 6 TO SYM                              
+     $     TO COPY FROM INP2 THE FOLLOWING MATRICES                                  
+     $        A 1X6 ROW VECTOR         OF FORM 7 TO RV1                              
+     $        A 6X1 ROW VECTOR         OF FORM 2 TO RV6                              
+     $        A 1X4 IDENTITY    MATRIX OF FORM 8 TO ID1                              
+     $        A 4X4 IDENTITY    MATRIX OF FORM 2 TO ID4                              
+     $        A 1X6 COLUMN      MATRIX OF FORM 2 TO CMX                              
+     $     AND TO ALTER THE TRAILER OF SYM, FROM SYMMETRIC TO SQUARE                 
+     $                                                                               
+     $     NOTE - THERE IS NO DOCUMENTATION AVAILABLE IN THE USER'S MANUAL           
+     $     4/93   ABOUT THE NEW CAPABILITIES BEING PERFORMED HERE.                   
+     $          - USER CAN GENERATE GINO DATA BLOCKS THRU THE DMIG CARDS.            
+     $            HOWEVER, INPUT VIA DMIG CARDS IS LIMITED TO ONLY SQAURE            
+     $            (FORM 1), RECTANGULAR (FORM 2) AND SYMMETRIC (FORM 6)              
+     $            MATRICES                                                           
+     $                                                                               
+     APP   DMAP                                                                      
+     DIAG  8,15                                                                      
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  520
+     BEGIN $                                                                         
+     (SEE NASTRAN SOURCE PROGRAM COMPILATION FOR LISTING OF DMAP SEQUENCE)
+     END $                                                                           
+     TIME  5                                                                         
+     CEND                                                                            
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     4
+                                                                                                                                    
+0                                                                                                                                   
+0                                        C A S E    C O N T R O L   D E C K   E C H O                                               
+                 CARD                                                                                                               
+                 COUNT                                                                                                              
+                  1      BEGIN                                                                           
+
+
+                        (NO. OF UNSORTED BULK DATA CARDS READ =     0, INCLUDING   0 COMMENT CARDS)
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     5
+                                                                                                                                    
+0                                                                                                                                   
+0                                                 S O R T E D   B U L K    D A T A    E C H O                                       
+                     CARD                                                                                                           
+                     COUNT        ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++                  
+                              ENDDATA
+  ERRTRC CALLED
+  NAME=WRTMSG  
+  IVAL=         100
+
+
+
+
+                                        * * * END OF JOB * * *
+1
+ JOB TITLE =                                                                     
+ DATE:  2/10/26
+ END TIME: 12:35:13
+ TOTAL WALL CLOCK TIME      0 SEC.
+ 

@@ -1,6 +1,6 @@
 ID    T05031A,NASTRAN                                                           
 SOL   5,0                                                                       
-APP   DISP                                                                      
+$ APP   DISP                                                                      
 TIME  200                                                                       
 CEND                                                                            
 TITLE    = BUCKLING ANALYSIS USING CIS2D8 ELEMENTS                              

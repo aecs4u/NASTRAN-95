@@ -57,18 +57,18 @@ OUTPUT
 BEGIN BULK                                                                      
 CORD2C  1               0.0     0.0     0.0     1.0     0.0     0.0     +COR12  
 +COR12  0.0     1.0     0.0                                                     
-CQUAD2  4       2       2       3       7       6                               
-CQUAD2  5       2       6       7       12      11                              
-CQUAD2  6       2       3       4       8       7                               
-CQUAD2  7       2       7       8       13      12                              
-CQUAD2  8       2       4       5       9       8                               
-CQUAD2  10      2       8       15      14      13                              
-CQUAD2  11      3       9       16      18      15                              
-CQUAD2  12      3       16      17      19      18                              
-CTRIA2  1       1       1       6       10                                      
-CTRIA2  2       1       1       2       6                                       
-CTRIA2  3       1       10      6       11                                      
-CTRIA2  9       1       8       9       15                                      
+CQUAD4  4       2       2       3       7       6                               
+CQUAD4  5       2       6       7       12      11                              
+CQUAD4  6       2       3       4       8       7                               
+CQUAD4  7       2       7       8       13      12                              
+CQUAD4  8       2       4       5       9       8                               
+CQUAD4  10      2       8       15      14      13                              
+CQUAD4  11      3       9       16      18      15                              
+CQUAD4  12      3       16      17      19      18                              
+CTRIA3  1       1       1       6       10                                      
+CTRIA3  2       1       1       2       6                                       
+CTRIA3  3       1       10      6       11                                      
+CTRIA3  9       1       8       9       15                                      
 CYJOIN  1               1       2       3       4       5                       
 CYJOIN  2               10      11      12      13      14                      
 DAREA   1       8       3       -1.0                                            
@@ -137,9 +137,9 @@ PARAM   LGKAD   1
 PARAM   LMAX    1                                                               
 PARAM   NSEGS   12                                                              
 PARAM   RPS     600.0                                                           
-PQUAD2  2       1       .25                                                     
-PQUAD2  3       1       .125                                                    
-PTRIA2  1       1       .25                                                     
+PSHELL  2       1       .25                                                     
+PSHELL  3       1       .125                                                    
+PSHELL  1       1       .25                                                     
 SPC1    30      123456  1       10                                              
 SPC1    30      6       1       THRU    19                                      
 TLOAD2  1       1                       0.0     5.5131-41813.854 -90.0          

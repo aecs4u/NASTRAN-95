@@ -15,7 +15,7 @@ SPC  = 350
 LOAD = 252                                                                      
 BEGIN BULK                                                                      
 CBAR    1       101     1       2       .0      1.0     .0      1               
-CHBDY   5       105     POINT   1                                       +HBDY5  
+CHBDYP  5       105     POINT   1                                       +HBDY5  
 +HBDY5                                  -1.0    .0      .0                      
 CONROD  3       2       3       200     3.14159                                 
 CROD    2       102     3       4                                               

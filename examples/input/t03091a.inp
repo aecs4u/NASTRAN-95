@@ -1,7 +1,7 @@
 ID    T03091A,NASTRAN                                                           
 SOL   3                                                                         
 TIME  20                                                                        
-APP   DISP                                                                      
+$ APP   DISP                                                                      
 CEND                                                                            
 TITLE    = TRAPEZOIDAL (TRAPAX) ELEMENT PROBLEM                                 
 SUBTITLE = NASTRAN TEST PROBLEM NO. T03-09-1A                                   
@@ -14,7 +14,7 @@ SUBCASE  6
    DISP  = NONE                                                                 
 BEGIN BULK                                                                      
 AXIC    1                                                                       
-PTRAPAX 1               1                                                       
+$ OBSOLETE: PTRAPAX 1               1                                                       
 PARAM   COUPMASS1                                                               
 MAT1    1       3.+7            .3      7.8-3                                   
 EIGR    1       INV     0.      5000.   10      10              1.-3    +E      
@@ -71,40 +71,40 @@ RINGAX        49          5.0000  5.5000                2456
 RINGAX        50          5.4167  5.5000                2456                    
 RINGAX        51          5.8333  5.5000                2456                    
 RINGAX        52          6.2500  5.5000                2456                    
-CTRAPAX        11              1       2       6       5                        
-CTRAPAX        21              2       3       7       6                        
-CTRAPAX        31              3       4       8       7                        
-CTRAPAX        51              5       6      10       9                        
-CTRAPAX        61              6       7      11      10                        
-CTRAPAX        71              7       8      12      11                        
-CTRAPAX        91              9      10      14      13                        
-CTRAPAX       101             10      11      15      14                        
-CTRAPAX       111             11      12      16      15                        
-CTRAPAX       131             13      14      18      17                        
-CTRAPAX       141             14      15      19      18                        
-CTRAPAX       151             15      16      20      19                        
-CTRAPAX       171             17      18      22      21                        
-CTRAPAX       181             18      19      23      22                        
-CTRAPAX       191             19      20      24      23                        
-CTRAPAX       211             21      22      26      25                        
-CTRAPAX       221             22      23      27      26                        
-CTRAPAX       231             23      24      28      27                        
-CTRAPAX       251             25      26      30      29                        
-CTRAPAX       261             26      27      31      30                        
-CTRAPAX       271             27      28      32      31                        
-CTRAPAX       291             29      30      34      33                        
-CTRAPAX       301             30      31      35      34                        
-CTRAPAX       311             31      32      36      35                        
-CTRAPAX       331             33      34      38      37                        
-CTRAPAX       341             34      35      39      38                        
-CTRAPAX       351             35      36      40      39                        
-CTRAPAX       371             37      38      42      41                        
-CTRAPAX       381             38      39      43      42                        
-CTRAPAX       391             39      40      44      43                        
-CTRAPAX       411             41      42      46      45                        
-CTRAPAX       421             42      43      47      46                        
-CTRAPAX       431             43      44      48      47                        
-CTRAPAX       451             45      46      50      49                        
-CTRAPAX       461             46      47      51      50                        
-CTRAPAX       471             47      48      52      51                        
+$ OBSOLETE: CTRAPAX        11              1       2       6       5                        
+$ OBSOLETE: CTRAPAX        21              2       3       7       6                        
+$ OBSOLETE: CTRAPAX        31              3       4       8       7                        
+$ OBSOLETE: CTRAPAX        51              5       6      10       9                        
+$ OBSOLETE: CTRAPAX        61              6       7      11      10                        
+$ OBSOLETE: CTRAPAX        71              7       8      12      11                        
+$ OBSOLETE: CTRAPAX        91              9      10      14      13                        
+$ OBSOLETE: CTRAPAX       101             10      11      15      14                        
+$ OBSOLETE: CTRAPAX       111             11      12      16      15                        
+$ OBSOLETE: CTRAPAX       131             13      14      18      17                        
+$ OBSOLETE: CTRAPAX       141             14      15      19      18                        
+$ OBSOLETE: CTRAPAX       151             15      16      20      19                        
+$ OBSOLETE: CTRAPAX       171             17      18      22      21                        
+$ OBSOLETE: CTRAPAX       181             18      19      23      22                        
+$ OBSOLETE: CTRAPAX       191             19      20      24      23                        
+$ OBSOLETE: CTRAPAX       211             21      22      26      25                        
+$ OBSOLETE: CTRAPAX       221             22      23      27      26                        
+$ OBSOLETE: CTRAPAX       231             23      24      28      27                        
+$ OBSOLETE: CTRAPAX       251             25      26      30      29                        
+$ OBSOLETE: CTRAPAX       261             26      27      31      30                        
+$ OBSOLETE: CTRAPAX       271             27      28      32      31                        
+$ OBSOLETE: CTRAPAX       291             29      30      34      33                        
+$ OBSOLETE: CTRAPAX       301             30      31      35      34                        
+$ OBSOLETE: CTRAPAX       311             31      32      36      35                        
+$ OBSOLETE: CTRAPAX       331             33      34      38      37                        
+$ OBSOLETE: CTRAPAX       341             34      35      39      38                        
+$ OBSOLETE: CTRAPAX       351             35      36      40      39                        
+$ OBSOLETE: CTRAPAX       371             37      38      42      41                        
+$ OBSOLETE: CTRAPAX       381             38      39      43      42                        
+$ OBSOLETE: CTRAPAX       391             39      40      44      43                        
+$ OBSOLETE: CTRAPAX       411             41      42      46      45                        
+$ OBSOLETE: CTRAPAX       421             42      43      47      46                        
+$ OBSOLETE: CTRAPAX       431             43      44      48      47                        
+$ OBSOLETE: CTRAPAX       451             45      46      50      49                        
+$ OBSOLETE: CTRAPAX       461             46      47      51      50                        
+$ OBSOLETE: CTRAPAX       471             47      48      52      51                        
 ENDDATA                                                                         

@@ -1,0 +1,120 @@
+     NASTRAN FILES=(INP1,INP2)                                                       
+
+
+
+
+
+
+                                  ****
+                                *      *
+                               *        *
+                               *  N A S T R A N
+                               *        *
+                                *      *
+                                  ****
+
+
+                             SUN COMPUTER SYSTEMS    
+                                SOLARIS VERSION
+
+                          SYSTEM RELEASE -  1995 ED.
+
+                                DISTRIBUTED BY
+
+         COMPUTER SOFTWARE MANAGEMENT AND INFORMATION CENTER (COSMIC)
+                 UNIVERSITY OF GEORGIA, ATHENS, GEORGIA 30602
+                 PHONE: (706)542-3265      FAX: (706)542-4807
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     2
+                                                                                                                                    
+0                                                                                                                                   
+                                                                                                         
+                                                                                                         
+                         INSTALLATION CENTER USER INFORMATION GIVEN IN THIS SECTION                      
+                                                                                                         
+                                     *********************************************                       
+                                     *                                           *                       
+                                     *  PLEASE READ THE COMMENT IN DEMO PROBLEM  *                       
+                                     *  D01002A ABOUT SYSTEM TIMING CONSTANTS    *                       
+                                     *                                           *                       
+                                     *********************************************                       
+                                                                                                         
+                         ===X=    TOP OF PAGE REQUEST IF 'X' IS REPLACED BY '='                          
+                                                                                                         
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     3
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    D E C K    E C H O                                                  
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     ID    T01301A,NASTRAN                                                           
+     SOL   1                                                                         
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  397
+     TIME  10                                                                        
+     APP   DISP                                                                      
+     $DIAG 15,-2,-14                                                                 
+     ALTER      110                                                                  
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  350
+     DATABASE   EQEXIN,BGPDT,GEOM2,CSTM,OUGV1,,//C,N,15/C,N,+1/C,N,+1  $             
+     $ALTER     131                                                                  
+     $DATABASE  EQEXIN,BGPDT,GEOM2,CSTM,OES1,,//C,N,16/C,N,+1  $                     
+     ALTER      147                                                                  
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  350
+     DATABASE   EQEXIN,BGPDT,GEOM2,CSTM,OES1,,//C,N,16/C,N,+1  $                     
+     JUMP       FINIS                                                                
+     ENDALTER                                                                        
+     CEND                                                                            
+1     TESTING DATABASE MODULE                                               /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     4
+      NASTRAN TEST PROBLEM NO. T01-30-1A                                                                                            
+0                                                                                                                                   
+0                                        C A S E    C O N T R O L   D E C K   E C H O                                               
+                 CARD                                                                                                               
+                 COUNT                                                                                                              
+                  1      TITLE    = TESTING DATABASE MODULE                                              
+                  2      SUBTITLE = NASTRAN TEST PROBLEM NO. T01-30-1A                                   
+                  3      SPC   = 10                                                                      
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  4      DISP  = ALL                                                                     
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  5      STRES = ALL                                                                     
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  6      ELFOR = ALL                                                                     
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  7      ECHO  = NONE                                                                    
+                  8      LOAD  = 20                                                                      
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  9      BEGIN BULK                                                                      
+
+ *** ILLEGAL CHARACTER ENCOUNTERED IN INPUT CARD
+    'CQUAD4,1,1,1,2,3,4                                                              '
+0*** SYSTEM FATAL MESSAGE 219, MISSING ENDDATA CARD.  IMHERE =    170
+
+
+                        (NO. OF UNSORTED BULK DATA CARDS READ =     0, INCLUDING   0 COMMENT CARDS)
+0*** USER FATAL MESSAGE 204, COLD START NO BULK DATA.
+  ERRTRC CALLED
+  NAME=WRTMSG  
+  IVAL=         100
+
+
+
+
+                                        * * * END OF JOB * * *
+1
+ JOB TITLE =  TESTING DATABASE MODULE                                            
+ DATE:  2/10/26
+ END TIME: 12:35:27
+ TOTAL WALL CLOCK TIME      0 SEC.
+ 

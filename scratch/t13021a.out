@@ -1,0 +1,170 @@
+ DEBUG: NASTRAN main program starting...
+
+
+
+
+
+
+                                  ****
+                                *      *
+                               *        *
+                               *  N A S T R A N
+                               *        *
+                                *      *
+                                  ****
+
+
+                             SUN COMPUTER SYSTEMS    
+                                SOLARIS VERSION
+
+                          SYSTEM RELEASE -  1995 ED.
+
+                                DISTRIBUTED BY
+
+         COMPUTER SOFTWARE MANAGEMENT AND INFORMATION CENTER (COSMIC)
+                 UNIVERSITY OF GEORGIA, ATHENS, GEORGIA 30602
+                 PHONE: (706)542-3265      FAX: (706)542-4807
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     2
+                                                                                                                                    
+0                                                                                                                                   
+                                                                                                         
+                                                                                                         
+                         INSTALLATION CENTER USER INFORMATION GIVEN IN THIS SECTION                      
+                                                                                                         
+                                     *********************************************                       
+                                     *                                           *                       
+                                     *  PLEASE READ THE COMMENT IN DEMO PROBLEM  *                       
+                                     *  D01002A ABOUT SYSTEM TIMING CONSTANTS    *                       
+                                     *                                           *                       
+                                     *********************************************                       
+                                                                                                         
+                         ===X=    TOP OF PAGE REQUEST IF 'X' IS REPLACED BY '='                          
+                                                                                                         
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     3
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    D E C K    E C H O                                                  
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     ID    T13021A,NASTRAN                                                           
+     APP   DISP                                                                      
+     SOL   13                                                                        
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  397
+     DIAG  38                                                                        
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  520
+     TIME  10                                                                        
+     CEND                                                                            
+1     OCTAGONAL FRAME MODELED BY 8 CBARS AND USING CPSE2 ELEMENTS           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     4
+      NASTRAN DEMONSTRATION PROBLEM NO. T13-02-1A                                                                                   
+0                                                                                                                                   
+0                                        C A S E    C O N T R O L   D E C K   E C H O                                               
+                 CARD                                                                                                               
+                 COUNT                                                                                                              
+                  1      TITLE = OCTAGONAL FRAME MODELED BY 8 CBARS AND USING CPSE2 ELEMENTS             
+                  2      SUBTITLE = NASTRAN DEMONSTRATION PROBLEM NO. T13-02-1A                          
+                  3      ECHO  = BOTH                                                                    
+                  4      DISP  = ALL                                                                     
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  5      SPC = 1                                                                         
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  6      SUBCASE 1                                                                       
+                  7      LABEL = STATIC SOLUTION                                                         
+                  8      LOAD  = 1                                                                       
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  9      OLOAD = ALL                                                                     
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                 10      SUBCASE 2                                                                       
+                 11      LABEL = SECOND ORDER STATICS SOLUTION                                           
+                 12      DSCOEFFICIENT = DEFAULT                                                         
+                 13      SUBCASE 3                                                                       
+                 14      LABEL = NORMAL MODES WITH DIFFERENTIAL STIFFNESS                                
+                 15      METHOD = 1                                                                      
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                 16      BEGIN BULK                                                                      
+1     OCTAGONAL FRAME MODELED BY 8 CBARS AND USING CPSE2 ELEMENTS           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     5
+      NASTRAN DEMONSTRATION PROBLEM NO. T13-02-1A                                                                                   
+0                                                                                                                                   
+0                                             I N P U T   B U L K   D A T A   D E C K   E C H O                                     
+                                                                                                                                    
+                                  ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++                  
+
+ *** ILLEGAL CHARACTER ENCOUNTERED IN INPUT CARD
+    ',    1. 0.0.                                                                    '
+0*** SYSTEM FATAL MESSAGE 219, MISSING ENDDATA CARD.  IMHERE =    170
+
+
+                        TOTAL COUNT=      2
+0*** USER INFORMATION MESSAGE 207, BULK DATA DECK IS NOT SORTED. NASTRAN WILL RE-ORDER THE INPUT DECK.
+1     OCTAGONAL FRAME MODELED BY 8 CBARS AND USING CPSE2 ELEMENTS           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     6
+      NASTRAN DEMONSTRATION PROBLEM NO. T13-02-1A                                                                                   
+0                                                                                                                                   
+0                                                 S O R T E D   B U L K    D A T A    E C H O                                       
+                     CARD                                                                                                           
+                     COUNT        ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++                  
+                    1-        CORD2C, 100     .  0.  0.  0.  0.  1.                                           
+                    2-        SPC,1,1,126                                                                     
+                              ENDDATA
+0*** USER FATAL MESSAGE 300, DATA ERROR IN FIELD UNDERLINED.
+          POSSIBLE ERROR IN EXPONENT
+          ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++
+          CORD2C, 100     .  0.  0.  0.  0.  1.                                           
+                          ========                                                        
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+0*** USER FATAL MESSAGE 300, DATA ERROR IN FIELD UNDERLINED.
+          POSSIBLE ERROR IN EXPONENT
+          ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++
+          CORD2C, 100     .  0.  0.  0.  0.  1.                                           
+                                  ========                                                
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+0*** USER FATAL MESSAGE 300, DATA ERROR IN FIELD UNDERLINED.
+          POSSIBLE ERROR IN EXPONENT
+          ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++
+          CORD2C, 100     .  0.  0.  0.  0.  1.                                           
+                                          ========                                        
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+0*** USER FATAL MESSAGE 307, ILLEGAL NAME FOR BULK DATA CARD CORD2C, 
+0*** USER FATAL MESSAGE 300, DATA ERROR IN FIELD UNDERLINED.
+          POSSIBLE ERROR IN EXPONENT
+          ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++
+          SPC,1,1,126                                                                     
+                  ========                                                                
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+0*** USER FATAL MESSAGE 307, ILLEGAL NAME FOR BULK DATA CARD SPC,1,1,
+  ERRTRC CALLED
+  NAME=WRTMSG  
+  IVAL=         100
+
+
+
+
+                                        * * * END OF JOB * * *
+1
+ JOB TITLE =  OCTAGONAL FRAME MODELED BY 8 CBARS AND USING CPSE2 ELEMENTS        
+ DATE:  2/10/**
+ END TIME: 12: 4:16
+ TOTAL WALL CLOCK TIME      0 SEC.
+ 

@@ -1,0 +1,97 @@
+ DEBUG: NASTRAN main program starting...
+     NASTRAN TITLEOPT=-1                                                             
+
+
+
+
+
+
+                                  ****
+                                *      *
+                               *        *
+                               *  N A S T R A N
+                               *        *
+                                *      *
+                                  ****
+
+
+                             SUN COMPUTER SYSTEMS    
+                                SOLARIS VERSION
+
+                          SYSTEM RELEASE -  1995 ED.
+
+                                DISTRIBUTED BY
+
+         COMPUTER SOFTWARE MANAGEMENT AND INFORMATION CENTER (COSMIC)
+                 UNIVERSITY OF GEORGIA, ATHENS, GEORGIA 30602
+                 PHONE: (706)542-3265      FAX: (706)542-4807
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     2
+                                                                                                                                    
+0                                                                                                                                   
+                                                                                                         
+                                                                                                         
+                         INSTALLATION CENTER USER INFORMATION GIVEN IN THIS SECTION                      
+                                                                                                         
+                                     *********************************************                       
+                                     *                                           *                       
+                                     *  PLEASE READ THE COMMENT IN DEMO PROBLEM  *                       
+                                     *  D01002A ABOUT SYSTEM TIMING CONSTANTS    *                       
+                                     *                                           *                       
+                                     *********************************************                       
+                                                                                                         
+                         ===X=    TOP OF PAGE REQUEST IF 'X' IS REPLACED BY '='                          
+                                                                                                         
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     3
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    D E C K    E C H O                                                  
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     ID    D01000A,PRINT RIGID FORMAT                                                
+     $=================================================================              
+     $     THIS DECK WILL PRINT THE NASTRAN DMAP COMPILE LISTING OF ANY              
+     $     RIGID FORMAT BY SPECIFYING THE FOLLOWING SOLUTION NUMBER AND              
+     $     APPLICATION.  JOB WILL AUTOMATICALLY STOP                                 
+     $                                                                               
+     SOL   6                                                                         
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  397
+     APP   DISP                                                                      
+     $=================================================================              
+     TIME  2                                                                         
+     DIAG  14,20                                                                     
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  520
+     CEND                                                                            
+1     TESTING                                                               /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     4
+      NASTRAN DEMONSTRATION PROBLEM NO. D01-00-0A                                                                                   
+0                                                                                                                                   
+0                                        C A S E    C O N T R O L   D E C K   E C H O                                               
+                 CARD                                                                                                               
+                 COUNT                                                                                                              
+                  1      TITLE    = TESTING                                                              
+                  2      SUBTITLE = NASTRAN DEMONSTRATION PROBLEM NO. D01-00-0A                          
+                  3      DISP = ALL                                                                      
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  4      ECHO = NONE                                                                     
+                  5      BEGIN BULK                                                                      
+
+
+                        (NO. OF UNSORTED BULK DATA CARDS READ =     0, INCLUDING   0 COMMENT CARDS)
+0*** USER FATAL MESSAGE 204, COLD START NO BULK DATA.
+  ERRTRC CALLED
+  NAME=WRTMSG  
+  IVAL=         100
+
+
+
+
+                                        * * * END OF JOB * * *
+1
+ JOB TITLE =  TESTING                                                            
+ DATE:  2/10/**
+ END TIME: 12:26:29
+ TOTAL WALL CLOCK TIME      0 SEC.
+ 

@@ -1,0 +1,162 @@
+ DEBUG: NASTRAN main program starting...
+
+
+
+
+
+
+                                  ****
+                                *      *
+                               *        *
+                               *  N A S T R A N
+                               *        *
+                                *      *
+                                  ****
+
+
+                             SUN COMPUTER SYSTEMS    
+                                SOLARIS VERSION
+
+                          SYSTEM RELEASE -  1995 ED.
+
+                                DISTRIBUTED BY
+
+         COMPUTER SOFTWARE MANAGEMENT AND INFORMATION CENTER (COSMIC)
+                 UNIVERSITY OF GEORGIA, ATHENS, GEORGIA 30602
+                 PHONE: (706)542-3265      FAX: (706)542-4807
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     2
+                                                                                                                                    
+0                                                                                                                                   
+                                                                                                         
+                                                                                                         
+                         INSTALLATION CENTER USER INFORMATION GIVEN IN THIS SECTION                      
+                                                                                                         
+                                     *********************************************                       
+                                     *                                           *                       
+                                     *  PLEASE READ THE COMMENT IN DEMO PROBLEM  *                       
+                                     *  D01002A ABOUT SYSTEM TIMING CONSTANTS    *                       
+                                     *                                           *                       
+                                     *********************************************                       
+                                                                                                         
+                         ===X=    TOP OF PAGE REQUEST IF 'X' IS REPLACED BY '='                          
+                                                                                                         
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     3
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    D E C K    E C H O                                                  
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     ID    T08022A,NASTRAN                                                           
+     APP   DISP                                                                      
+     SOL   8                                                                         
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  397
+     DIAG  14                                                                        
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  520
+     TIME  20                                                                        
+     $                                                                               
+
+
+ *** CAN NOT OPEN FILE (UNIT= 60) - COSDFVA
+     SUGGESTION- CHECK USER ID OR QUALIFIER
+                                                                                     
+     $                                                                               
+     CEND                                                                            
+1     ROTATING CYCLIC STRUCTURE (TIME DEP. LOADS, PHYSICAL I/O)             /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     4
+      NASTRAN TEST PROBLEM NO. T08-02-2A                                                                                            
+0                                                                                                                                   
+0                                        C A S E    C O N T R O L   D E C K   E C H O                                               
+                 CARD                                                                                                               
+                 COUNT                                                                                                              
+                  1      TITLE    = ROTATING CYCLIC STRUCTURE (TIME DEP. LOADS, PHYSICAL I/O)            
+                  2      SUBTITLE = NASTRAN TEST PROBLEM NO. T08-02-2A                                   
+                  3      $                                                                               
+                  4         SPC   = 30                                                                   
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  5         TSTEP = 1                                                                    
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  6      OUTPUT                                                                          
+0*** USER FATAL MESSAGE    617
+ INCORRECT OR MISSING VALUE ON CASE CONTROL CARD.  CHECK FOR CORRECT CARD FORMAT.
+                  7         SET 1 = 8,16,18                                                              
+0*** USER FATAL MESSAGE    614
+ THE ABOVE SET IS INCORRECTLY SPECIFIED.  CHECK FORMAT ON THIS OR PREVIOUS CARD.
+                  8         SET 2 = 11                                                                   
+0*** USER FATAL MESSAGE    614
+ THE ABOVE SET IS INCORRECTLY SPECIFIED.  CHECK FORMAT ON THIS OR PREVIOUS CARD.
+                  9         OLOAD = 1                                                                    
+0*** USER FATAL MESSAGE    608
+ THE SET ID SPECIFIED ON THE ABOVE CARD MUST BE DEFINED PRIOR TO THIS CARD.
+                 10         DISP(SORT2,PHASE)   = 1                                                      
+0*** USER FATAL MESSAGE    608
+ THE SET ID SPECIFIED ON THE ABOVE CARD MUST BE DEFINED PRIOR TO THIS CARD.
+                 11         STRESS(SORT2,PHASE) = 2                                                      
+0*** USER FATAL MESSAGE    608
+ THE SET ID SPECIFIED ON THE ABOVE CARD MUST BE DEFINED PRIOR TO THIS CARD.
+                 12            SUBCASE 1                                                                 
+                 13               LABEL = SEGMENT 1                                                      
+                 14               DLOAD = 1   $ TIME DEPENDENT LOADS                                     
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                 15            SUBCASE 2                                                                 
+                 16               LABEL = SEGMENT 2                                                      
+                 17               DLOAD = 2   $ TIME DEPENDENT LOADS                                     
+1     ROTATING CYCLIC STRUCTURE (TIME DEP. LOADS, PHYSICAL I/O)             /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     5
+      NASTRAN TEST PROBLEM NO. T08-02-2A                                                                                            
+0                                                                                                                                   
+0                                        C A S E    C O N T R O L   D E C K   E C H O                                               
+                 CARD                                                                                                               
+                 COUNT                                                                                                              
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                 18            SUBCASE 3                                                                 
+                 19               LABEL = SEGMENT 3                                                      
+                 20               DLOAD = 3   $ TIME DEPENDENT LOADS                                     
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                 21            SUBCASE 4                                                                 
+                 22               LABEL = SEGMENT 4                                                      
+                 23               DLOAD = 4   $ TIME DEPENDENT LOADS                                     
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                 24            SUBCASE 5                                                                 
+                 25               LABEL = SEGMENT 5                                                      
+                 26               DLOAD = 5   $ TIME DEPENDENT LOADS                                     
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                 27            SUBCASE 6                                                                 
+                 28               LABEL = SEGMENT 6                                                      
+                 29               DLOAD = 6   $ TIME DEPENDENT LOADS                                     
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                 30            SUBCASE 7                                                                 
+                 31               LABEL = SEGMENT 7                                                      
+                 32               DLOAD = 7   $ TIME DEPENDENT LOADS                                     
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                 33            SUBCASE 8                                                                 
+                 34               LABEL = SEGMENT 8                                                      
+                 35               DLOAD = 8   $ TIME DEPENDENT LOADS                                     
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                 36            SUBCASE 9                                                                 
+1     ROTATING CYCLIC STRUCTURE (TIME DEP. LOADS, PHYSICAL I/O)             /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     6
+      NASTRAN TEST PROBLEM NO. T08-02-2A                                                                                            
+0                                                                                                                                   
+0                                        C A S E    C O N T R O L   D E C K   E C H O                                               
+                 CARD                                                                                                               
+                 COUNT                                                                                                              
+                 37               LABEL = SEGMENT 9                                                      

@@ -60,18 +60,31 @@ C
       DATA XSAV , YCHK  /4HXSAV, 4HXCHK/
 C*****
 C INITIALIZE MACHINE DEPENDENT CONSTANTS
+      WRITE(0,*) '>>> DEBUG XSEM00: Calling BTSTRP...'
+      WRITE(6,*) 'DEBUG XSEM00: Calling BTSTRP...'
+      CALL FLUSH(6)
+      CALL FLUSH(0)
       CALL BTSTRP
+      WRITE(0,*) '>>> DEBUG XSEM00: BTSTRP done'
+      WRITE(6,*) 'DEBUG XSEM00: BTSTRP done'
+      CALL FLUSH(6)
+      CALL FLUSH(0)
       LVAX = MACH.EQ.5
 C*****
 C EXECUTE PREFACE
 C*****
+      WRITE(0,*) '>>> DEBUG XSEM00: Computing KSCR...'
       KSCR= LSHIFT(1,NBPW-4*NBPC)
+      WRITE(0,*) '>>> DEBUG XSEM00: Calling TDATE...'
       CALL TDATE(XX(14))
+      WRITE(0,*) '>>> DEBUG XSEM00: Calling CONMSG...'
       CALL CONMSG(WORDB,2,1)
 C
 C     DEBUG TRACING - ADDED 2026-02-09
-      WRITE(6,*) 'DEBUG: About to call SEMINT (PREFACE)...'
+      WRITE(0,*) '>>> DEBUG XSEM00: About to call SEMINT (PREFACE)...'
+      WRITE(6,*) 'DEBUG XSEM00: About to call SEMINT (PREFACE)...'
       CALL FLUSH(6)
+      CALL FLUSH(0)
 C
       CALL SEMINT ( 0 )
 C

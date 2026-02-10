@@ -1,0 +1,102 @@
+     NASTRAN FILES=(NPTP,PLT2)                                                       
+
+
+
+
+
+
+                                  ****
+                                *      *
+                               *        *
+                               *  N A S T R A N
+                               *        *
+                                *      *
+                                  ****
+
+
+                             SUN COMPUTER SYSTEMS    
+                                SOLARIS VERSION
+
+                          SYSTEM RELEASE -  1995 ED.
+
+                                DISTRIBUTED BY
+
+         COMPUTER SOFTWARE MANAGEMENT AND INFORMATION CENTER (COSMIC)
+                 UNIVERSITY OF GEORGIA, ATHENS, GEORGIA 30602
+                 PHONE: (706)542-3265      FAX: (706)542-4807
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     2
+                                                                                                                                    
+0                                                                                                                                   
+                                                                                                         
+                                                                                                         
+                         INSTALLATION CENTER USER INFORMATION GIVEN IN THIS SECTION                      
+                                                                                                         
+                                     *********************************************                       
+                                     *                                           *                       
+                                     *  PLEASE READ THE COMMENT IN DEMO PROBLEM  *                       
+                                     *  D01002A ABOUT SYSTEM TIMING CONSTANTS    *                       
+                                     *                                           *                       
+                                     *********************************************                       
+                                                                                                         
+                         ===X=    TOP OF PAGE REQUEST IF 'X' IS REPLACED BY '='                          
+                                                                                                         
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     3
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    D E C K    E C H O                                                  
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     ID    D11011A,NASTRAN                                                           
+     CHKPNT YES                                                                      
+     APP    DISPLACEMENT                                                             
+     SOL    11,3                                                                     
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  397
+     DIAG   14                                                                       
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  520
+     TIME   25                                                                       
+     ALTER  86 $                                                                     
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  350
+     MATPRN   PHIA,,,,// $                                                           
+     ENDALTER $                                                                      
+     CEND                                                                            
+0*** USER FATAL MESSAGE 8020, SYNTAX ERROR NEAR COLUMN  16 IN THE FOLLOWING CARD- 
+                    ****SBST   1,  3                                                                
+                    0        1         2         3         4         5         6         7         8
+                    1        0         0         0         0         0         0         0         0
+0*** USER FATAL MESSAGE 8020, SYNTAX ERROR NEAR COLUMN  16 IN THE FOLLOWING CARD- 
+                    ****SBST   2,  3                                                                
+                    0        1         2         3         4         5         6         7         8
+                    1        0         0         0         0         0         0         0         0
+0*** USER FATAL MESSAGE 8020, SYNTAX ERROR NEAR COLUMN  16 IN THE FOLLOWING CARD- 
+                    ****SBST   2,  3                                                                
+                    0        1         2         3         4         5         6         7         8
+                    1        0         0         0         0         0         0         0         0
+0*** USER FATAL MESSAGE 8020, SYNTAX ERROR NEAR COLUMN  16 IN THE FOLLOWING CARD- 
+                    ****SBST   1,  3                                                                
+                    0        1         2         3         4         5         6         7         8
+                    1        0         0         0         0         0         0         0         0
+0*** USER FATAL MESSAGE 8020, SYNTAX ERROR NEAR COLUMN  16 IN THE FOLLOWING CARD- 
+                    ****SBST   1,  3                                                                
+                    0        1         2         3         4         5         6         7         8
+                    1        0         0         0         0         0         0         0         0
+0*** USER FATAL MESSAGE 8020, SYNTAX ERROR NEAR COLUMN  16 IN THE FOLLOWING CARD- 
+                    ****SBST   1,  3                                                                
+                    0        1         2         3         4         5         6         7         8
+                    1        0         0         0         0         0         0         0         0
+  ERRTRC CALLED
+  NAME=WRTMSG  
+  IVAL=         100
+
+
+
+
+                                        * * * END OF JOB * * *
+1
+ JOB TITLE =                                                                     
+ DATE:  2/10/26
+ END TIME: 12:35: 2
+ TOTAL WALL CLOCK TIME      0 SEC.
+ 

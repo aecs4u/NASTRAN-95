@@ -8,6 +8,7 @@ C     SOFUT     //V,N,DRY/C,N,NAME1/C,N,OPER/C,N,OPT/C,N,NAME2/
 C                 C,N,PREFX/C,N,IA/C,N,IB/C,N,IC/C,N,ID/C,N,IE $
 C
       LOGICAL         DITUP
+      EXTERNAL        RENAME
       INTEGER         DRY,OPER,OPT,PREFX,SYSBUF,DELE,RENAM,NAME(2)
       CHARACTER       UFM*23,UWM*25
       COMMON /XMSSG / UFM,UWM
@@ -109,11 +110,7 @@ C
 C
 C     RENAME OPERATION
 C
-C     TODO: RENAME intrinsic in gfortran only takes 2 args (oldpath, newpath)
-C     Original code: CALL RENAME (NAME1,NAME2,IZ(1),NZ,ITEST)
-C     Temporarily disabled - may need custom wrapper for rename() syscall
-  200 ITEST = 0
-C      CALL RENAME (NAME1,NAME2,IZ(1),NZ,ITEST)
+  200 CALL RENAME (NAME1,NAME2,IZ(1),NZ,ITEST)
       GO TO 50
 C
 C     ERROR MESSAGES

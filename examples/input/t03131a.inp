@@ -10,7 +10,7 @@ $
 READFILE COSDDAM                                                                
 $                                                                               
 SOL   3                                                                         
-APP   DISP                                                                      
+$ APP   DISP                                                                      
 TIME  20                                                                        
 CEND                                                                            
 TITLE    = NAVY DYNAMIC DESIGN ANALYSIS METHOD (DDAM)                           

@@ -67,51 +67,51 @@ CCONEAX 48      15      47      48
 CCONEAX 49      15      48      49                                              
 CCONEAX 50      15      49      50                                              
 MAT1    15      91.0            .3      .5                                      
-MOMAX   15      50      0       157.0796        2.0                             
-MOMAX   15      50      1       157.0796        1.0                             
-MOMAX   15      50      2       157.0796        1.0                             
-MOMAX   15      50      3       157.0796        1.0                             
-MOMAX   15      50      4       157.0796        1.0                             
-MOMAX   15      50      5       157.0796        1.0                             
-MOMAX   15      50      6       157.0796        1.0                             
-MOMAX   15      50      7       157.0796        1.0                             
-MOMAX   15      50      8       157.0796        1.0                             
-MOMAX   15      50      9       157.0796        1.0                             
-MOMAX   15      50      10      157.0796        1.0                             
-MOMAX   15      50      11      157.0796        1.0                             
-MOMAX   15      50      12      157.0796        1.0                             
-MOMAX   15      50      13      157.0796        1.0                             
-MOMAX   15      50      14      157.0796        1.0                             
-MOMAX   15      50      15      157.0796        1.0                             
-MOMAX   15      50      16      157.0796        1.0                             
-MOMAX   15      50      17      157.0796        1.0                             
-MOMAX   15      50      18      157.0796        1.0                             
-MOMAX   15      50      19      157.0796        1.0                             
-MOMAX   15      50      20      157.0796        1.0                             
-MOMAX   15      100     0       157.0796        -2.0                            
-MOMAX   15      100     1       157.0796        -1.0                            
-MOMAX   15      100     2       157.0796        -1.0                            
-MOMAX   15      100     3       157.0796        -1.0                            
-MOMAX   15      100     4       157.0796        -1.0                            
-MOMAX   15      100     5       157.0796        -1.0                            
-MOMAX   15      100     6       157.0796        -1.0                            
-MOMAX   15      100     7       157.0796        -1.0                            
-MOMAX   15      100     8       157.0796        -1.0                            
-MOMAX   15      100     9       157.0796        -1.0                            
-MOMAX   15      100     10      157.0796        -1.0                            
-MOMAX   15      100     11      157.0796        -1.0                            
-MOMAX   15      100     12      157.0796        -1.0                            
-MOMAX   15      100     13      157.0796        -1.0                            
-MOMAX   15      100     14      157.0796        -1.0                            
-MOMAX   15      100     15      157.0796        -1.0                            
-MOMAX   15      100     16      157.0796        -1.0                            
-MOMAX   15      100     17      157.0796        -1.0                            
-MOMAX   15      100     18      157.0796        -1.0                            
-MOMAX   15      100     19      157.0796        -1.0                            
-MOMAX   15      100     20      157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      50      0       157.0796        2.0                             
+$ OBSOLETE: MOMAX   15      50      1       157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      2       157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      3       157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      4       157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      5       157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      6       157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      7       157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      8       157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      9       157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      10      157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      11      157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      12      157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      13      157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      14      157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      15      157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      16      157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      17      157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      18      157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      19      157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      50      20      157.0796        1.0                             
+$ OBSOLETE: MOMAX   15      100     0       157.0796        -2.0                            
+$ OBSOLETE: MOMAX   15      100     1       157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     2       157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     3       157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     4       157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     5       157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     6       157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     7       157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     8       157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     9       157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     10      157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     11      157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     12      157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     13      157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     14      157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     15      157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     16      157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     17      157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     18      157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     19      157.0796        -1.0                            
+$ OBSOLETE: MOMAX   15      100     20      157.0796        -1.0                            
 PCONEAX 15      15      1.0     15      .083333315      1.0     .5      +PC     
 +PC     .0      .5      .0      90.     180.                                    
-POINTAX 200     100                                                             
+GRID    200     100                                                             
 RINGAX  1               50.0    1.0                     4                       
 RINGAX  2               50.0    2.0                     4                       
 RINGAX  3               50.0    3.                      4                       

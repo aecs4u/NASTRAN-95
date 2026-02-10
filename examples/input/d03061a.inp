@@ -12,66 +12,66 @@ THERMAL = ALL
 OLOAD   = ALL                                                                   
 ELFORCE = ALL                                                                   
 BEGIN BULK                                                                      
-CHBDY   21      101     LINE    20      1                               +B1     
+CHBDYP  21      101     LINE    20      1                               +B1     
 +B1                                     1.0                                     
-CHBDY   22      101     LINE    1       2                               +B2     
+CHBDYP  22      101     LINE    1       2                               +B2     
 +B2                                     1.0                                     
-CHBDY   23      101     LINE    2       3                               +B3     
+CHBDYP  23      101     LINE    2       3                               +B3     
 +B3                                     1.0                                     
-CHBDY   24      101     LINE    3       4                               +B4     
+CHBDYP  24      101     LINE    3       4                               +B4     
 +B4                                     1.0                                     
-CHBDY   25      101     LINE    4       5                               +B5     
+CHBDYP  25      101     LINE    4       5                               +B5     
 +B5                                     1.0                                     
-CHBDY   26      101     LINE    5       6                               +B6     
+CHBDYP  26      101     LINE    5       6                               +B6     
 +B6                                     -1.0                                    
-CHBDY   27      101     LINE    6       7                               +B7     
+CHBDYP  27      101     LINE    6       7                               +B7     
 +B7                                     -1.0                                    
-CHBDY   28      101     LINE    7       8                               +B8     
+CHBDYP  28      101     LINE    7       8                               +B8     
 +B8                                     -1.0                                    
-CHBDY   29      101     LINE    8       9                               +B9     
+CHBDYP  29      101     LINE    8       9                               +B9     
 +B9                                     -1.0                                    
-CHBDY   30      101     LINE    9       10                              +B10    
+CHBDYP  30      101     LINE    9       10                              +B10    
 +B10                                    -1.0                                    
-CHBDY   31      101     LINE    10      11                              +B11    
+CHBDYP  31      101     LINE    10      11                              +B11    
 +B11                                    -1.0                                    
-CHBDY   32      101     LINE    11      12                              +B12    
+CHBDYP  32      101     LINE    11      12                              +B12    
 +B12                                    -1.0                                    
-CHBDY   33      101     LINE    12      13                              +B13    
+CHBDYP  33      101     LINE    12      13                              +B13    
 +B13                                    -1.0                                    
-CHBDY   34      101     LINE    13      14                              +B14    
+CHBDYP  34      101     LINE    13      14                              +B14    
 +B14                                    -1.0                                    
-CHBDY   35      101     LINE    14      15                              +B15    
+CHBDYP  35      101     LINE    14      15                              +B15    
 +B15                                    -1.0                                    
-CHBDY   36      101     LINE    15      16                              +B16    
+CHBDYP  36      101     LINE    15      16                              +B16    
 +B16                                    1.0                                     
-CHBDY   37      101     LINE    16      17                              +B17    
+CHBDYP  37      101     LINE    16      17                              +B17    
 +B17                                    1.0                                     
-CHBDY   38      101     LINE    17      18                              +B18    
+CHBDYP  38      101     LINE    17      18                              +B18    
 +B18                                    1.0                                     
-CHBDY   39      101     LINE    18      19                              +B19    
+CHBDYP  39      101     LINE    18      19                              +B19    
 +B19                                    1.0                                     
-CHBDY   40      101     LINE    19      20                              +B20    
+CHBDYP  40      101     LINE    19      20                              +B20    
 +B20                                    1.0                                     
-CHBDY   41      101     LINE    20      1                                       
-CHBDY   42      101     LINE    1       2                                       
-CHBDY   43      101     LINE    2       3                                       
-CHBDY   44      101     LINE    3       4                                       
-CHBDY   45      101     LINE    4       5                                       
-CHBDY   46      101     LINE    5       6                                       
-CHBDY   47      101     LINE    6       7                                       
-CHBDY   48      101     LINE    7       8                                       
-CHBDY   49      101     LINE    8       9                                       
-CHBDY   50      101     LINE    9       10                                      
-CHBDY   51      101     LINE    10      11                                      
-CHBDY   52      101     LINE    11      12                                      
-CHBDY   53      101     LINE    12      13                                      
-CHBDY   54      101     LINE    13      14                                      
-CHBDY   55      101     LINE    14      15                                      
-CHBDY   56      101     LINE    15      16                                      
-CHBDY   57      101     LINE    16      17                                      
-CHBDY   58      101     LINE    17      18                                      
-CHBDY   59      101     LINE    18      19                                      
-CHBDY   60      101     LINE    19      20                                      
+CHBDYP  41      101     LINE    20      1                                       
+CHBDYP  42      101     LINE    1       2                                       
+CHBDYP  43      101     LINE    2       3                                       
+CHBDYP  44      101     LINE    3       4                                       
+CHBDYP  45      101     LINE    4       5                                       
+CHBDYP  46      101     LINE    5       6                                       
+CHBDYP  47      101     LINE    6       7                                       
+CHBDYP  48      101     LINE    7       8                                       
+CHBDYP  49      101     LINE    8       9                                       
+CHBDYP  50      101     LINE    9       10                                      
+CHBDYP  51      101     LINE    10      11                                      
+CHBDYP  52      101     LINE    11      12                                      
+CHBDYP  53      101     LINE    12      13                                      
+CHBDYP  54      101     LINE    13      14                                      
+CHBDYP  55      101     LINE    14      15                                      
+CHBDYP  56      101     LINE    15      16                                      
+CHBDYP  57      101     LINE    16      17                                      
+CHBDYP  58      101     LINE    17      18                                      
+CHBDYP  59      101     LINE    18      19                                      
+CHBDYP  60      101     LINE    19      20                                      
 CORD2C  1                                                       1.0     +CORD1  
 +CORD1  1.0                                                                     
 CROD    1       100     20      1       2       100     1       2               

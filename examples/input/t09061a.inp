@@ -367,266 +367,266 @@ GRID*   154                                 2.700000E-01    2.060000E+00*GD  154
 *GD  154   -4.000000E-02                                                        
 GRID*   155                                 4.700000E-01    2.060000E+00*GD  155
 *GD  155   -8.999997E-02                                                        
-PQUAD2    1     1       .012                                                    
-PQUAD2    2     1       .024                                                    
-PQUAD2    3     1       .032                                                    
-PQUAD2    4     1       .036                                                    
-PQUAD2    5     1       .030                                                    
-PQUAD2    6     1       .018                                                    
-PQUAD2    7     1       .014                                                    
-PQUAD2    8     1       .028                                                    
-PQUAD2    9     1       .037                                                    
-PQUAD2   10     1       .043                                                    
-PQUAD2   11     1       .036                                                    
-PQUAD2   12     1       .022                                                    
-PQUAD2   13     1       .016                                                    
-PQUAD2   14     1       .032                                                    
-PQUAD2   15     1       .048                                                    
-PQUAD2   16     1       .051                                                    
-PQUAD2   17     1       .042                                                    
-PQUAD2   18     1       .023                                                    
-PQUAD2   19     1       .018                                                    
-PQUAD2   20     1       .034                                                    
-PQUAD2   21     1       .053                                                    
-PQUAD2   22     1       .058                                                    
-PQUAD2   23     1       .046                                                    
-PQUAD2   24     1       .025                                                    
-PQUAD2   25     1       .021                                                    
-PQUAD2   26     1       .042                                                    
-PQUAD2   27     1       .061                                                    
-PQUAD2   28     1       .066                                                    
-PQUAD2   29     1       .051                                                    
-PQUAD2   30     1       .027                                                    
-PQUAD2   31     1       .024                                                    
-PQUAD2   32     1       .049                                                    
-PQUAD2   33     1       .070                                                    
-PQUAD2   34     1       .073                                                    
-PQUAD2   35     1       .057                                                    
-PQUAD2   36     1       .030                                                    
-PQUAD2   37     1       .028                                                    
-PQUAD2   38     1       .054                                                    
-PQUAD2   39     1       .078                                                    
-PQUAD2   40     1       .082                                                    
-PQUAD2   41     1       .065                                                    
-PQUAD2   42     1       .035                                                    
-PQUAD2   43     1       .031                                                    
-PQUAD2   44     1       .061                                                    
-PQUAD2   45     1       .088                                                    
-PQUAD2   46     1       .093                                                    
-PQUAD2   47     1       .075                                                    
-PQUAD2   48     1       .039                                                    
-PQUAD2   49     1       .038                                                    
-PQUAD2   50     1       .068                                                    
-PQUAD2   51     1       .098                                                    
-PQUAD2   52     1       .103                                                    
-PQUAD2   53     1       .083                                                    
-PQUAD2   54     1       .046                                                    
-PQUAD2   55     1       .041                                                    
-PQUAD2   56     1       .076                                                    
-PQUAD2   57     1       .110                                                    
-PQUAD2   58     1       .118                                                    
-PQUAD2   59     1       .091                                                    
-PQUAD2   60     1       .047                                                    
-PQUAD2   61     1       .043                                                    
-PQUAD2   62     1       .083                                                    
-PQUAD2   63     1       .120                                                    
-PQUAD2   64     1       .129                                                    
-PQUAD2   65     1       .100                                                    
-PQUAD2   66     1       .044                                                    
-PQUAD2   67     1       .045                                                    
-PQUAD2   68     1       .090                                                    
-PQUAD2   69     1       .135                                                    
-PQUAD2   70     1       .138                                                    
-PQUAD2   71     1       .100                                                    
-PQUAD2   72     1       .048                                                    
-PQUAD2   73     1       .053                                                    
-PQUAD2   74     1       .106                                                    
-PQUAD2   75     1       .152                                                    
-PQUAD2   76     1       .148                                                    
-PQUAD2   77     1       .099                                                    
-PQUAD2   78     1       .044                                                    
-PQUAD2   79     1       .063                                                    
-PQUAD2   80     1       .123                                                    
-PQUAD2   81     1       .171                                                    
-PQUAD2   82     1       .157                                                    
-PQUAD2   83     1       .099                                                    
-PQUAD2   84     1       .046                                                    
-PQUAD2   85     1       .071                                                    
-PQUAD2   86     1       .141                                                    
-PQUAD2   87     1       .206                                                    
-PQUAD2   88     1       .177                                                    
-PQUAD2   89     1       .112                                                    
-PQUAD2   90     1       .048                                                    
-PQUAD2   91     1       .084                                                    
-PQUAD2   92     1       .172                                                    
-PQUAD2   93     1       .232                                                    
-PQUAD2   94     1       .198                                                    
-PQUAD2   95     1       .135                                                    
-PQUAD2   96     1       .062                                                    
-PQUAD2   97     1       .119                                                    
-PQUAD2   98     1       .206                                                    
-PQUAD2   99     1       .266                                                    
-PQUAD2   100    1       .230                                                    
-PQUAD2   101    1       .152                                                    
-PQUAD2   102    1       .071                                                    
-PQUAD2   103    1       .161                                                    
-PQUAD2   104    1       .237                                                    
-PQUAD2   105    1       .347                                                    
-PQUAD2   106    1       .319                                                    
-PQUAD2   107    1       .167                                                    
-PQUAD2   108    1       .075                                                    
-PQUAD2   109    1       .222                                                    
-PQUAD2   110    1       .373                                                    
-PQUAD2   121    1       .242                                                    
-PQUAD2   122    1       .089                                                    
-PQUAD2   123    1       .441                                                    
-PQUAD2   124    1       .830                                                    
-PQUAD2   125    1       .830                                                    
-PQUAD2   126    1       .441                                                    
-PQUAD2   127    1       .441                                                    
-PQUAD2   128    1       .830                                                    
-PQUAD2   129    1       .830                                                    
-PQUAD2   130    1       .441                                                    
-PTRIA2   111    1       .531                                                    
-PTRIA2   112    1       .532                                                    
-PTRIA2   113    1       .396                                                    
-PTRIA2   114    1       .544                                                    
-PTRIA2   115    1       .590                                                    
-PTRIA2   116    1       .591                                                    
-PTRIA2   117    1       .557                                                    
-PTRIA2   118    1       .519                                                    
-PTRIA2   119    1       .396                                                    
-PTRIA2   120    1       .377                                                    
-CQUAD2    1       1       1       2       9       8                             
-CQUAD2    2       2       2       3      10       9                             
-CQUAD2    3       3       3       4      11      10                             
-CQUAD2    4       4       4       5      12      11                             
-CQUAD2    5       5       5       6      13      12                             
-CQUAD2    6       6       6       7      14      13                             
-CQUAD2    7       7       8       9      16      15                             
-CQUAD2    8       8       9      10      17      16                             
-CQUAD2    9       9      10      11      18      17                             
-CQUAD2   10      10      11      12      19      18                             
-CQUAD2   11      11      12      13      20      19                             
-CQUAD2   12      12      13      14      21      20                             
-CQUAD2   13      13      15      16      23      22                             
-CQUAD2   14      14      16      17      24      23                             
-CQUAD2   15      15      17      18      25      24                             
-CQUAD2   16      16      18      19      26      25                             
-CQUAD2   17      17      19      20      27      26                             
-CQUAD2   18      18      20      21      28      27                             
-CQUAD2   19      19      22      23      30      29                             
-CQUAD2   20      20      23      24      31      30                             
-CQUAD2   21      21      24      25      32      31                             
-CQUAD2   22      22      25      26      33      32                             
-CQUAD2   23      23      26      27      34      33                             
-CQUAD2   24      24      27      28      35      34                             
-CQUAD2   25      25      29      30      37      36                             
-CQUAD2   26      26      30      31      38      37                             
-CQUAD2   27      27      31      32      39      38                             
-CQUAD2   28      28      32      33      40      39                             
-CQUAD2   29      29      33      34      41      40                             
-CQUAD2   30      30      34      35      42      41                             
-CQUAD2   31      31      36      37      44      43                             
-CQUAD2   32      32      37      38      45      44                             
-CQUAD2   33      33      38      39      46      45                             
-CQUAD2   34      34      39      40      47      46                             
-CQUAD2   35      35      40      41      48      47                             
-CQUAD2   36      36      41      42      49      48                             
-CQUAD2   37      37      43      44      51      50                             
-CQUAD2   38      38      44      45      52      51                             
-CQUAD2   39      39      45      46      53      52                             
-CQUAD2   40      40      46      47      54      53                             
-CQUAD2   41      41      47      48      55      54                             
-CQUAD2   42      42      48      49      56      55                             
-CQUAD2   43      43      50      51      58      57                             
-CQUAD2   44      44      51      52      59      58                             
-CQUAD2   45      45      52      53      60      59                             
-CQUAD2   46      46      53      54      61      60                             
-CQUAD2   47      47      54      55      62      61                             
-CQUAD2   48      48      55      56      63      62                             
-CQUAD2   49      49      57      58      65      64                             
-CQUAD2   50      50      58      59      66      65                             
-CQUAD2   51      51      59      60      67      66                             
-CQUAD2   52      52      60      61      68      67                             
-CQUAD2   53      53      61      62      69      68                             
-CQUAD2   54      54      62      63      70      69                             
-CQUAD2   55      55      64      65      72      71                             
-CQUAD2   56      56      65      66      73      72                             
-CQUAD2   57      57      66      67      74      73                             
-CQUAD2   58      58      67      68      75      74                             
-CQUAD2   59      59      68      69      76      75                             
-CQUAD2   60      60      69      70      77      76                             
-CQUAD2   61      61      71      72      79      78                             
-CQUAD2   62      62      72      73      80      79                             
-CQUAD2   63      63      73      74      81      80                             
-CQUAD2   64      64      74      75      82      81                             
-CQUAD2   65      65      75      76      83      82                             
-CQUAD2   66      66      76      77      84      83                             
-CQUAD2   67      67      78      79      86      85                             
-CQUAD2   68      68      79      80      87      86                             
-CQUAD2   69      69      80      81      88      87                             
-CQUAD2   70      70      81      82      89      88                             
-CQUAD2   71      71      82      83      90      89                             
-CQUAD2   72      72      83      84      91      90                             
-CQUAD2   73      73      85      86      93      92                             
-CQUAD2   74      74      86      87      94      93                             
-CQUAD2   75      75      87      88      95      94                             
-CQUAD2   76      76      88      89      96      95                             
-CQUAD2   77      77      89      90      97      96                             
-CQUAD2   78      78      90      91      98      97                             
-CQUAD2   79      79      92      93     100      99                             
-CQUAD2   80      80      93      94     101     100                             
-CQUAD2   81      81      94      95     102     101                             
-CQUAD2   82      82      95      96     103     102                             
-CQUAD2   83      83      96      97     104     103                             
-CQUAD2   84      84      97      98     105     104                             
-CQUAD2   85      85      99     100     107     106                             
-CQUAD2   86      86     100     101     108     107                             
-CQUAD2   87      87     101     102     109     108                             
-CQUAD2   88      88     102     103     110     109                             
-CQUAD2   89      89     103     104     111     110                             
-CQUAD2   90      90     104     105     112     111                             
-CQUAD2   91      91     106     107     114     113                             
-CQUAD2   92      92     107     108     115     114                             
-CQUAD2   93      93     108     109     116     115                             
-CQUAD2   94      94     109     110     117     116                             
-CQUAD2   95      95     110     111     118     117                             
-CQUAD2   96      96     111     112     119     118                             
-CQUAD2   97      97     113     114     121     120                             
-CQUAD2   98      98     114     115     122     121                             
-CQUAD2   99      99     115     116     123     122                             
-CQUAD2  100     100     116     117     124     123                             
-CQUAD2  101     101     117     118     125     124                             
-CQUAD2  102     102     118     119     126     125                             
-CQUAD2  103     103     120     121     128     127                             
-CQUAD2  104     104     121     122     129     128                             
-CQUAD2  105     105     122     123     130     129                             
-CQUAD2  106     106     123     124     131     130                             
-CQUAD2  107     107     124     125     132     131                             
-CQUAD2  108     108     125     126     133     132                             
-CQUAD2  109     109     127     128     135     134                             
-CQUAD2  110     110     128     129     136     135                             
-CQUAD2  121     121     131     132     144     143                             
-CQUAD2  122     122     132     133     145     144                             
-CQUAD2  123     123     138     139     147     146                             
-CQUAD2  124     124     139     140     148     147                             
-CQUAD2  125     125     140     141     149     148                             
-CQUAD2  126     126     141     142     150     149                             
-CQUAD2  127     127     146     147     152     151                             
-CQUAD2  128     128     147     148     153     152                             
-CQUAD2  129     129     148     149     154     153                             
-CQUAD2  130     130     149     150     155     154                             
-CTRIA2  111     111     129     138     136                                     
-CTRIA2  112     112     129     137     138                                     
-CTRIA2  113     113     129     130     137                                     
-CTRIA2  114     114     137     130     140                                     
-CTRIA2  115     115     138     137     139                                     
-CTRIA2  116     116     139     137     140                                     
-CTRIA2  117     117     140     130     141                                     
-CTRIA2  118     118     141     130     142                                     
-CTRIA2  119     119     130     131     142                                     
-CTRIA2  120     120     142     131     143                                     
+PSHELL    1     1       .012                                                    
+PSHELL    2     1       .024                                                    
+PSHELL    3     1       .032                                                    
+PSHELL    4     1       .036                                                    
+PSHELL    5     1       .030                                                    
+PSHELL    6     1       .018                                                    
+PSHELL    7     1       .014                                                    
+PSHELL    8     1       .028                                                    
+PSHELL    9     1       .037                                                    
+PSHELL   10     1       .043                                                    
+PSHELL   11     1       .036                                                    
+PSHELL   12     1       .022                                                    
+PSHELL   13     1       .016                                                    
+PSHELL   14     1       .032                                                    
+PSHELL   15     1       .048                                                    
+PSHELL   16     1       .051                                                    
+PSHELL   17     1       .042                                                    
+PSHELL   18     1       .023                                                    
+PSHELL   19     1       .018                                                    
+PSHELL   20     1       .034                                                    
+PSHELL   21     1       .053                                                    
+PSHELL   22     1       .058                                                    
+PSHELL   23     1       .046                                                    
+PSHELL   24     1       .025                                                    
+PSHELL   25     1       .021                                                    
+PSHELL   26     1       .042                                                    
+PSHELL   27     1       .061                                                    
+PSHELL   28     1       .066                                                    
+PSHELL   29     1       .051                                                    
+PSHELL   30     1       .027                                                    
+PSHELL   31     1       .024                                                    
+PSHELL   32     1       .049                                                    
+PSHELL   33     1       .070                                                    
+PSHELL   34     1       .073                                                    
+PSHELL   35     1       .057                                                    
+PSHELL   36     1       .030                                                    
+PSHELL   37     1       .028                                                    
+PSHELL   38     1       .054                                                    
+PSHELL   39     1       .078                                                    
+PSHELL   40     1       .082                                                    
+PSHELL   41     1       .065                                                    
+PSHELL   42     1       .035                                                    
+PSHELL   43     1       .031                                                    
+PSHELL   44     1       .061                                                    
+PSHELL   45     1       .088                                                    
+PSHELL   46     1       .093                                                    
+PSHELL   47     1       .075                                                    
+PSHELL   48     1       .039                                                    
+PSHELL   49     1       .038                                                    
+PSHELL   50     1       .068                                                    
+PSHELL   51     1       .098                                                    
+PSHELL   52     1       .103                                                    
+PSHELL   53     1       .083                                                    
+PSHELL   54     1       .046                                                    
+PSHELL   55     1       .041                                                    
+PSHELL   56     1       .076                                                    
+PSHELL   57     1       .110                                                    
+PSHELL   58     1       .118                                                    
+PSHELL   59     1       .091                                                    
+PSHELL   60     1       .047                                                    
+PSHELL   61     1       .043                                                    
+PSHELL   62     1       .083                                                    
+PSHELL   63     1       .120                                                    
+PSHELL   64     1       .129                                                    
+PSHELL   65     1       .100                                                    
+PSHELL   66     1       .044                                                    
+PSHELL   67     1       .045                                                    
+PSHELL   68     1       .090                                                    
+PSHELL   69     1       .135                                                    
+PSHELL   70     1       .138                                                    
+PSHELL   71     1       .100                                                    
+PSHELL   72     1       .048                                                    
+PSHELL   73     1       .053                                                    
+PSHELL   74     1       .106                                                    
+PSHELL   75     1       .152                                                    
+PSHELL   76     1       .148                                                    
+PSHELL   77     1       .099                                                    
+PSHELL   78     1       .044                                                    
+PSHELL   79     1       .063                                                    
+PSHELL   80     1       .123                                                    
+PSHELL   81     1       .171                                                    
+PSHELL   82     1       .157                                                    
+PSHELL   83     1       .099                                                    
+PSHELL   84     1       .046                                                    
+PSHELL   85     1       .071                                                    
+PSHELL   86     1       .141                                                    
+PSHELL   87     1       .206                                                    
+PSHELL   88     1       .177                                                    
+PSHELL   89     1       .112                                                    
+PSHELL   90     1       .048                                                    
+PSHELL   91     1       .084                                                    
+PSHELL   92     1       .172                                                    
+PSHELL   93     1       .232                                                    
+PSHELL   94     1       .198                                                    
+PSHELL   95     1       .135                                                    
+PSHELL   96     1       .062                                                    
+PSHELL   97     1       .119                                                    
+PSHELL   98     1       .206                                                    
+PSHELL   99     1       .266                                                    
+PSHELL   100    1       .230                                                    
+PSHELL   101    1       .152                                                    
+PSHELL   102    1       .071                                                    
+PSHELL   103    1       .161                                                    
+PSHELL   104    1       .237                                                    
+PSHELL   105    1       .347                                                    
+PSHELL   106    1       .319                                                    
+PSHELL   107    1       .167                                                    
+PSHELL   108    1       .075                                                    
+PSHELL   109    1       .222                                                    
+PSHELL   110    1       .373                                                    
+PSHELL   121    1       .242                                                    
+PSHELL   122    1       .089                                                    
+PSHELL   123    1       .441                                                    
+PSHELL   124    1       .830                                                    
+PSHELL   125    1       .830                                                    
+PSHELL   126    1       .441                                                    
+PSHELL   127    1       .441                                                    
+PSHELL   128    1       .830                                                    
+PSHELL   129    1       .830                                                    
+PSHELL   130    1       .441                                                    
+PSHELL   111    1       .531                                                    
+PSHELL   112    1       .532                                                    
+PSHELL   113    1       .396                                                    
+PSHELL   114    1       .544                                                    
+PSHELL   115    1       .590                                                    
+PSHELL   116    1       .591                                                    
+PSHELL   117    1       .557                                                    
+PSHELL   118    1       .519                                                    
+PSHELL   119    1       .396                                                    
+PSHELL   120    1       .377                                                    
+CQUAD4    1       1       1       2       9       8                             
+CQUAD4    2       2       2       3      10       9                             
+CQUAD4    3       3       3       4      11      10                             
+CQUAD4    4       4       4       5      12      11                             
+CQUAD4    5       5       5       6      13      12                             
+CQUAD4    6       6       6       7      14      13                             
+CQUAD4    7       7       8       9      16      15                             
+CQUAD4    8       8       9      10      17      16                             
+CQUAD4    9       9      10      11      18      17                             
+CQUAD4   10      10      11      12      19      18                             
+CQUAD4   11      11      12      13      20      19                             
+CQUAD4   12      12      13      14      21      20                             
+CQUAD4   13      13      15      16      23      22                             
+CQUAD4   14      14      16      17      24      23                             
+CQUAD4   15      15      17      18      25      24                             
+CQUAD4   16      16      18      19      26      25                             
+CQUAD4   17      17      19      20      27      26                             
+CQUAD4   18      18      20      21      28      27                             
+CQUAD4   19      19      22      23      30      29                             
+CQUAD4   20      20      23      24      31      30                             
+CQUAD4   21      21      24      25      32      31                             
+CQUAD4   22      22      25      26      33      32                             
+CQUAD4   23      23      26      27      34      33                             
+CQUAD4   24      24      27      28      35      34                             
+CQUAD4   25      25      29      30      37      36                             
+CQUAD4   26      26      30      31      38      37                             
+CQUAD4   27      27      31      32      39      38                             
+CQUAD4   28      28      32      33      40      39                             
+CQUAD4   29      29      33      34      41      40                             
+CQUAD4   30      30      34      35      42      41                             
+CQUAD4   31      31      36      37      44      43                             
+CQUAD4   32      32      37      38      45      44                             
+CQUAD4   33      33      38      39      46      45                             
+CQUAD4   34      34      39      40      47      46                             
+CQUAD4   35      35      40      41      48      47                             
+CQUAD4   36      36      41      42      49      48                             
+CQUAD4   37      37      43      44      51      50                             
+CQUAD4   38      38      44      45      52      51                             
+CQUAD4   39      39      45      46      53      52                             
+CQUAD4   40      40      46      47      54      53                             
+CQUAD4   41      41      47      48      55      54                             
+CQUAD4   42      42      48      49      56      55                             
+CQUAD4   43      43      50      51      58      57                             
+CQUAD4   44      44      51      52      59      58                             
+CQUAD4   45      45      52      53      60      59                             
+CQUAD4   46      46      53      54      61      60                             
+CQUAD4   47      47      54      55      62      61                             
+CQUAD4   48      48      55      56      63      62                             
+CQUAD4   49      49      57      58      65      64                             
+CQUAD4   50      50      58      59      66      65                             
+CQUAD4   51      51      59      60      67      66                             
+CQUAD4   52      52      60      61      68      67                             
+CQUAD4   53      53      61      62      69      68                             
+CQUAD4   54      54      62      63      70      69                             
+CQUAD4   55      55      64      65      72      71                             
+CQUAD4   56      56      65      66      73      72                             
+CQUAD4   57      57      66      67      74      73                             
+CQUAD4   58      58      67      68      75      74                             
+CQUAD4   59      59      68      69      76      75                             
+CQUAD4   60      60      69      70      77      76                             
+CQUAD4   61      61      71      72      79      78                             
+CQUAD4   62      62      72      73      80      79                             
+CQUAD4   63      63      73      74      81      80                             
+CQUAD4   64      64      74      75      82      81                             
+CQUAD4   65      65      75      76      83      82                             
+CQUAD4   66      66      76      77      84      83                             
+CQUAD4   67      67      78      79      86      85                             
+CQUAD4   68      68      79      80      87      86                             
+CQUAD4   69      69      80      81      88      87                             
+CQUAD4   70      70      81      82      89      88                             
+CQUAD4   71      71      82      83      90      89                             
+CQUAD4   72      72      83      84      91      90                             
+CQUAD4   73      73      85      86      93      92                             
+CQUAD4   74      74      86      87      94      93                             
+CQUAD4   75      75      87      88      95      94                             
+CQUAD4   76      76      88      89      96      95                             
+CQUAD4   77      77      89      90      97      96                             
+CQUAD4   78      78      90      91      98      97                             
+CQUAD4   79      79      92      93     100      99                             
+CQUAD4   80      80      93      94     101     100                             
+CQUAD4   81      81      94      95     102     101                             
+CQUAD4   82      82      95      96     103     102                             
+CQUAD4   83      83      96      97     104     103                             
+CQUAD4   84      84      97      98     105     104                             
+CQUAD4   85      85      99     100     107     106                             
+CQUAD4   86      86     100     101     108     107                             
+CQUAD4   87      87     101     102     109     108                             
+CQUAD4   88      88     102     103     110     109                             
+CQUAD4   89      89     103     104     111     110                             
+CQUAD4   90      90     104     105     112     111                             
+CQUAD4   91      91     106     107     114     113                             
+CQUAD4   92      92     107     108     115     114                             
+CQUAD4   93      93     108     109     116     115                             
+CQUAD4   94      94     109     110     117     116                             
+CQUAD4   95      95     110     111     118     117                             
+CQUAD4   96      96     111     112     119     118                             
+CQUAD4   97      97     113     114     121     120                             
+CQUAD4   98      98     114     115     122     121                             
+CQUAD4   99      99     115     116     123     122                             
+CQUAD4  100     100     116     117     124     123                             
+CQUAD4  101     101     117     118     125     124                             
+CQUAD4  102     102     118     119     126     125                             
+CQUAD4  103     103     120     121     128     127                             
+CQUAD4  104     104     121     122     129     128                             
+CQUAD4  105     105     122     123     130     129                             
+CQUAD4  106     106     123     124     131     130                             
+CQUAD4  107     107     124     125     132     131                             
+CQUAD4  108     108     125     126     133     132                             
+CQUAD4  109     109     127     128     135     134                             
+CQUAD4  110     110     128     129     136     135                             
+CQUAD4  121     121     131     132     144     143                             
+CQUAD4  122     122     132     133     145     144                             
+CQUAD4  123     123     138     139     147     146                             
+CQUAD4  124     124     139     140     148     147                             
+CQUAD4  125     125     140     141     149     148                             
+CQUAD4  126     126     141     142     150     149                             
+CQUAD4  127     127     146     147     152     151                             
+CQUAD4  128     128     147     148     153     152                             
+CQUAD4  129     129     148     149     154     153                             
+CQUAD4  130     130     149     150     155     154                             
+CTRIA3  111     111     129     138     136                                     
+CTRIA3  112     112     129     137     138                                     
+CTRIA3  113     113     129     130     137                                     
+CTRIA3  114     114     137     130     140                                     
+CTRIA3  115     115     138     137     139                                     
+CTRIA3  116     116     139     137     140                                     
+CTRIA3  117     117     140     130     141                                     
+CTRIA3  118     118     141     130     142                                     
+CTRIA3  119     119     130     131     142                                     
+CTRIA3  120     120     142     131     143                                     
 MAT1    1        1.6  E7         .35    .0004141                                
 SPC1    1       123456  151     THRU    155                                     
 SPC1    1       6       7       91      98      134     145                     

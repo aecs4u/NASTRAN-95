@@ -6,7 +6,7 @@ $     RIGID FORMAT BY SPECIFYING THE FOLLOWING SOLUTION NUMBER AND
 $     APPLICATION.  JOB WILL AUTOMATICALLY STOP                                 
 $                                                                               
 SOL   6                                                                         
-APP   DISP                                                                      
+$ APP   DISP                                                                      
 $=================================================================              
 TIME  2                                                                         
 DIAG  14,20                                                                     

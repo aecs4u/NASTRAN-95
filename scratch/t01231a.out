@@ -1,0 +1,151 @@
+ DEBUG: NASTRAN main program starting...
+     NASTRAN FILES=(INP1,INP2)                                                       
+
+
+
+
+
+
+                                  ****
+                                *      *
+                               *        *
+                               *  N A S T R A N
+                               *        *
+                                *      *
+                                  ****
+
+
+                             SUN COMPUTER SYSTEMS    
+                                SOLARIS VERSION
+
+                          SYSTEM RELEASE -  1995 ED.
+
+                                DISTRIBUTED BY
+
+         COMPUTER SOFTWARE MANAGEMENT AND INFORMATION CENTER (COSMIC)
+                 UNIVERSITY OF GEORGIA, ATHENS, GEORGIA 30602
+                 PHONE: (706)542-3265      FAX: (706)542-4807
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     2
+                                                                                                                                    
+0                                                                                                                                   
+                                                                                                         
+                                                                                                         
+                         INSTALLATION CENTER USER INFORMATION GIVEN IN THIS SECTION                      
+                                                                                                         
+                                     *********************************************                       
+                                     *                                           *                       
+                                     *  PLEASE READ THE COMMENT IN DEMO PROBLEM  *                       
+                                     *  D01002A ABOUT SYSTEM TIMING CONSTANTS    *                       
+                                     *                                           *                       
+                                     *********************************************                       
+                                                                                                         
+                         ===X=    TOP OF PAGE REQUEST IF 'X' IS REPLACED BY '='                          
+                                                                                                         
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     3
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    D E C K    E C H O                                                  
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     ID    T01231A,NASTRAN                                                           
+     APP   DISP                                                                      
+     SOL   1                                                                         
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  397
+     DIAG  8,15,-2,-14,-7                                                            
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  520
+     TIME  30                                                                        
+     $                                                                               
+     ALTER 113 $                                                                     
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  350
+     $                                                                               
+     $PRINT OQG1 TABLE FOR LATER COMPARISION                                         
+     OFP    OQG1,,,,, //S,N,CARDNO $                                                 
+     $                                                                               
+     $CDC USERS, USE UT1 (UNIT 11) AND UT2 (UNIT 12) INSTEAD OF INP1 AND INP2        
+     $IN THIS DEMO PROBLEM                                                           
+     $                                                                               
+     $COPY TABLE OQG1 TO INP1 (UNIT 15) AND COPY OQG1 TO MYFOOT (IN PACKED           
+     $GINO FILE)                                                                     
+     DUMMOD5 OQG1,,OQG1,,/,,MYFOOT,,/6/15/6/0/0/+1  $                                
+     $                                                                               
+     $PRINT  MYFOOT, IN MATRIX FORMAT, WHICH SHOULD CONTAIN OQG1 DATA                
+     $PRINT  MATRIX KGG FOR LATER COMPARISON                                         
+     MATPRN  MYFOOT,KGG,,,// $                                                       
+     $                                                                               
+     $COPY   MYFOOT AND KGG TO INP2 (UNIT 16), SEQUENTIAL FORMATTED TAPE             
+     OUTPUT5 MYFOOT,KGG,,,//-1/16/*YOURFEET*/1  $                                    
+     $                                                                               
+     $RECOVER THE 2 FILES FROM INP2 (UNIT 16) AND MAKE THEM NASTRAN GINO FILES       
+     INPUTT5 /OMYFOOT,OKGG,,,/-1/16/*YOURFEET*/1  $                                  
+     $                                                                               
+     $RECOVER THE BINARY FILE IN INP1 (UNIT 15) WHICH WAS SAVED IN DUMMOD5           
+     INPUTT5  /OQG1X,,,,/-1/15/*XXXXXXXX*/0  $                                       
+     $                                                                               
+     $TABLE  PRINT OQG1X AND OMYFOOT, AND MATRIX PRINT OKGG FOR VERIFICATION         
+     TABPT   OQG1X,OMYFOOT,,, // $                                                   
+     MATPRN  OKGG,,,, // $                                                           
+     $                                                                               
+     $JUMP TO FINISH                                                                 
+     JUMP  FINIS $                                                                   
+     $                                                                               
+     ENDALTER                                                                        
+     $                                                                               
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     4
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    D E C K    E C H O                                                  
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     CEND                                                                            
+1     DEMONSTRATION TO USE DUMMOD5, OUTPUT5 AND INPUT5                      /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     5
+      NASTRAN TEST PROBLEM NO. T01-23-1A                                                                                            
+0                                                                                                                                   
+0                                        C A S E    C O N T R O L   D E C K   E C H O                                               
+                 CARD                                                                                                               
+                 COUNT                                                                                                              
+                  1      TITLE    = DEMONSTRATION TO USE DUMMOD5, OUTPUT5 AND INPUT5                     
+                  2      SUBTITLE = NASTRAN TEST PROBLEM NO. T01-23-1A                                   
+                  3      LOAD    = 10                                                                    
+0*** USER FATAL MESSAGE300, INTEGER DATA OUT OF MACHINE RANGE
+
+     'LOAD    = 10                                                            '  ERROR IN XRCARD ROUTINE
+0*** USER FATAL MESSAGE    617
+ INCORRECT OR MISSING VALUE ON CASE CONTROL CARD.  CHECK FOR CORRECT CARD FORMAT.
+                  4      SPC     = 1                                                                     
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  5      SPCFORCE= ALL                                                                   
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  6      DISP    = NONE                                                                  
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  7      BEGIN BULK                                                                      
+
+ *** ILLEGAL CHARACTER ENCOUNTERED IN INPUT CARD
+    'GRDSET,8)246                                                                    '
+0*** SYSTEM FATAL MESSAGE 219, MISSING ENDDATA CARD.  IMHERE =    170
+
+
+                        (NO. OF UNSORTED BULK DATA CARDS READ =     0, INCLUDING   0 COMMENT CARDS)
+0*** USER FATAL MESSAGE 204, COLD START NO BULK DATA.
+  ERRTRC CALLED
+  NAME=WRTMSG  
+  IVAL=         100
+
+
+
+
+                                        * * * END OF JOB * * *
+1
+ JOB TITLE =  DEMONSTRATION TO USE DUMMOD5, OUTPUT5 AND INPUT5                   
+ DATE:  2/10/**
+ END TIME: 12: 4: 4
+ TOTAL WALL CLOCK TIME      0 SEC.
+ 

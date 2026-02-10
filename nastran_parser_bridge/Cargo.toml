@@ -1,0 +1,20 @@
+[package]
+name = "nastran_parser_bridge"
+version = "0.1.0"
+edition = "2021"
+authors = ["NASTRAN-95 Team"]
+description = "Rust bridge between pyNastran (Python) and NASTRAN-95 (Fortran)"
+
+[lib]
+name = "nastran_parser_bridge"
+crate-type = ["cdylib", "staticlib"]  # Both dynamic and static for flexibility
+
+[dependencies]
+pyo3 = { version = "0.20", features = ["auto-initialize"] }
+libc = "0.2"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true

@@ -1,0 +1,127 @@
+
+
+
+
+
+
+                                  ****
+                                *      *
+                               *        *
+                               *  N A S T R A N
+                               *        *
+                                *      *
+                                  ****
+
+
+                             SUN COMPUTER SYSTEMS    
+                                SOLARIS VERSION
+
+                          SYSTEM RELEASE -  1995 ED.
+
+                                DISTRIBUTED BY
+
+         COMPUTER SOFTWARE MANAGEMENT AND INFORMATION CENTER (COSMIC)
+                 UNIVERSITY OF GEORGIA, ATHENS, GEORGIA 30602
+                 PHONE: (706)542-3265      FAX: (706)542-4807
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     2
+                                                                                                                                    
+0                                                                                                                                   
+                                                                                                         
+                                                                                                         
+                         INSTALLATION CENTER USER INFORMATION GIVEN IN THIS SECTION                      
+                                                                                                         
+                                     *********************************************                       
+                                     *                                           *                       
+                                     *  PLEASE READ THE COMMENT IN DEMO PROBLEM  *                       
+                                     *  D01002A ABOUT SYSTEM TIMING CONSTANTS    *                       
+                                     *                                           *                       
+                                     *********************************************                       
+                                                                                                         
+                         ===X=    TOP OF PAGE REQUEST IF 'X' IS REPLACED BY '='                          
+                                                                                                         
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     3
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    D E C K    E C H O                                                  
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     ID    T01311A,NASTRAN                                                           
+     SOL   1                                                                         
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  397
+     APP   DISP                                                                      
+     TIME  10                                                                        
+     DIAG  2,8,15                                                                    
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  520
+     ALTER     50                                                                    
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  350
+     GINOFILE  /XXX/C,N,303 $                                                        
+     MATPRN    XXX,,,, // $                                                          
+     JUMP      FINIS $                                                               
+     ENDALTER                                                                        
+     CEND                                                                            
+1     TESTING GINOFILE MODULE                                               /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     4
+      NASTRAN TEST PROBLEM NO. T01-31-1A                                                                                            
+0     TO CAPTURE SCRATCH 3 OF GPWG MODULE                                                                                           
+0                                        C A S E    C O N T R O L   D E C K   E C H O                                               
+                 CARD                                                                                                               
+                 COUNT                                                                                                              
+                  1      TITLE    = TESTING GINOFILE MODULE                                              
+                  2      SUBTITLE = NASTRAN TEST PROBLEM NO. T01-31-1A                                   
+                  3      LABEL    = TO CAPTURE SCRATCH 3 OF GPWG MODULE                                  
+                  4      SPC   = 10                                                                      
+0*** USER FATAL MESSAGE300, INTEGER DATA OUT OF MACHINE RANGE
+
+     'SPC   = 10                                                              '  ERROR IN XRCARD ROUTINE
+0*** USER FATAL MESSAGE    617
+ INCORRECT OR MISSING VALUE ON CASE CONTROL CARD.  CHECK FOR CORRECT CARD FORMAT.
+                  5      DISP  = ALL                                                                     
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  6      STRES = ALL                                                                     
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  7      ELFOR = ALL                                                                     
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  8      $ECHO = NONE                                                                    
+                  9      LOAD  = 20                                                                      
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                 10      BEGIN BULK                                                                      
+
+ *** ILLEGAL CHARACTER ENCOUNTERED IN INPUT CARD
+    'CQUAD4,1,1,1,2,3,4                                                              '
+0*** SYSTEM FATAL MESSAGE 219, MISSING ENDDATA CARD.  IMHERE =    170
+
+
+                        (NO. OF UNSORTED BULK DATA CARDS READ =     1, INCLUDING   0 COMMENT CARDS)
+1     TESTING GINOFILE MODULE                                               /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     5
+      NASTRAN TEST PROBLEM NO. T01-31-1A                                                                                            
+0     TO CAPTURE SCRATCH 3 OF GPWG MODULE                                                                                           
+0                                                 S O R T E D   B U L K    D A T A    E C H O                                       
+                     CARD                                                                                                           
+                     COUNT        ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++                  
+                    1-        PARAM,GRDPNT,1                                                                  
+                              ENDDATA
+0*** USER FATAL MESSAGE 307, ILLEGAL NAME FOR BULK DATA CARD PARAM,GR
+  ERRTRC CALLED
+  NAME=WRTMSG  
+  IVAL=         100
+
+
+
+
+                                        * * * END OF JOB * * *
+1
+ JOB TITLE =  TESTING GINOFILE MODULE                                            
+ DATE:  2/10/26
+ END TIME: 12:35:28
+ TOTAL WALL CLOCK TIME      0 SEC.
+ 

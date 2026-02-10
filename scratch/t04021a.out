@@ -1,0 +1,216 @@
+ DEBUG: NASTRAN main program starting...
+     NASTRAN FILES=NPTP                                                              
+
+
+
+
+
+
+                                  ****
+                                *      *
+                               *        *
+                               *  N A S T R A N
+                               *        *
+                                *      *
+                                  ****
+
+
+                             SUN COMPUTER SYSTEMS    
+                                SOLARIS VERSION
+
+                          SYSTEM RELEASE -  1995 ED.
+
+                                DISTRIBUTED BY
+
+         COMPUTER SOFTWARE MANAGEMENT AND INFORMATION CENTER (COSMIC)
+                 UNIVERSITY OF GEORGIA, ATHENS, GEORGIA 30602
+                 PHONE: (706)542-3265      FAX: (706)542-4807
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     2
+                                                                                                                                    
+0                                                                                                                                   
+                                                                                                         
+                                                                                                         
+                         INSTALLATION CENTER USER INFORMATION GIVEN IN THIS SECTION                      
+                                                                                                         
+                                     *********************************************                       
+                                     *                                           *                       
+                                     *  PLEASE READ THE COMMENT IN DEMO PROBLEM  *                       
+                                     *  D01002A ABOUT SYSTEM TIMING CONSTANTS    *                       
+                                     *                                           *                       
+                                     *********************************************                       
+                                                                                                         
+                         ===X=    TOP OF PAGE REQUEST IF 'X' IS REPLACED BY '='                          
+                                                                                                         
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     3
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    D E C K    E C H O                                                  
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     ID    T04021A,NASTRAN                                                           
+     DIAG   14                                                                       
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  520
+     TIME   10                                                                       
+     CHKPNT YES                                                                      
+     APP    DISP                                                                     
+     SOL    4,6                                                                      
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  397
+     ALTER  2,2 $                                                                    
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  350
+     ALTER  91 $                                                                     
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  350
+     CHKPNT   KDGG $                                                                 
+     EXIT $                                                                          
+     ENDALTER $                                                                      
+     CEND                                                                            
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     4
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    D E C K    E C H O                                                  
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+0ECHO OF FIRST CARD IN CHECKPOINT DICTIONARY TO BE PUNCHED OUT FOR THIS PROBLEM
+0   RESTART   T04021A ,NASTRAN , 2/10/**,   43451,
+1     HYDROELASTIC ULLAGE PRESSURE, DIFFERENTIAL STIFFNESS PROBLEM          /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     5
+      NASTRAN TEST PROBLEM NO. T04-02-1A                                                                                            
+0                                                                                                                                   
+0                                        C A S E    C O N T R O L   D E C K   E C H O                                               
+                 CARD                                                                                                               
+                 COUNT                                                                                                              
+                  1      TITLE    = HYDROELASTIC ULLAGE PRESSURE, DIFFERENTIAL STIFFNESS PROBLEM         
+                  2      SUBTITLE = NASTRAN TEST PROBLEM NO. T04-02-1A                                   
+                  3      $ REFERENCE PROBLEM III.1                                                       
+                  4      SPC  = 10                                                                       
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  5      LOAD = 10                                                                       
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  6      DISP = ALL                                                                      
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  7      SUBCASE 1                                                                       
+                  8        LABEL = STATIC SOLUTION                                                       
+                  9      SUBCASE 2                                                                       
+                 10        LABEL = DIFFERENTIAL STIFFNESS SOLUTION                                       
+                 11      BEGIN BULK                                                                      
+
+
+                        (NO. OF UNSORTED BULK DATA CARDS READ =    16, INCLUDING   0 COMMENT CARDS)
+0*** USER INFORMATION MESSAGE 207, BULK DATA DECK IS NOT SORTED. NASTRAN WILL RE-ORDER THE INPUT DECK.
+1     HYDROELASTIC ULLAGE PRESSURE, DIFFERENTIAL STIFFNESS PROBLEM          /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     6
+      NASTRAN TEST PROBLEM NO. T04-02-1A                                                                                            
+0                                                                                                                                   
+0                                                 S O R T E D   B U L K    D A T A    E C H O                                       
+                     CARD                                                                                                           
+                     COUNT        ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++                  
+                    1-        CQUAD2  101     100     101     102     106     105                             
+                    2-        CQUAD2  102     100     102     104     108     106                             
+                    3-        CQUAD2  103     100     104     103     107     108                             
+                    4-        CQUAD2  104     100     101     103     104     102                             
+                    5-        GRID    101             0.0     0.0     0.0                                     
+                    6-        GRID    102             6.0     0.0     0.0                                     
+                    7-        GRID    103             0.0     12.0    0.0                                     
+                    8-        GRID    104             6.0     12.0    0.0                                     
+                    9-        GRID    105             0.0     0.0     12.0                                    
+                   10-        GRID    106             6.0     0.0     12.0                                    
+                   11-        GRID    107             0.0     12.0    12.0                                    
+                   12-        GRID    108             6.0     12.0    12.0                                    
+                   13-        MAT1    100     10.6+6          .3      .92-3                                   
+                   14-        PLOAD2  10      1.0     101     THRU    104                                     
+                   15-        PQUAD2  100     100     .06                                                     
+                   16-        SPC1    10      12356   101     103     105     107                             
+                              ENDDATA
+0*** USER FATAL MESSAGE 307, ILLEGAL NAME FOR BULK DATA CARD CQUAD2  
+0*** USER FATAL MESSAGE 300, DATA ERROR IN FIELD UNDERLINED.
+          POSSIBLE ERROR IN EXPONENT
+          ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++
+          CQUAD2  102     100     102     104     108     106                             
+                  ========                                                                
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+0*** USER FATAL MESSAGE 300, DATA ERROR IN FIELD UNDERLINED.
+          POSSIBLE ERROR IN EXPONENT
+          ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++
+          CQUAD2  102     100     102     104     108     106                             
+                          ========                                                        
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+0*** USER FATAL MESSAGE 300, DATA ERROR IN FIELD UNDERLINED.
+          POSSIBLE ERROR IN EXPONENT
+          ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++
+          CQUAD2  102     100     102     104     108     106                             
+                                  ========                                                
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+0*** USER FATAL MESSAGE 300, DATA ERROR IN FIELD UNDERLINED.
+          POSSIBLE ERROR IN EXPONENT
+          ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++
+          CQUAD2  102     100     102     104     108     106                             
+                                          ========                                        
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+0*** USER FATAL MESSAGE 300, DATA ERROR IN FIELD UNDERLINED.
+          POSSIBLE ERROR IN EXPONENT
+          ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++
+          CQUAD2  102     100     102     104     108     106                             
+                                                  ========                                
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+0*** USER FATAL MESSAGE 300, DATA ERROR IN FIELD UNDERLINED.
+          POSSIBLE ERROR IN EXPONENT
+          ---1--- +++2+++ ---3--- +++4+++ ---5--- +++6+++ ---7--- +++8+++ ---9--- +++10+++
+          CQUAD2  102     100     102     104     108     106                             
+                                                          ========                        
+                                                                                          
+                                                                                          
+                                                                                          
+                                                                                          
+1     HYDROELASTIC ULLAGE PRESSURE, DIFFERENTIAL STIFFNESS PROBLEM          /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     7
+      NASTRAN TEST PROBLEM NO. T04-02-1A                                                                                            
+
+                                                                                                                                    
+
+
+
+
+0*** USER FATAL MESSAGE 307, ILLEGAL NAME FOR BULK DATA CARD CQUAD2  
+0*** USER FATAL MESSAGE 307, ILLEGAL NAME FOR BULK DATA CARD CQUAD2  
+0*** USER FATAL MESSAGE 307, ILLEGAL NAME FOR BULK DATA CARD CQUAD2  
+0*** USER FATAL MESSAGE 307, ILLEGAL NAME FOR BULK DATA CARD GRID    
+0*** USER FATAL MESSAGE 307, ILLEGAL NAME FOR BULK DATA CARD GRID    
+0*** USER FATAL MESSAGE 307, ILLEGAL NAME FOR BULK DATA CARD GRID    
+                               .
+                             MORE
+                               .
+  ERRTRC CALLED
+  NAME=WRTMSG  
+  IVAL=         100
+
+
+
+
+                                        * * * END OF JOB * * *
+1
+ JOB TITLE =  HYDROELASTIC ULLAGE PRESSURE, DIFFERENTIAL STIFFNESS PROBLEM       
+ DATE:  2/10/**
+ END TIME: 12: 4:11
+ TOTAL WALL CLOCK TIME      0 SEC.
+ 

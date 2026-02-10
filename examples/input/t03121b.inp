@@ -15,7 +15,7 @@ $
 READFILE RSCARDS                                                                
 TIME  10                                                                        
 SOL   3,0                                                                       
-APP   DISP                                                                      
+$ APP   DISP                                                                      
 $ INSERT HYDRO MODAL DMAP ALTERS (COSHYD2) AFTER THIS CARD                      
 READFILE COSHYD2                                                                
 $ INSERT HYDRO MODAL DMAP ALTERS (COSHYD2) BEFORE THIS CARD                     

@@ -1,7 +1,7 @@
 ID    D01101A,NASTRAN                                                           
 SOL   1,0                                                                       
 TIME  9                                                                         
-APP   DISPLACEMENT                                                              
+$ APP   DISPLACEMENT                                                              
 CEND                                                                            
 TITLE    = THERMAL BENDING OF A BAR.                                            
 SUBTITLE = NASTRAN DEMONSTRATION PROBLEM NO. D01-10-1A                          

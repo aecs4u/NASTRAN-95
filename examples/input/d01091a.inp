@@ -99,7 +99,7 @@ CHEXA2  39      1       85      86      89      88      94      95      +HEX  39
 +HEX  3998      97                                                              
 CHEXA2  40      1       86      87      90      89      95      96      +HEX  40
 +HEX  4099      98                                                              
-CNGRNT  1       2       THRU    40                                              
+$ OBSOLETE: CNGRNT  1       2       THRU    40                                              
 FORCE1  20      91      .375+3  82      91                                      
 FORCE1  20      92      .75+3   83      92                                      
 FORCE1  20      93      .375+3  84      93                                      

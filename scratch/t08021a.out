@@ -1,0 +1,157 @@
+ DEBUG: NASTRAN main program starting...
+     NASTRAN FILES = PLT2                                                            
+
+
+
+
+
+
+                                  ****
+                                *      *
+                               *        *
+                               *  N A S T R A N
+                               *        *
+                                *      *
+                                  ****
+
+
+                             SUN COMPUTER SYSTEMS    
+                                SOLARIS VERSION
+
+                          SYSTEM RELEASE -  1995 ED.
+
+                                DISTRIBUTED BY
+
+         COMPUTER SOFTWARE MANAGEMENT AND INFORMATION CENTER (COSMIC)
+                 UNIVERSITY OF GEORGIA, ATHENS, GEORGIA 30602
+                 PHONE: (706)542-3265      FAX: (706)542-4807
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     2
+                                                                                                                                    
+0                                                                                                                                   
+                                                                                                         
+                                                                                                         
+                         INSTALLATION CENTER USER INFORMATION GIVEN IN THIS SECTION                      
+                                                                                                         
+                                     *********************************************                       
+                                     *                                           *                       
+                                     *  PLEASE READ THE COMMENT IN DEMO PROBLEM  *                       
+                                     *  D01002A ABOUT SYSTEM TIMING CONSTANTS    *                       
+                                     *                                           *                       
+                                     *********************************************                       
+                                                                                                         
+                         ===X=    TOP OF PAGE REQUEST IF 'X' IS REPLACED BY '='                          
+                                                                                                         
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     3
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    D E C K    E C H O                                                  
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     ID    T08021A,NASTRAN                                                           
+     APP   DISP                                                                      
+     SOL   8                                                                         
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  397
+     DIAG  14                                                                        
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  520
+     TIME  50                                                                        
+     $                                                                               
+
+
+ *** CAN NOT OPEN FILE (UNIT= 60) - COSDFVA
+     SUGGESTION- CHECK USER ID OR QUALIFIER
+                                                                                     
+     $                                                                               
+     CEND                                                                            
+1     ROTATING CYCLIC STRUCTURE (FREQ+BASE ACCN LOADS, HARM. I/O)           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     4
+      NASTRAN TEST PROBLEM NO. T08-02-1A                                                                                            
+0                                                                                                                                   
+0                                        C A S E    C O N T R O L   D E C K   E C H O                                               
+                 CARD                                                                                                               
+                 COUNT                                                                                                              
+                  1      TITLE    = ROTATING CYCLIC STRUCTURE (FREQ+BASE ACCN LOADS, HARM. I/O)          
+                  2      SUBTITLE = NASTRAN TEST PROBLEM NO. T08-02-1A                                   
+                  3      $                                                                               
+                  4         SPC   = 30                                                                   
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  5         FREQ  = 1                                                                    
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  6      OUTPUT                                                                          
+0*** USER FATAL MESSAGE    617
+ INCORRECT OR MISSING VALUE ON CASE CONTROL CARD.  CHECK FOR CORRECT CARD FORMAT.
+                  7         SET 1 = 8,16,18                                                              
+0*** USER FATAL MESSAGE    614
+ THE ABOVE SET IS INCORRECTLY SPECIFIED.  CHECK FORMAT ON THIS OR PREVIOUS CARD.
+                  8         SET 2 = 11                                                                   
+0*** USER FATAL MESSAGE    614
+ THE ABOVE SET IS INCORRECTLY SPECIFIED.  CHECK FORMAT ON THIS OR PREVIOUS CARD.
+                  9         OLOAD = 1                                                                    
+0*** USER FATAL MESSAGE    608
+ THE SET ID SPECIFIED ON THE ABOVE CARD MUST BE DEFINED PRIOR TO THIS CARD.
+                 10         DISP(SORT2,PHASE)   = 1                                                      
+0*** USER FATAL MESSAGE    608
+ THE SET ID SPECIFIED ON THE ABOVE CARD MUST BE DEFINED PRIOR TO THIS CARD.
+                 11         STRESS(SORT2,PHASE) = 2                                                      
+0*** USER FATAL MESSAGE    608
+ THE SET ID SPECIFIED ON THE ABOVE CARD MUST BE DEFINED PRIOR TO THIS CARD.
+                 12      SUBCASE  1                                                                      
+                 13         LABEL = KINDEX 0                                                             
+                 14         DLOAD = 1   $ FREQ DEPENDENT LOADS                                           
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                 15      $                AXIAL BASE ACCN LOADS VIA PARAM BXTID,BXPTID                   
+                 16       SUBCASE 2                                                                      
+                 17         LABEL = KINDEX 1C                                                            
+1     ROTATING CYCLIC STRUCTURE (FREQ+BASE ACCN LOADS, HARM. I/O)           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     5
+      NASTRAN TEST PROBLEM NO. T08-02-1A                                                                                            
+0                                                                                                                                   
+0                                        C A S E    C O N T R O L   D E C K   E C H O                                               
+                 CARD                                                                                                               
+                 COUNT                                                                                                              
+                 18      $                LATERAL BASE ACCN LOADS VIA PARAM BYTID                        
+                 19       SUBCASE 3                                                                      
+                 20         LABEL = KINDEX 1S                                                            
+                 21      $                LATERAL BASE ACCN LOADS VIA PARAM BZTID                        
+                 22       SUBCASE 4                                                                      
+                 23         LABEL = KINDEX 2C                                                            
+                 24         DLOAD = 1   $ FREQ DEPENDENT LOADS                                           
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                 25       SUBCASE 5                                                                      
+                 26         LABEL = KINDEX 2S                                                            
+                 27      OUTPUT(XYPLOT)                                                                  
+                 28         PLOTTER NASTPLT D,0                                                          
+                 29         XPAPER = 8.0                                                                 
+                 30         YPAPER = 10.5                                                                
+                 31         XAXIS  = YES                                                                 
+                 32         YAXIS  = YES                                                                 
+                 33         XGRID LINES = YES                                                            
+                 34         YGRID LINES = YES                                                            
+                 35         CURVELINESYMBOL = 1                                                          
+                 36         XTITLE =                           FREQUENCY (HERTZ)                         
+                 37         YTITLE =            GRID POINT DISPLACEMENTS ( MAGNITUDE,INCH )              
+                 38         YLOG   = YES                                                                 
+                 39         TCURVE = 8(T3RM),18(T3RM)                                                    
+                 40         XYPLOT,XYPRINT DISP RESPONSE 1 /8(T3RM),18(T3RM)                             
+0*** USER FATAL MESSAGE 691, MORE THAN 2 OR UNEQUAL NUMBER OF COMPONENTS FOR ID-S WITHIN A SINGLE FRAME.
+                 41         XYPLOT,XYPRINT DISP RESPONSE 2 /8(T3RM),18(T3RM)                             
+0*** USER FATAL MESSAGE 300 *** INTEGER DATA OUT OF MACHINE RANGE
+
+     '   XYPLOT,XYPRINT DISP RESPONSE 2 /8(T3RM),18(T3RM)                     '
+                 42         XYPLOT,XYPRINT DISP RESPONSE 3 /8(T3RM),18(T3RM)                             
+0*** USER FATAL MESSAGE 300 *** INTEGER DATA OUT OF MACHINE RANGE
+
+     '   XYPLOT,XYPRINT DISP RESPONSE 3 /8(T3RM),18(T3RM)                     '
+                 43         XYPLOT,XYPRINT DISP RESPONSE 4 /8(T3RM),18(T3RM)                             
+0*** USER FATAL MESSAGE 300 *** INTEGER DATA OUT OF MACHINE RANGE
+
+     '   XYPLOT,XYPRINT DISP RESPONSE 4 /8(T3RM),18(T3RM)                     '
+                 44         YTITLE =            GRID POINT DISPLACEMENTS ( PHASE,DEGREE )                
+                 45         YLOG   = NO                                                                  

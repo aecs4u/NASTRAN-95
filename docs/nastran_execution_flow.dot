@@ -1,0 +1,71 @@
+digraph NASTRAN_Execution {
+  rankdir=TB;
+  node [shape=box, style="rounded,filled", fillcolor=lightblue];
+  edge [fontsize=10];
+
+  // Main program
+  nastrn [label="NASTRN\n(nastrn.f)\nMain Program", fillcolor=lightgreen];
+
+  // Preface execution
+  semint [label="SEMINT\n(semint.f90)\nPreface Execution Monitor", fillcolor=lightyellow];
+
+  // System initialization
+  defcor [label="DEFCOR\nSet platform defaults"];
+  gnfiat [label="GNFIAT\nGenerate file tables"];
+  tmtsio [label="TMTSIO\nI/O timing tests"];
+  tmtslp [label="TMTSLP\nCPU timing tests"];
+
+  // Executive control deck processing
+  xcsa [label="XCSA\n(xcsa.f90)\nExecutive Control Parser", fillcolor=lightcoral];
+  xcsa_init [label="XCSA Initialization\n(lines 141-176)\n⚠ NOT EXECUTING", fillcolor=red, fontcolor=white];
+  xcsa_page [label="call page\n(line 205)", fillcolor=orange];
+  xcsa_rust [label="Rust Bridge Code\n(lines 207-248)\n⚠ NOT EXECUTING", fillcolor=red, fontcolor=white];
+  xcsa_loop [label="Card Processing Loop\n(label 20, line 278)\n✓ EXECUTING", fillcolor=green, fontcolor=white];
+  xcsa_error [label="MESSAGE 507 Handler\n(line 760+)\n✓ EXECUTING", fillcolor=green, fontcolor=white];
+
+  // Case control and bulk data
+  endsys [label="ENDSYS\nCase Control Parser"];
+  xsort [label="XSORT\nBulk Data Sort"];
+  ifp [label="IFP\nInput File Processor"];
+
+  // Main execution flow
+  nastrn -> semint [label="call semint"];
+
+  semint -> defcor [label="1. Initialize"];
+  semint -> gnfiat [label="2. File tables"];
+  semint -> tmtsio [label="3. I/O timing"];
+  semint -> tmtslp [label="4. CPU timing"];
+  semint -> xcsa [label="5. Exec control"];
+  semint -> endsys [label="6. Case control"];
+  semint -> xsort [label="7. Sort bulk data"];
+  semint -> ifp [label="8. Process input"];
+
+  // XCSA internal flow (EXPECTED)
+  xcsa -> xcsa_init [label="Expected:\nInitialize variables", style=dashed, color=red];
+  xcsa_init -> xcsa_page [label="Expected flow", style=dashed, color=red];
+  xcsa_page -> xcsa_rust [label="Expected:\nValidate with Rust", style=dashed, color=red];
+  xcsa_rust -> xcsa_loop [label="Expected flow", style=dashed, color=red];
+
+  // XCSA internal flow (ACTUAL)
+  xcsa -> xcsa_loop [label="ACTUAL:\nDirect jump?", style=bold, color=green];
+  xcsa_loop -> xcsa_error [label="DIAG/APP cards\ntrigger error", style=bold, color=green];
+
+  // Problem annotation
+  problem [label="⚠ PROBLEM IDENTIFIED ⚠\n\n1. Old xcsa.f in mis/ was being linked\n   (excluded from build now)\n\n2. Even after fix, xcsa.f90\n   initialization & Rust bridge\n   sections NOT executing\n\n3. Card loop IS executing\n   (MESSAGE 507 appears)\n\n4. Unknown entry point or\n   control flow issue",
+          shape=note, fillcolor=yellow, fontsize=11];
+
+  // Legend
+  subgraph cluster_legend {
+    label="Legend";
+    style=dashed;
+
+    exec [label="✓ Executing", fillcolor=green, fontcolor=white];
+    notexec [label="⚠ Not Executing", fillcolor=red, fontcolor=white];
+    expected [label="Expected Flow", shape=plaintext];
+    actual [label="Actual Flow", shape=plaintext];
+
+    expected -> actual [label="vs", style=invis];
+  }
+
+  problem -> xcsa [style=invis];
+}

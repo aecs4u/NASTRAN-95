@@ -14,6 +14,7 @@ C                 DAY   MONTH     YEAR
 C     THESE DATES HAD TO BE INTERCHANGED FOR THE SUN
       DATE(1)=DATE1(2)
       DATE(2)=DATE1(1)
-      DATE(3)=DATE1(3)-1900
+C     Use MOD to get last 2 digits of year (works for both 1900s and 2000s)
+      DATE(3)=MOD(DATE1(3), 100)
       RETURN        
       END        

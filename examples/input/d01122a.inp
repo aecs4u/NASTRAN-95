@@ -14,21 +14,21 @@ THERMAL (PRINT,PUNCH) = ALL
 ELFORCE  = ALL                                                                  
 SPC = 350                                                                       
 BEGIN BULK                                                                      
-CHBDY   14      100     REV     1       12                              +HBDY14 
+CHBDYP  14      100     REV     1       12                              +HBDY14 
 +HBDY14 23      23                                                              
-CTRAPRG 7       4       5       16      15      .0      200                     
-CTRAPRG 8       5       6       17      16      .0      200                     
-CTRAPRG 9       6       7       18      17      .0      200                     
-CTRAPRG 10      7       8       19      18      .0      200                     
-CTRAPRG 11      8       9       20      19      .0      200                     
-CTRAPRG 12      9       10      21      20      .0      200                     
-CTRAPRG 13      10      11      22      21      .0      200                     
-CTRIARG 1       1       13      12      -45.0   200                             
-CTRIARG 2       1       2       13      .0      200                             
-CTRIARG 3       2       14      13      -45.0   200                             
-CTRIARG 4       2       3       14      .0      200                             
-CTRIARG 5       3       15      14      -45.0   200                             
-CTRIARG 6       3       4       15      .0      200                             
+$ OBSOLETE: CTRAPRG 7       4       5       16      15      .0      200                     
+$ OBSOLETE: CTRAPRG 8       5       6       17      16      .0      200                     
+$ OBSOLETE: CTRAPRG 9       6       7       18      17      .0      200                     
+$ OBSOLETE: CTRAPRG 10      7       8       19      18      .0      200                     
+$ OBSOLETE: CTRAPRG 11      8       9       20      19      .0      200                     
+$ OBSOLETE: CTRAPRG 12      9       10      21      20      .0      200                     
+$ OBSOLETE: CTRAPRG 13      10      11      22      21      .0      200                     
+$ OBSOLETE: CTRIARG 1       1       13      12      -45.0   200                             
+$ OBSOLETE: CTRIARG 2       1       2       13      .0      200                             
+$ OBSOLETE: CTRIARG 3       2       14      13      -45.0   200                             
+$ OBSOLETE: CTRIARG 4       2       3       14      .0      200                             
+$ OBSOLETE: CTRIARG 5       3       15      14      -45.0   200                             
+$ OBSOLETE: CTRIARG 6       3       4       15      .0      200                             
 GRID    1               1.0     .0      .0                                      
 GRID    2               1.1     .0      .0                                      
 GRID    3               1.2     .0      .0                                      

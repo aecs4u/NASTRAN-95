@@ -1,7 +1,7 @@
 ID    T01321A,NASTRAN                                                           
 SOL   1,0                                                                       
 DIAG  40                                                                        
-APP   DISP                                                                      
+$ APP   DISP                                                                      
 TIME  10                                                                        
 CEND                                                                            
 TITLE    = CTRIA3 SIMPLE SUPPORTED FLAT PLATE WITH PLOAD4 UNIFORM LOAD          

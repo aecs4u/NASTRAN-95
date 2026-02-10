@@ -2,7 +2,7 @@ NASTRAN FILES=PLT2
 ID    T01271A,NASTRAN                                                           
 DIAG  40                                                                        
 SOL   1,0                                                                       
-APP   DISP                                                                      
+$ APP   DISP                                                                      
 TIME  100                                                                       
 CEND                                                                            
 TITLE    = QUAD4 COMPOSITE TUBE - SYMMETRIC LAYUP [45/-45/0/90]S                

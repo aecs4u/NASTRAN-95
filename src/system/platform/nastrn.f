@@ -1,5 +1,5 @@
-      PROGRAM NASTRN
-C
+      PROGRAM NASTRN        
+C        
       CHARACTER*80    VALUE
       CHARACTER*5     TMP
       INTEGER         SPERLK
@@ -18,11 +18,7 @@ C
       CHARACTER*80    SDSN
       EQUIVALENCE    ( ISYSTM, SYSTM )
       LENOPC = 14000000
-C
-C     DEBUG - ADDED 2026-02-09
-      WRITE(6,*) 'DEBUG: NASTRAN main program starting...'
-      CALL FLUSH(6)
-C
+C        
 C     SAVE STARTING CPU TIME AND WALL CLOCK TIME IN /SYSTEM/        
 C      
       ISYSTM(18) = 0

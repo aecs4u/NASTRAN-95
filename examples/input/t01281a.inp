@@ -1,7 +1,7 @@
 ID    T01281A,NASTRAN                                                           
 DIAG  40                                                                        
 SOL   1,0                                                                       
-APP   DISP                                                                      
+$ APP   DISP                                                                      
 TIME  30                                                                        
 CEND                                                                            
 TITLE    = COMP04 ***COSMIS*** QUAD4 4-NODE STRAIGHT BEAM TEST                  

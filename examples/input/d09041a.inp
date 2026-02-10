@@ -17,11 +17,11 @@ OLOAD  = ALL
 SPCF   = 21                                                                     
 BEGIN BULK                                                                      
 CELAS2  28      3.0+8   20      1       21      1                               
-CHBDY   31      2       LINE    10      12                                      
-CHBDY   33      2       LINE    12      14                                      
-CHBDY   35      2       LINE    14      16                                      
-CHBDY   37      2       LINE    16      18                                      
-CHBDY   39      2       LINE    18      20                                      
+CHBDYP  31      2       LINE    10      12                                      
+CHBDYP  33      2       LINE    12      14                                      
+CHBDYP  35      2       LINE    14      16                                      
+CHBDYP  37      2       LINE    16      18                                      
+CHBDYP  39      2       LINE    18      20                                      
 CROD    11      1       10      12      13      1       12      14              
 CROD    15      1       14      16      17      1       16      18              
 CROD    19      1       18      20                                              

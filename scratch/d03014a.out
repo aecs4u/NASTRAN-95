@@ -1,0 +1,109 @@
+ DEBUG: NASTRAN main program starting...
+     NASTRAN FILES=PLT2                                                              
+
+
+
+
+
+
+                                  ****
+                                *      *
+                               *        *
+                               *  N A S T R A N
+                               *        *
+                                *      *
+                                  ****
+
+
+                             SUN COMPUTER SYSTEMS    
+                                SOLARIS VERSION
+
+                          SYSTEM RELEASE -  1995 ED.
+
+                                DISTRIBUTED BY
+
+         COMPUTER SOFTWARE MANAGEMENT AND INFORMATION CENTER (COSMIC)
+                 UNIVERSITY OF GEORGIA, ATHENS, GEORGIA 30602
+                 PHONE: (706)542-3265      FAX: (706)542-4807
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     2
+                                                                                                                                    
+0                                                                                                                                   
+                                                                                                         
+                                                                                                         
+                         INSTALLATION CENTER USER INFORMATION GIVEN IN THIS SECTION                      
+                                                                                                         
+                                     *********************************************                       
+                                     *                                           *                       
+                                     *  PLEASE READ THE COMMENT IN DEMO PROBLEM  *                       
+                                     *  D01002A ABOUT SYSTEM TIMING CONSTANTS    *                       
+                                     *                                           *                       
+                                     *********************************************                       
+                                                                                                         
+                         ===X=    TOP OF PAGE REQUEST IF 'X' IS REPLACED BY '='                          
+                                                                                                         
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     3
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    D E C K    E C H O                                                  
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     ID    D03014A,NASTRAN                                                           
+     ALTER 1 $                                                                       
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  350
+     PARAM   //C,N,NOP/V,N,TRUE=-1 $                                                 
+     INPUT,  ,GEOM2,,,/G1,G2,,G4,/C,N,3/C,N,1 $                                      
+     EQUIV   G1,GEOM1/TRUE / G2,GEOM2/TRUE / G4,GEOM4/TRUE $                         
+     ENDALTER $                                                                      
+     APP      DISPLACEMENT                                                           
+     SOL      3,1                                                                    
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  397
+     DIAG     14                                                                     
+0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
+     IMHERE =  520
+     TIME     65                                                                     
+     CEND                                                                            
+1             VIBRATION OF A 20 X 40 HALF PLATE                             /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     4
+      NASTRAN DEMONSTRATION PROBLEM NO. D03-01-4A                                                                                   
+0                                                                                                                                   
+0                                        C A S E    C O N T R O L   D E C K   E C H O                                               
+                 CARD                                                                                                               
+                 COUNT                                                                                                              
+                  1      TITLE    =         VIBRATION OF A 20 X 40 HALF PLATE                            
+                  2      SUBTITLE = NASTRAN DEMONSTRATION PROBLEM NO. D03-01-4A                          
+                  3      $                                                                               
+                  4        METHOD = 20 $ FEER - NO MODES                                                 
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  5           SPC = 20040   $ INPUT VERSION                                              
+0*** USER FATAL MESSAGE    603
+ THE ABOVE CARD DOES NOT END PROPERLY. COMMENTS SHOULDBE PRECEEDED
+ BY A DOLLAR SIGN.
+                  6      $                  ROOTS ARE AT THE FOLLOWING FREQUENCIES (THEORETICAL)         
+                  7      $       MODE    M       N       FREQ                                            
+                  8      $       1       1       1       9.068997E-1                                     
+                  9      $       2       1       2       2.267249                                        
+                 10      $       5       1       3       4.534498                                        
+                 11      $       6       3       1       4.534498                                        
+                 12      $       7       3       2       5.894848                                        
+                 13      $       9       1       4       7.708647                                        
+                 14      $                                                                               
+                 15      OUTPUT                                                                          
+0*** USER FATAL MESSAGE    617
+ INCORRECT OR MISSING VALUE ON CASE CONTROL CARD.  CHECK FOR CORRECT CARD FORMAT.
+                 16         SET 1 = 1 THRU 21, 64 THRU 84, 127 THRU 147, 190 THRU 210,                   
+                 17                 253 THRU 273, 316 THRU 336, 379 THRU 399, 442 THRU 462,              
+0*** USER FATAL MESSAGE 300 *** INTEGER DATA OUT OF MACHINE RANGE
+
+     '           253 THRU 273, 316 THRU 336, 379 THRU 399, 442 THRU 462,      '
+                 18                 505 THRU 525, 568 THRU 588, 631 THRU 651, 694 THRU 714,              
+0*** USER FATAL MESSAGE 300 *** INTEGER DATA OUT OF MACHINE RANGE
+
+     '           505 THRU 525, 568 THRU 588, 631 THRU 651, 694 THRU 714,      '
+                 19                 757 THRU 777, 820 THRU 840, 841 THRU 861                             
+0*** USER FATAL MESSAGE 300 *** INTEGER DATA OUT OF MACHINE RANGE
+
+     '           757 THRU 777, 820 THRU 840, 841 THRU 861                     '
+                 20         DISPLACEMENTS = 1                                                            

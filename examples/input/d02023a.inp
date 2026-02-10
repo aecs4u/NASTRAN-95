@@ -28,9 +28,9 @@ OUTPUT(PLOT)
 BEGIN BULK                                                                      
 CORD2R  1               5.0     22.5    .0      5.0     22.5    1.0     +A      
 +A      .0      22.5    .0                                                      
-CQDMEM  1       10      3       4       2       1                               
-CQDMEM  2       10      5       6       4       3                               
-CQDMEM  3       10      7       8       6       5                               
+CQUAD4  1       10      3       4       2       1                               
+CQUAD4  2       10      5       6       4       3                               
+CQUAD4  3       10      7       8       6       5                               
 FORCE1  2       1       25.0    4       2                                       
 FORCE1  2       2       25.0    4       2                                       
 GRDSET                                          1       3456                    
@@ -44,6 +44,6 @@ GRID    7               .0      .0
 GRID    8               5.0     .0                                              
 GRID    9               .0      -27.5                   123456                  
 MAT1    50      1.0+7           .25     2.5E-4  1.0E-6  70.0                    
-PQDMEM  10      50      .1                                                      
+PSHELL  10      50      .1                                                      
 RFORCE  1       9               .1591579.0      .0      1.0                     
 ENDDATA                                                                         

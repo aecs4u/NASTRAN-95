@@ -1,6 +1,6 @@
 ID    T01251A,NASTRAN                                                           
 SOL   1,0                                                                       
-APP   DISP                                                                      
+$ APP   DISP                                                                      
 TIME  30                                                                        
 DIAG  48                                                                        
 CEND                                                                            

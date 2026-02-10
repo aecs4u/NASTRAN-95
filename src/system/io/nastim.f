@@ -1,7 +1,7 @@
       SUBROUTINE NASTIM (IHR, IMN, ISC, CPUSEC)
-      REAL ARRAY(2)
+      REAL ARRAY(2), ETIME
       SECS = ETIME(ARRAY)
-C     SECS now contains total CPU time (user+system)
+      IF (ARRAY(2) .GT. 0.0) SECS = ARRAY(2)
       IHR    = SECS / 3600.  
       IMN    = ( SECS - 3600.*IHR ) / 60.
       ISC    = SECS - ( 3600.*IHR ) - ( 60.*IMN )

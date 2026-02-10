@@ -1,0 +1,63 @@
+NASTRAN-95 Test Scripts Usage Guide
+====================================
+
+Available Scripts:
+-----------------
+
+1. run_quick_test.sh (⚡ Fastest - ~1 minute)
+   - Tests 3 representative examples
+   - Use for: Quick validation during development
+
+2. run_parallel.sh (🚀 Fast - ~5-10 minutes)
+   - Runs all examples with 4 parallel jobs
+   - Use for: Full test suite before commits
+   - Recommended for regular testing
+
+3. run_all_examples.sh (📊 Comprehensive - ~20-30 minutes)
+   - Runs all examples sequentially
+   - Detailed timing and error reporting
+   - Use for: Release validation and detailed analysis
+
+4. cleanup.sh (🧹 Utility)
+   - Removes all generated output files
+   - Run before starting new tests
+
+Quick Start:
+-----------
+    ./run_quick_test.sh      # Quick smoke test
+    ./run_parallel.sh        # Full test suite (fast)
+    ./cleanup.sh             # Clean up
+
+Output Files:
+------------
+For each test (e.g., d01000a.inp), creates:
+- d01000a.out  - Console output
+- d01000a.log  - Analysis log
+- d01000a.dic  - Dictionary
+- d01000a.pun  - Punch output
+- d01000a.plt  - Plot data
+- d01000a.nptp - NPTP data
+
+Test Results:
+------------
+- test_results.txt - Detailed pass/fail for each test
+- test_summary.txt - Overall statistics
+
+Examples:
+--------
+# Run quick test
+./run_quick_test.sh
+
+# Run all tests in parallel
+./run_parallel.sh
+
+# Run specific test manually
+export DBMEM=12000000 OCMEM=2000000 RFDIR=/tmp/nrf DIRCTY=/tmp
+../build/bin/nastran ../examples/input/d01000a.inp
+
+# Compare with reference
+diff d01000a.out ../examples/reference_output/d01000a.out
+
+# Clean up before new run
+./cleanup.sh
+

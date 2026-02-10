@@ -4,7 +4,7 @@ $     THIS DEMO IS SAME AS T03131A WHERE SOLUTION 3 IS USED WITH DMAP
 $     ALTERS, COSDDAM                                                           
 $                                                                               
 SOL   17                                                                        
-APP   DISP                                                                      
+$ APP   DISP                                                                      
 DIAG  14,25                                                                     
 TIME  20                                                                        
 CEND                                                                            

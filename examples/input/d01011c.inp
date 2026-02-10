@@ -4,7 +4,7 @@ $ INSERT THE RESTART DICTIONARY HERE
 READFILE RSCARDS                                                                
 TIME  5                                                                         
 SOL   3,1                                                                       
-APP   DISPLACEMENT                                                              
+$ APP   DISPLACEMENT                                                              
 CEND                                                                            
 TITLE    = DELTA WING              RESTART, REAL EIGENVALUE ANALYSIS            
 SUBTITLE = NASTRAN DEMONSTRATION PROBLEM NO. D01-01-1C                          

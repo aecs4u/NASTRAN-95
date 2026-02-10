@@ -1,0 +1,680 @@
+================================================================================
+Testing 132 NASTRAN input files with pyNastran
+================================================================================
+
+Testing d01000a.inp                    ... ✓ PASS (SOL=6, APP=DISP)
+Testing d01001a.inp                    ... ✓ PASS (SOL=1, APP=DISP)
+Testing d01002a.inp                    ... ✓ PASS (parsed)
+Testing d01011a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CQDMEM'
+problem adding ['CROD', '60', '5', '1', '11', '61', '6', '2', '12']
+✗ FAIL - len(CROD card) = 9
+card=['CROD', '60', '5', '1', '11', '61',
+Testing d01011b.inp                    ... ✓ PASS (SOL=1,1, APP=DISPLACEMENT)
+Testing d01011c.inp                    ... ✓ PASS (SOL=3,1, APP=DISPLACEMENT)
+Testing d01012a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CQDMEM1'
+INFO:    bdf.py:2784                      rejecting card_name = 'CQDMEM2'
+problem adding ['CROD', '60', '5', '1', '11', '61', '6', '2', '12']
+✗ FAIL - len(CROD card) = 9
+card=['CROD', '60', '5', '1', '11', '61',
+Testing d01013a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CQDMEM1'
+problem adding ['CROD', '60', '5', '1', '11', '61', '6', '2', '12']
+✗ FAIL - len(CROD card) = 9
+card=['CROD', '60', '5', '1', '11', '61',
+Testing d01014a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CQDMEM2'
+problem adding ['CROD', '60', '5', '1', '11', '61', '6', '2', '12']
+✗ FAIL - len(CROD card) = 9
+card=['CROD', '60', '5', '1', '11', '61',
+Testing d01021a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CTRIA2'
+INFO:    bdf.py:2784                      rejecting card_name = 'PTRIA2'
+✓ PASS (SOL=1,1, APP=DISPLACEMENT, 26 nodes)
+Testing d01021b.inp                    ... ✓ PASS (SOL=1,1, APP=DISPLACEMENT)
+Testing d01031a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CNGRNT'
+INFO:    bdf.py:2784                      rejecting card_name = 'CQDMEM'
+INFO:    bdf.py:2784                      rejecting card_name = 'PQDMEM'
+✓ PASS (SOL=1,1, APP=DISPLACEMENT, 247 nodes)
+Testing d01032a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CNGRNT'
+INFO:    bdf.py:2784                      rejecting card_name = 'CQDMEM1'
+INFO:    bdf.py:2784                      rejecting card_name = 'PQDMEM1'
+✓ PASS (SOL=1,1, APP=DISPLACEMENT, 247 nodes)
+Testing d01033a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CNGRNT'
+INFO:    bdf.py:2784                      rejecting card_name = 'CQDMEM2'
+INFO:    bdf.py:2784                      rejecting card_name = 'PQDMEM2'
+✓ PASS (SOL=1,1, APP=DISPLACEMENT, 247 nodes)
+Testing d01034a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CNGRNT'
+INFO:    bdf.py:2784                      rejecting card_name = 'CQDMEM2'
+INFO:    bdf.py:2784                      rejecting card_name = 'PQDMEM2'
+✓ PASS (SOL=1,1, APP=DISPLACEMENT, 247 nodes)
+Testing d01041a.inp                    ... problem adding ['PQUAD1', '101', None, None, '1234', '.0833333', None, None, None, '.5', '-.5']
+✗ FAIL - nsm = None (field #8) on card must be a float (not blank).
+c
+Testing d01051a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'MOMAX'
+problem adding ['POINTAX', '200', '100']
+✗ FAIL - phi = None (field #3) on card must be a float (not blank).
+c
+Testing d01061a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CTRAPRG'
+✓ PASS (SOL=1,1, APP=DISP, 26 nodes)
+Testing d01062a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CTRAPRG'
+✗ FAIL - field='*(1) *(2)' has embedded blanks (mixed comma/space sep
+Testing d01071a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CTORDRG'
+problem adding ['MAT1', '12', '3.0E6', None, '.1667', None, '12.5 E-6', '.0']
+✗ FAIL - a = '12.5 E-6' (field #6) on card must be a float or blank (
+Testing d01081a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CNGRNT'
+✓ PASS (SOL=1,3, APP=DISPLACEMENT, 110 nodes, 40 elements)
+Testing d01091a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CNGRNT'
+✓ PASS (SOL=1,3, APP=DISP, 99 nodes, 40 elements)
+Testing d01092a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CTRIM6'
+INFO:    bdf.py:2784                      rejecting card_name = 'PTRIM6'
+✓ PASS (SOL=1,0, APP=DISPLACEMENT, 33 nodes)
+Testing d01101a.inp                    ... ✓ PASS (SOL=1,0, APP=DISPLACEMENT, 15 nodes, 14 elements)
+Testing d01111a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CNGRNT'
+problem adding ['PARAM', 'STRESS', '0']
+✗ FAIL - value = 0 (field #2) on card must be a string with a charact
+Testing d01112a.inp                    ... problem adding ['PARAM', 'STRESS', '0']
+✗ FAIL - value = 0 (field #2) on card must be a string with a charact
+Testing d01121a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CHBDY'
+INFO:    bdf.py:2784                      rejecting card_name = 'CWEDGE'
+✓ PASS (SOL=1,1, APP=HEAT, 44 nodes, 7 elements)
+Testing d01122a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CHBDY'
+INFO:    bdf.py:2784                      rejecting card_name = 'CTRAPRG'
+INFO:    bdf.py:2784                      rejecting card_name = 'CTRIARG'
+problem adding ['PHBDY', '100', '300']
+✗ FAIL - af = '300' (field #2) on card must be a float or blank (not 
+Testing d01131a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CNGRNT'
+problem adding ['PIHEX', '200', '300', None, '4', '4.5', '10.0']
+✗ FAIL - stress = '4.5' (field #5) on card must be an integer, string
+Testing d01132a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CNGRNT'
+INFO:    bdf.py:2784                      rejecting card_name = 'PLOAD3'
+✓ PASS (SOL=1,0, APP=DISPLACEMENT, 32 nodes, 2 elements)
+Testing d01133a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CIHEX3'
+INFO:    bdf.py:2784                      rejecting card_name = 'PLOAD3'
+✓ PASS (SOL=1,0, APP=DISPLACEMENT, 32 nodes)
+Testing d01141a.inp                    ... ✓ PASS (SOL=1,0, APP=DISPLACEMENT, 7 nodes, 6 elements)
+Testing d01151a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CTRAPAX'
+INFO:    bdf.py:2784                      rejecting card_name = 'CTRIAAX'
+INFO:    bdf.py:2784                      rejecting card_name = 'PTRAPAX'
+INFO:    bdf.py:2784                      rejecting card_name = 'PTRIAAX'
+✓ PASS (SOL=1,1, APP=DISPLACEMENT)
+Testing d01161a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CQDMEM'
+problem adding ['CROD', '101', None, '48', '49', '102', '102', '49', '59']
+✗ FAIL - len(CROD card) = 9
+card=['CROD', '101', None, '48', '49', '1
+Testing d01171a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CQUAD2'
+INFO:    bdf.py:2784                      rejecting card_name = 'PQUAD2'
+✓ PASS (SOL=1,0, APP=DISP, 15 nodes)
+Testing d02011a.inp                    ... ✓ PASS (SOL=2,1, APP=DISPLACEMENT, 25 nodes, 24 elements)
+Testing d02021a.inp                    ... ✗ FAIL - uline='APP   DISPLACEMENT,SUBS'
+Testing d02022a.inp                    ... ✗ FAIL - uline='APP   DISPLACEMENT,SUBS'
+Testing d02023a.inp                    ... ✗ FAIL - uline='APP   DISPLACEMENT,SUBS'
+Testing d02024a.inp                    ... ✗ FAIL - uline='APP   DISPLACEMENT,SUBS'
+Testing d02025a.inp                    ... ✗ FAIL - uline='APP   DISP,SUBS'
+Testing d02026a.inp                    ... ✗ FAIL - uline='APP   DISPLACEMENT,SUBS'
+Testing d02027a.inp                    ... ✗ FAIL - uline='APP   DISP,SUBS'
+Testing d02031a.inp                    ... ✗ FAIL - uline='APP   DISP,SUBS'
+Testing d02032a.inp                    ... ✗ FAIL - uline='APP   DISP,SUBS'
+Testing d02033a.inp                    ... ✗ FAIL - uline='APP   DISP,SUBS'
+Testing d02034a.inp                    ... ✗ FAIL - uline='APP   DISP,SUBS'
+Testing d02035a.inp                    ... ✗ FAIL - uline='APP   DISP,SUBS'
+Testing d02036a.inp                    ... ✗ FAIL - uline='APP   DISP,SUBS'
+Testing d03011a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CNGRNT'
+problem adding ['CQUAD1', '1', '23', '1', '2', '13', '12', '.00']
+✗ FAIL - len(CQUAD1 card) = 8
+card=['CQUAD1', '1', '23', '1', '2', '1
+Testing d03012a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CNGRNT'
+problem adding ['CQUAD1', '1', '101', '1', '2', '23', '22', '.0']
+✗ FAIL - len(CQUAD1 card) = 8
+card=['CQUAD1', '1', '101', '1', '2', '
+Testing d03013a.inp                    ... problem adding ['EIGR', '4', 'DET', '.89', '1.0', '1', '1', '0', None, 'MAX']
+✗ FAIL - method=DET; allowed_methods=[LAN, AHOU, INV, SINV, GIV, MGIV
+Testing d03014a.inp                    ... problem adding ['EIGR', '4', 'DET', '.89', '1.0', '1', '1', '0', None, 'MAX']
+✗ FAIL - method=DET; allowed_methods=[LAN, AHOU, INV, SINV, GIV, MGIV
+Testing d03021a.inp                    ... problem adding ['AXIF', '100', None, '.001', '1.0+3', 'NO', None, None, None, '0', 'THRU', '2']
+✗ FAIL - g = None (field #2) on card must be a float (not blank).
+car
+Testing d03031a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CFLUID2'
+INFO:    bdf.py:2784                      rejecting card_name = 'CFLUID3'
+INFO:    bdf.py:2784                      rejecting card_name = 'FREEPT'
+INFO:    bdf.py:2784                      rejecting card_name = 'FSLIST'
+ERROR:   bdf.py:3546                  ['RINGFL', '1090', '.50000', '90.0000', None, '1135', '.50000', '135.000']
+✗ FAIL - ringfl_2 = '90.0000' (field #3) on card must be an integer (
+Testing d03041a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'AXSLOT'
+INFO:    bdf.py:2784                      rejecting card_name = 'CAXIF2'
+INFO:    bdf.py:2784                      rejecting card_name = 'CAXIF3'
+INFO:    bdf.py:2784                      rejecting card_name = 'CAXIF4'
+INFO:    bdf.py:2784                      rejecting card_name = 'CSLOT3'
+INFO:    bdf.py:2784                      rejecting card_name = 'CSLOT4'
+INFO:    bdf.py:2784                      rejecting card_name = 'GRIDF'
+INFO:    bdf.py:2784                      rejecting card_name = 'GRIDS'
+INFO:    bdf.py:2784                      rejecting card_name = 'SLBDY'
+✓ PASS (SOL=3,0, APP=DISPLACEMENT, 2 nodes)
+Testing d03051a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CHBDY'
+✓ PASS (SOL=3,1, APP=HEAT, 5 nodes, 4 elements)
+Testing d03061a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CHBDY'
+problem adding ['CROD', '1', '100', '20', '1', '2', '100', '1', '2']
+✗ FAIL - len(CROD card) = 9
+card=['CROD', '1', '100', '20', '1', '2',
+Testing d03071a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CTRPLT1'
+INFO:    bdf.py:2784                      rejecting card_name = 'PTRPLT1'
+✓ PASS (SOL=3,0, APP=DISPLACEMENT, 45 nodes)
+Testing d03081a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CRIGD1'
+INFO:    bdf.py:2784                      rejecting card_name = 'CRIGD2'
+INFO:    bdf.py:2784                      rejecting card_name = 'CRIGD3'
+INFO:    bdf.py:2784                      rejecting card_name = 'CRIGDR'
+✓ PASS (SOL=3,0, APP=DISPLACEMENT, 28 nodes, 25 elements)
+Testing d03082a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CRIGD1'
+INFO:    bdf.py:2784                      rejecting card_name = 'CRIGD2'
+INFO:    bdf.py:2784                      rejecting card_name = 'CRIGD3'
+INFO:    bdf.py:2784                      rejecting card_name = 'CRIGDR'
+✓ PASS (SOL=3,0, APP=DISPLACEMENT, 28 nodes, 25 elements)
+Testing d03083a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CRIGD1'
+INFO:    bdf.py:2784                      rejecting card_name = 'CRIGD2'
+INFO:    bdf.py:2784                      rejecting card_name = 'CRIGD3'
+INFO:    bdf.py:2784                      rejecting card_name = 'CRIGDR'
+✓ PASS (SOL=3,0, APP=DISPLACEMENT, 28 nodes, 25 elements)
+Testing d04011a.inp                    ... ✓ PASS (SOL=4,0, APP=DISP, 10 nodes, 9 elements)
+Testing d05011a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CNGRNT'
+INFO:    bdf.py:2784                      rejecting card_name = 'CTRIA1'
+✗ FAIL - method must be INV or SINV.  method='UDET'
+Testing d05021a.inp                    ... problem adding ['PTRSHL', '6', '5', '2.990698', None, '2.495348', '5', '2.229135', None, '1.294828']
+✗ FAIL - t6 = None (field #10) on card must be an integer (not blank)
+Testing d06011a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CTRMEM'
+problem adding ['MATS1', '60', '101']
+✗ FAIL - Type = None (field #3) on card must be a string (not blank).
+Testing d07011a.inp                    ... problem adding ['CDAMP3', '60003', '401', '3', '0', '60004', '401', '4', '0']
+✗ FAIL - len(CDAMP3 card) = 9
+card=['CDAMP3', '60003', '401', '3', '0
+Testing d07012a.inp                    ... problem adding ['EIGC', '1', 'FEER', 'MAX', None, None, None, None, None, '-1.0', '12.0']
+✗ FAIL - method=FEER is not ARNO, INV, HESS, CLAN, ISRR, IRAM, DET
+Testing d07021a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'BDYLIST'
+INFO:    bdf.py:2784                      rejecting card_name = 'CFLUID2'
+INFO:    bdf.py:2784                      rejecting card_name = 'CFLUID4'
+INFO:    bdf.py:2784                      rejecting card_name = 'FLSYM'
+INFO:    bdf.py:2784                      rejecting card_name = 'FSLIST'
+problem adding ['PQUAD1', '1', '2', '.01', '2', '8.3333-8', None, None, None, '.0', '.005']
+✗ FAIL - mid1 = '2' (field #2) on card must be blank (not an integer)
+Testing d07022a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'BDYLIST'
+INFO:    bdf.py:2784                      rejecting card_name = 'CFLUID2'
+INFO:    bdf.py:2784                      rejecting card_name = 'CFLUID4'
+INFO:    bdf.py:2784                      rejecting card_name = 'FLSYM'
+INFO:    bdf.py:2784                      rejecting card_name = 'FSLIST'
+problem adding ['PQUAD1', '1', '2', '.01', '2', '8.3333-8', None, None, None, '.0', '.005']
+✗ FAIL - mid1 = '2' (field #2) on card must be blank (not an integer)
+Testing d08011a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CNGRNT'
+problem adding ['CQUAD1', '1', '23', '1', '2', '13', '12', '.00']
+✗ FAIL - len(CQUAD1 card) = 8
+card=['CQUAD1', '1', '23', '1', '2', '1
+Testing d08012a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CNGRNT'
+problem adding ['CQUAD1', '1', '23', '1', '2', '23', '22', '.00']
+✗ FAIL - len(CQUAD1 card) = 8
+card=['CQUAD1', '1', '23', '1', '2', '2
+Testing d08013a.inp                    ... ✓ PASS (SOL=8,1, APP=DISPLACEMENT)
+Testing d08014a.inp                    ... ✓ PASS (SOL=8,1, APP=DISPLACEMENT)
+Testing d09011a.inp                    ... ✓ PASS (SOL=9,1, APP=DISPLACEMENT)
+Testing d09021a.inp                    ... problem adding ['CELAS3', '1', '101', '0', '2', '2', '101', '2', '3']
+✗ FAIL - len(CELAS3 card) = 9
+card=['CELAS3', '1', '101', '0', '2', '
+Testing d09022a.inp                    ... ✓ PASS (SOL=9,1, APP=DISP)
+Testing d09031a.inp                    ... ERROR:   case_control_deck.py:155     Invalid Case Control Deck:
+TITLE    = TRANSIENT ANALYSIS OF A FLUID-FILLED ELASTIC CYLINDER.
+SUBTITLE = NASTRAN DEMONSTRATION PROBLEM NO. D09-03-1A
+   LABEL = THIRD HARMONIC ANALYSIS.
+   TSTEP = 10
+   DLOAD = 10
+     SPC = 3
+   AXISYMMETRIC = FLUID
+   OUTPUT
+   HARMONICS = 3
+     SET 100 = 10,11, 26,27, 42,43, 58,59, 74,75, 81 THRU 96,
+               106,107, 122,123, 138,139, 154,155, 170,171
+   DISPLACEMENT = 100
+PLOTID   = NASTRAN DEMONSTRATION PROBLEM NO. D09-03-1A
+OUTPUT(XYPLOT)
+ PLOTTER = NASTPLT
+  XTGRID = YES
+  YTGRID = YES
+  XBGRID = YES
+  YBGRID = YES
+  XDIVISIONS = 10
+  CURVELINESYMBOL = 1
+  XTITLE  =                                     TIME (SECONDS)
+  YTTITLE =  R DISP      -INCHES-
+  YBTITLE =  R DISP      -INCHES-
+$
+
+TCURVE = PLOTTED  *TOP GRID 91(Z=5,A=0), *BOTTOM GRID 110(Z=5,A=18)
+  XYPLOT DISP   /91(T1,), 110(,T1)
+TCURVE = PLOTTED GRID(A=0,18) *TOP - 59,62(Z=7) *BOTTOM 123,126(Z=3)
+  XYPLOT DISP   /59(T1,), 62(T1,), 123(,T1),126(,T1)
+$
+
+  YTTITLE =  PRESSURE     *LB/INCH*
+  YBTITLE =  PRESSURE     *LB/INCH*
+TCURVE = PLOTTED PRESPT (Z=5,A=0)  *TOP 5301(R=3)  *BOTTOM 5801(R=8)
+  XYPLOT DISP   / 5301(T1,), 5801(,T1)
+TCURVE = PLOTTED PRESPT (R=5,A=0,Z=3,5,7)*TOP 3501,5501  *BOT 7501,5501
+  XYPLOT DISP   / 5501(T1,T1), 3501(T1,), 7501(,T1)
+  YTITLE = R DISP       -INCH-
+TCURVE = PLOTTED  DISP AT MIDPOINT(Z=5.), ANGLE = 0.0 AND 18.0 DEGREES.
+  XYPLOT DISP   /  91(T1), 110(T1)
+   YTITLE = HARMONIC PRESSURE
+TCURVE = PLOTTED RINGFL (R=5,Z=5)  * 85
+     XYPLOT DISP / 4000085 (T1)
+$
+
+✗ FAIL - TCURVE = PLOTTED  *TOP GRID 91(Z=5,A=0), *BOTTOM GRID 110(Z=
+Testing d09041a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CHBDY'
+problem adding ['CROD', '11', '1', '10', '12', '13', '1', '12', '14']
+✗ FAIL - len(CROD card) = 9
+card=['CROD', '11', '1', '10', '12', '13'
+Testing d10011a.inp                    ... problem adding ['CELAS4', '1001', '2.0261+7', '1001', None, '1002', '32.417+7', '1002']
+✗ FAIL - len(CELAS4 card) = 8
+card=['CELAS4', '1001', '2.0261+7', '10
+Testing d10021a.inp                    ... ✗ FAIL - uline='APP   AERO'
+Testing d10022a.inp                    ... ✗ FAIL - uline='APP   AERO'
+Testing d10023a.inp                    ... ✗ FAIL - uline='APP   AERO'
+Testing d11011a.inp                    ... problem adding ['GENEL', '1101', None, '2', '1', '2', '3', '2', '5', '3', '1', '3', '3', '3', '5', None, None, 'UD', '1       1', '1       3', '1       5', 'Z', '.89044935-8', '.0', '.0', '.89044935-8', '.0', '.0', '3.08928-6', '-2.31696-6', '.0', '7.7232005-6', '-2.31696-6', '2.31696-6', '.0', '-6.950884-6', '2.31696-6', '1.7808987-8', '.0', '.0', '24.714241-6', '-9.26784-6', '4.6339203-6', None, None, 'S', '1.0', '.0', '.0', '.0', '1.0', '-2.0', '.0', '.0', '1.0', '1.0', '.0', '.0', '.0', '1.0', '-4.0', '.0', '.0', '1.0']
+✗ FAIL - UD_1 = '1       3' (field #19) on card must be an integer (n
+Testing d11011b.inp                    ... ✓ PASS (SOL=1,9, APP=DISPLACEMENT)
+Testing d11021a.inp                    ... problem adding ['CELAS3', '1', '101', '0', '2', '2', '101', '2', '3']
+✗ FAIL - len(CELAS3 card) = 9
+card=['CELAS3', '1', '101', '0', '2', '
+Testing d11022a.inp                    ... problem adding ['EIGR', '10', 'FEER', '10.5', None, None, '20', None, None, 'MAX']
+✗ FAIL - method=FEER; allowed_methods=[LAN, AHOU, INV, SINV, GIV, MGI
+Testing d11031a.inp                    ... ✗ FAIL - uline='APP   AERO'
+Testing d11032a.inp                    ... ✗ FAIL - uline='APP   AERO'
+Testing d12011a.inp                    ... ✓ PASS (SOL=12,3, APP=DISPLACEMENT, 101 nodes, 100 elements)
+Testing d13011a.inp                    ... ✓ PASS (SOL=13,0, APP=DISPLACEMENT, 101 nodes, 100 elements)
+Testing d14011a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CNGRNT'
+INFO:    bdf.py:2784                      rejecting card_name = 'CQUAD2'
+problem adding ['MAT1', '1', '10.6 +6', None, '.325', '2.59 -4', '12.9 -6']
+✗ FAIL - E = '10.6 +6' (field #2) on card must be a float or blank (n
+Testing d15011a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CNGRNT'
+INFO:    bdf.py:2784                      rejecting card_name = 'CQUAD2'
+problem adding ['MAT1', '1', '10.6 +6', None, '.325', '2.59-4', '12.9-6']
+✗ FAIL - E = '10.6 +6' (field #2) on card must be a float or blank (n
+Testing t00001a.inp                    ... ✗ FAIL - expected "BEGIN BULK" or "BEGIN SUPER=1"
+line = BEGIN       
+Testing t01181a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CELBOW'
+INFO:    bdf.py:2784                      rejecting card_name = 'PELBOW'
+✓ PASS (SOL=1,0, APP=DISPLACEMENT, 18 nodes, 11 elements)
+Testing t01191a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CIS2D8'
+INFO:    bdf.py:2784                      rejecting card_name = 'PIS2D8'
+INFO:    bdf.py:2784                      rejecting card_name = 'SPCFLD'
+INFO:    bdf.py:2784                      rejecting card_name = 'REMFLUX'
+INFO:    bdf.py:2784                      rejecting card_name = 'GEMLOOP'
+INFO:    bdf.py:2784                      rejecting card_name = 'MDIPOLE'
+INFO:    bdf.py:2784                      rejecting card_name = 'CEMLOOP'
+INFO:    bdf.py:2784                      rejecting card_name = 'BFIELD'
+INFO:    bdf.py:2784                      rejecting card_name = 'CTRMEM'
+INFO:    bdf.py:2784                      rejecting card_name = 'PTRMEM'
+INFO:    bdf.py:2784                      rejecting card_name = 'CQDMEM'
+INFO:    bdf.py:2784                      rejecting card_name = 'CQUAD2'
+INFO:    bdf.py:2784                      rejecting card_name = 'CTRIA1'
+INFO:    bdf.py:2784                      rejecting card_name = 'CTRIA2'
+INFO:    bdf.py:2784                      rejecting card_name = 'PQDMEM'
+problem adding ['PQUAD1', '2', '1', '2.', '1', '2.', '1', '2.']
+✗ FAIL - mid1 = '1' (field #2) on card must be blank (not an integer)
+Testing t01201a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CEMLOOP'
+INFO:    bdf.py:2784                      rejecting card_name = 'MDIPOLE'
+INFO:    bdf.py:2784                      rejecting card_name = 'REMFLUX'
+INFO:    bdf.py:2784                      rejecting card_name = 'CWEDGE'
+INFO:    bdf.py:2784                      rejecting card_name = 'SPCFLD'
+✓ PASS (SOL=1,0, APP=HEAT, 26 nodes, 3 elements)
+Testing t01211a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CWEDGE'
+✓ PASS (SOL=1, APP=DISP, 40 nodes, 20 elements)
+Testing t01221a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'MAT6'
+INFO:    bdf.py:2784                      rejecting card_name = 'PLOAD3'
+✓ PASS (SOL=1,0, APP=DISP, 68 nodes, 5 elements)
+Testing t01231a.inp                    ... ERROR:   bdf.py:3546                  ['GRDSET', '8)246']
+✗ FAIL - blank = '8)246' (field #1) on card must be blank (not a stri
+Testing t01241a.inp                    ... problem adding ['CROD', '60', '5', '1', '2', '61', '5', '2', '3']
+✗ FAIL - len(CROD card) = 9
+card=['CROD', '60', '5', '1', '2', '61', 
+Testing t01251a.inp                    ... problem adding ['MAT8', '3', '2.0  E+7', '5.0  E+5', '.25', '25.0E+04', None, None, None, None, None, None, '1.6 E+05', '1.2 E+04', '2.0 E+05', '3.0 E+04', '1.5 E+04']
+✗ FAIL - E11 = '2.0  EE+7' (field #2) on card must be a float (not a 
+Testing t01261a.inp                    ... problem adding ['MAT8', '1', '20.0E+06', '.50  E+6', '.25', '.250 E+6']
+✗ FAIL - E22 = '.50  EE+6' (field #3) on card must be a float (not a 
+Testing t01271a.inp                    ... problem adding ['MAT8', '1', '73.8 E+3', '3.75 E+3', '0.4', '1.74 E+3', None, None, None, None, None, None, '1680.', '-229.0', '20.9', '-137.0', '82.9']
+✗ FAIL - E11 = '73.8 EE+3' (field #2) on card must be a float (not a 
+Testing t01281a.inp                    ... problem adding ['PARAM', 'AUTOSPC', '1']
+✗ FAIL - value = 1 (field #2) on card must be a string with a charact
+Testing t01291a.inp                    ... problem adding ['MAT8', '1', '20.0 E+7', '0.5 E+07', '0.25', '0.25 E+7', '0.25 E+7', '0.25 E+7']
+✗ FAIL - E11 = '20.0 EE+7' (field #2) on card must be a float (not a 
+Testing t01301a.inp                    ... ✗ FAIL - card_name='='
+equal signs are not supported...line='=,2,,0.0
+Testing t01311a.inp                    ... ✗ FAIL - card_name='='
+equal signs are not supported...line='=,2,,0.0
+Testing t01321a.inp                    ... ✓ PASS (SOL=1,0, APP=DISP, 25 nodes, 32 elements)
+Testing t01331a.inp                    ... problem adding ['MAT8', '1', '20.0 E+7', '0.5 E+07', '0.25', '0.25 E+7', '0.25 E+7', '0.25 E+7']
+✗ FAIL - E11 = '20.0 EE+7' (field #2) on card must be a float (not a 
+Testing t01341a.inp                    ... ERROR:   bdf.py:3546                  ['GRDSET', '8)246']
+✗ FAIL - blank = '8)246' (field #1) on card must be blank (not a stri
+Testing t03091a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'PTRAPAX'
+INFO:    bdf.py:2784                      rejecting card_name = 'CTRAPAX'
+✓ PASS (SOL=3, APP=DISP)
+Testing t03101a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CTRAPRG'
+✓ PASS (SOL=3, APP=DISP, 52 nodes)
+Testing t03111a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CFFREE'
+INFO:    bdf.py:2784                      rejecting card_name = 'CFHEX2'
+INFO:    bdf.py:2784                      rejecting card_name = 'CFLSTR'
+INFO:    bdf.py:2784                      rejecting card_name = 'CQUAD2'
+INFO:    bdf.py:2784                      rejecting card_name = 'MATF'
+INFO:    bdf.py:2784                      rejecting card_name = 'PQUAD2'
+✓ PASS (SOL=3,0, APP=DISP, 16 nodes)
+Testing t03111b.inp                    ... ✗ FAIL - $ NEW EIGR CARD FOR DIFFERENT MODES
+['/', '9', '10']
+Testing t03121a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CFFREE'
+INFO:    bdf.py:2784                      rejecting card_name = 'CFHEX2'
+INFO:    bdf.py:2784                      rejecting card_name = 'CFLSTR'
+INFO:    bdf.py:2784                      rejecting card_name = 'CQUAD2'
+INFO:    bdf.py:2784                      rejecting card_name = 'MATF'
+INFO:    bdf.py:2784                      rejecting card_name = 'PQUAD2'
+✓ PASS (SOL=3,0, APP=DISP, 16 nodes)
+Testing t03121b.inp                    ... ✗ FAIL - $ NEW EIGR CARD FOR DIFFERENT MODE
+['/', '11', '12']
+Testing t03121c.inp                    ... ✗ FAIL - $ NEW FLUID MODEL
+['/', '1', '4']
+Testing t03131a.inp                    ... ✓ PASS (SOL=3, APP=DISP, 28 nodes, 33 elements)
+Testing t04021a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CQUAD2'
+INFO:    bdf.py:2784                      rejecting card_name = 'PQUAD2'
+✓ PASS (SOL=4,6, APP=DISP, 8 nodes)
+Testing t04021b.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CFHEX2'
+INFO:    bdf.py:2784                      rejecting card_name = 'CFFREE'
+INFO:    bdf.py:2784                      rejecting card_name = 'CFLSTR'
+INFO:    bdf.py:2784                      rejecting card_name = 'MATF'
+✓ PASS (SOL=3,0, APP=DISP, 8 nodes)
+Testing t05031a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CIS2D8'
+INFO:    bdf.py:2784                      rejecting card_name = 'PIS2D8'
+✓ PASS (SOL=5,0, APP=DISP, 28 nodes)
+Testing t08021a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CQUAD2'
+INFO:    bdf.py:2784                      rejecting card_name = 'CTRIA2'
+problem adding ['CYJOIN', '1', None, '1', '2', '3', '4', '5']
+✗ FAIL - coord = None (field #2) on card must be a string (not blank)
+Testing t08022a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CQUAD2'
+INFO:    bdf.py:2784                      rejecting card_name = 'CTRIA2'
+problem adding ['CYJOIN', '1', None, '1', '2', '3', '4', '5']
+✗ FAIL - coord = None (field #2) on card must be a string (not blank)
+Testing t08031a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CTRIA2'
+problem adding ['CYJOIN', '1', None, '199']
+✗ FAIL - coord = None (field #2) on card must be a string (not blank)
+Testing t09051a.inp                    ... ✗ FAIL - uline='APP   AERO'
+Testing t09061a.inp                    ... ✗ FAIL - uline='APP   AERO'
+Testing t09071a.inp                    ... /mnt/developer/git/aecs4u.it/get-me-the-job/.venv/lib/python3.12/site-packages/pyNastran/bdf/field_writer_8.py:295: UserWarning: bad fields = ['CBAR', '1', '1', '1', '2', '0.  0.  1.0  1']
+  warnings.warn("bad fields = %s" % fields)
+ERROR:   bdf.py:3546                  ['CBAR', '1', '1', '1', '2', '0.  0.  1.0  1']
+✗ FAIL - g0_x1 = '0.  0.  1.0  1' (field #5) on card must be an integ
+Testing t13021a.inp                    ... /mnt/developer/git/aecs4u.it/get-me-the-job/.venv/lib/python3.12/site-packages/pyNastran/bdf/field_writer_8.py:295: UserWarning: bad fields = ['BAROR', None, '1', None, None, '1.  0.  0.']
+  warnings.warn("bad fields = %s" % fields)
+problem adding ['BAROR', None, '1', None, None, '1.  0.  0.']
+✗ FAIL - g0_x1 = '1.  0.  0.' (field #5) on card must be an integer, 
+Testing t13022a.inp                    ... problem adding ['CORD2C', '1  0  0. 0. 0.  0. 0. 1.', None, None, None, None, None, None, None, '1. 0. 0.']
+✗ FAIL - cid = '1  0  0. 0. 0.  0. 0. 1.' (field #1) on card must be 
+Testing t16011a.inp                    ... INFO:    bdf.py:2784                      rejecting card_name = 'CTRIA2'
+ERROR:   bdf.py:3546                  ['DTI', 'ALGDB', '1', 'NASA LEW', 'IS EXPER', 'IMENTAL', 'FAN', None, None, None, None, None, 'ENDREC']
+✗ FAIL - T2 = 'NASA LEW' (field #3) on card must be an integer, float
+Testing t17011a.inp                    ... ✓ PASS (SOL=17, APP=DISP, 28 nodes, 33 elements)
+
+================================================================================
+Results: 51 passed, 81 failed out of 132 total
+================================================================================
+
+Failed files:
+  d01011a.inp
+    Error: len(CROD card) = 9
+card=['CROD', '60', '5', '1', '11', '61', '6', '2', '12']
+  d01012a.inp
+    Error: len(CROD card) = 9
+card=['CROD', '60', '5', '1', '11', '61', '6', '2', '12']
+  d01013a.inp
+    Error: len(CROD card) = 9
+card=['CROD', '60', '5', '1', '11', '61', '6', '2', '12']
+  d01014a.inp
+    Error: len(CROD card) = 9
+card=['CROD', '60', '5', '1', '11', '61', '6', '2', '12']
+  d01041a.inp
+    Error: nsm = None (field #8) on card must be a float (not blank).
+card=['PQUAD1', '101', None, None, '1234', '.0833333', None, None, None, '.5', '-.5']
+PQUAD1       101                    1234.0833333
+              .5     -.5
+
+  d01051a.inp
+    Error: phi = None (field #3) on card must be a float (not blank).
+card=['POINTAX', '200', '100']
+POINTAX      200     100
+
+  d01062a.inp
+    Error: field='*(1) *(2)' has embedded blanks (mixed comma/space separated fields)
+fields=['=(11)', ' *(1) *(2)', '///', ' ==', '', '', '', '', '']
+  d01071a.inp
+    Error: a = '12.5 E-6' (field #6) on card must be a float or blank (not a string).
+card=['MAT1', '12', '3.0E6', None, '.1667', None, '12.5 E-6', '.0']
+  d01111a.inp
+    Error: value = 0 (field #2) on card must be a string with a character (not an integer).
+card=['PARAM', 'STRESS', '0']
+  d01112a.inp
+    Error: value = 0 (field #2) on card must be a string with a character (not an integer).
+card=['PARAM', 'STRESS', '0']
+  d01122a.inp
+    Error: af = '300' (field #2) on card must be a float or blank (not an integer).
+card=['PHBDY', '100', '300']
+  d01131a.inp
+    Error: stress = '4.5' (field #5) on card must be an integer, string (without a blank space), or blank (not a double value=4.5).
+card=['PIHEX', '200', '300', None, '4', '4.5', '10.0']
+  d01161a.inp
+    Error: len(CROD card) = 9
+card=['CROD', '101', None, '48', '49', '102', '102', '49', '59']
+  d02021a.inp
+    Error: uline='APP   DISPLACEMENT,SUBS'
+  d02022a.inp
+    Error: uline='APP   DISPLACEMENT,SUBS'
+  d02023a.inp
+    Error: uline='APP   DISPLACEMENT,SUBS'
+  d02024a.inp
+    Error: uline='APP   DISPLACEMENT,SUBS'
+  d02025a.inp
+    Error: uline='APP   DISP,SUBS'
+  d02026a.inp
+    Error: uline='APP   DISPLACEMENT,SUBS'
+  d02027a.inp
+    Error: uline='APP   DISP,SUBS'
+  d02031a.inp
+    Error: uline='APP   DISP,SUBS'
+  d02032a.inp
+    Error: uline='APP   DISP,SUBS'
+  d02033a.inp
+    Error: uline='APP   DISP,SUBS'
+  d02034a.inp
+    Error: uline='APP   DISP,SUBS'
+  d02035a.inp
+    Error: uline='APP   DISP,SUBS'
+  d02036a.inp
+    Error: uline='APP   DISP,SUBS'
+  d03011a.inp
+    Error: len(CQUAD1 card) = 8
+card=['CQUAD1', '1', '23', '1', '2', '13', '12', '.00']
+  d03012a.inp
+    Error: len(CQUAD1 card) = 8
+card=['CQUAD1', '1', '101', '1', '2', '23', '22', '.0']
+  d03013a.inp
+    Error: method=DET; allowed_methods=[LAN, AHOU, INV, SINV, GIV, MGIV, HOU, MHOU, AGIV]
+  d03014a.inp
+    Error: method=DET; allowed_methods=[LAN, AHOU, INV, SINV, GIV, MGIV, HOU, MHOU, AGIV]
+  d03021a.inp
+    Error: g = None (field #2) on card must be a float (not blank).
+card=['AXIF', '100', None, '.001', '1.0+3', 'NO', None, None, None, '0', 'THRU', '2']
+AXIF         100            .001   1.0+3      NO
+               0    THRU       2
+
+  d03031a.inp
+    Error: ringfl_2 = '90.0000' (field #3) on card must be an integer (not a double value=90.0).
+card=['RINGFL', '1090', '.50000', '90.0000', None, '1135', '.50000', '135.000']
+  d03061a.inp
+    Error: len(CROD card) = 9
+card=['CROD', '1', '100', '20', '1', '2', '100', '1', '2']
+  d05011a.inp
+    Error: method must be INV or SINV.  method='UDET'
+  d05021a.inp
+    Error: t6 = None (field #10) on card must be an integer (not blank).
+card=['PTRSHL', '6', '5', '2.990698', None, '2.495348', '5', '2.229135', None, '1.294828']
+  d06011a.inp
+    Error: Type = None (field #3) on card must be a string (not blank).
+card=['MATS1', '60', '101']
+  d07011a.inp
+    Error: len(CDAMP3 card) = 9
+card=['CDAMP3', '60003', '401', '3', '0', '60004', '401', '4', '0']
+  d07012a.inp
+    Error: method=FEER is not ARNO, INV, HESS, CLAN, ISRR, IRAM, DET
+  d07021a.inp
+    Error: mid1 = '2' (field #2) on card must be blank (not an integer).
+card=['PQUAD1', '1', '2', '.01', '2', '8.3333-8', None, None, None, '.0', '.005']
+  d07022a.inp
+    Error: mid1 = '2' (field #2) on card must be blank (not an integer).
+card=['PQUAD1', '1', '2', '.01', '2', '8.3333-8', None, None, None, '.0', '.005']
+  d08011a.inp
+    Error: len(CQUAD1 card) = 8
+card=['CQUAD1', '1', '23', '1', '2', '13', '12', '.00']
+  d08012a.inp
+    Error: len(CQUAD1 card) = 8
+card=['CQUAD1', '1', '23', '1', '2', '23', '22', '.00']
+  d09021a.inp
+    Error: len(CELAS3 card) = 9
+card=['CELAS3', '1', '101', '0', '2', '2', '101', '2', '3']
+  d09031a.inp
+    Error: TCURVE = PLOTTED  *TOP GRID 91(Z=5,A=0), *BOTTOM GRID 110(Z=5,A=18)
+  d09041a.inp
+    Error: len(CROD card) = 9
+card=['CROD', '11', '1', '10', '12', '13', '1', '12', '14']
+  d10011a.inp
+    Error: len(CELAS4 card) = 8
+card=['CELAS4', '1001', '2.0261+7', '1001', None, '1002', '32.417+7', '1002']
+  d10021a.inp
+    Error: uline='APP   AERO'
+  d10022a.inp
+    Error: uline='APP   AERO'
+  d10023a.inp
+    Error: uline='APP   AERO'
+  d11011a.inp
+    Error: UD_1 = '1       3' (field #19) on card must be an integer (not a string).
+card=['GENEL', '1101', None, '2', '1', '2', '3', '2', '5', '3', '1', '3', '3', '3', '5', None, None, 'UD', '1       1', '1       3', '1       5', 'Z', '.89044935-8', '.0', '.0', '.89044935-8', '.0', '.0', '3.08928-6', '-2.31696-6', '.0', '7.7232005-6', '-2.31696-6', '2.31696-6', '.0', '-6.950884-6', '2.31696-6', '1.7808987-8', '.0', '.0', '24.714241-6', '-9.26784-6', '4.6339203-6', None, None, 'S', '1.0', '.0', '.0', '.0', '1.0', '-2.0', '.0', '.0', '1.0', '1.0', '.0', '.0', '.0', '1.0', '-4.0', '.0', '.0', '1.0']
+  d11021a.inp
+    Error: len(CELAS3 card) = 9
+card=['CELAS3', '1', '101', '0', '2', '2', '101', '2', '3']
+  d11022a.inp
+    Error: method=FEER; allowed_methods=[LAN, AHOU, INV, SINV, GIV, MGIV, HOU, MHOU, AGIV]
+  d11031a.inp
+    Error: uline='APP   AERO'
+  d11032a.inp
+    Error: uline='APP   AERO'
+  d14011a.inp
+    Error: E = '10.6 +6' (field #2) on card must be a float or blank (not a double value=10600000.0).
+card=['MAT1', '1', '10.6 +6', None, '.325', '2.59 -4', '12.9 -6']
+  d15011a.inp
+    Error: E = '10.6 +6' (field #2) on card must be a float or blank (not a double value=10600000.0).
+card=['MAT1', '1', '10.6 +6', None, '.325', '2.59-4', '12.9-6']
+  t00001a.inp
+    Error: expected "BEGIN BULK" or "BEGIN SUPER=1"
+line = BEGIN                                                                           
+
+  t01191a.inp
+    Error: mid1 = '1' (field #2) on card must be blank (not an integer).
+card=['PQUAD1', '2', '1', '2.', '1', '2.', '1', '2.']
+  t01231a.inp
+    Error: blank = '8)246' (field #1) on card must be blank (not a string).
+card=['GRDSET', '8)246']
+  t01241a.inp
+    Error: len(CROD card) = 9
+card=['CROD', '60', '5', '1', '2', '61', '5', '2', '3']
+  t01251a.inp
+    Error: E11 = '2.0  EE+7' (field #2) on card must be a float (not a string).
+card=['MAT8', '3', '2.0  E+7', '5.0  E+5', '.25', '25.0E+04', None, None, None, None, None, None, '1.6 E+05', '1.2 E+04', '2.0 E+05', '3.0 E+04', '1.5 E+04']
+MAT8           32.0  E+75.0  E+5     .2525.0E+04
+                                1.6 E+051.2 E+042.0 E+053.0 E+041.5 E+04
+
+  t01261a.inp
+    Error: E22 = '.50  EE+6' (field #3) on card must be a float (not a string).
+card=['MAT8', '1', '20.0E+06', '.50  E+6', '.25', '.250 E+6']
+MAT8           120.0E+06.50  E+6     .25.250 E+6
+
+  t01271a.inp
+    Error: E11 = '73.8 EE+3' (field #2) on card must be a float (not a string).
+card=['MAT8', '1', '73.8 E+3', '3.75 E+3', '0.4', '1.74 E+3', None, None, None, None, None, None, '1680.', '-229.0', '20.9', '-137.0', '82.9']
+MAT8           173.8 E+33.75 E+3     0.41.74 E+3
+                                   1680.  -229.0    20.9  -137.0    82.9
+
+  t01281a.inp
+    Error: value = 1 (field #2) on card must be a string with a character (not an integer).
+card=['PARAM', 'AUTOSPC', '1']
+  t01291a.inp
+    Error: E11 = '20.0 EE+7' (field #2) on card must be a float (not a string).
+card=['MAT8', '1', '20.0 E+7', '0.5 E+07', '0.25', '0.25 E+7', '0.25 E+7', '0.25 E+7']
+MAT8           120.0 E+70.5 E+07    0.250.25 E+70.25 E+70.25 E+7
+
+  t01301a.inp
+    Error: card_name='='
+equal signs are not supported...line='=,2,,0.0,1.0'
+  t01311a.inp
+    Error: card_name='='
+equal signs are not supported...line='=,2,,0.0,1.0'
+  t01331a.inp
+    Error: E11 = '20.0 EE+7' (field #2) on card must be a float (not a string).
+card=['MAT8', '1', '20.0 E+7', '0.5 E+07', '0.25', '0.25 E+7', '0.25 E+7', '0.25 E+7']
+MAT8           120.0 E+70.5 E+07    0.250.25 E+70.25 E+70.25 E+7
+
+  t01341a.inp
+    Error: blank = '8)246' (field #1) on card must be blank (not a string).
+card=['GRDSET', '8)246']
+  t03111b.inp
+    Error: $ NEW EIGR CARD FOR DIFFERENT MODES
+['/', '9', '10']
+  t03121b.inp
+    Error: $ NEW EIGR CARD FOR DIFFERENT MODE
+['/', '11', '12']
+  t03121c.inp
+    Error: $ NEW FLUID MODEL
+['/', '1', '4']
+  t08021a.inp
+    Error: coord = None (field #2) on card must be a string (not blank).
+card=['CYJOIN', '1', None, '1', '2', '3', '4', '5']
+  t08022a.inp
+    Error: coord = None (field #2) on card must be a string (not blank).
+card=['CYJOIN', '1', None, '1', '2', '3', '4', '5']
+  t08031a.inp
+    Error: coord = None (field #2) on card must be a string (not blank).
+card=['CYJOIN', '1', None, '199']
+  t09051a.inp
+    Error: uline='APP   AERO'
+  t09061a.inp
+    Error: uline='APP   AERO'
+  t09071a.inp
+    Error: g0_x1 = '0.  0.  1.0  1' (field #5) on card must be an integer, float, or blank (not a string).
+card=['CBAR', '1', '1', '1', '2', '0.  0.  1.0  1']
+  t13021a.inp
+    Error: g0_x1 = '1.  0.  0.' (field #5) on card must be an integer, float, or blank (not a string).
+card=['BAROR', None, '1', None, None, '1.  0.  0.']
+  t13022a.inp
+    Error: cid = '1  0  0. 0. 0.  0. 0. 1.' (field #1) on card must be an integer (not a string).
+card=['CORD2C', '1  0  0. 0. 0.  0. 0. 1.', None, None, None, None, None, None, None, '1. 0. 0.']
+  t16011a.inp
+    Error: T2 = 'NASA LEW' (field #3) on card must be an integer, float or string (without a blank space).
+card=['DTI', 'ALGDB', '1', 'NASA LEW', 'IS EXPER', 'IMENTAL', 'FAN', None, None, None, None, None, 'ENDREC']
+
+
+Summary of successfully parsed files:
+  Solution types:
+    SOL 1: 2 files
+    SOL 1,0: 10 files
+    SOL 1,1: 10 files
+    SOL 1,3: 2 files
+    SOL 1,9: 1 files
+    SOL 12,3: 1 files
+    SOL 13,0: 1 files
+    SOL 17: 1 files
+    SOL 2,1: 1 files
+    SOL 3: 3 files
+    SOL 3,0: 8 files
+    SOL 3,1: 2 files
+    SOL 4,0: 1 files
+    SOL 4,6: 1 files
+    SOL 5,0: 1 files
+    SOL 6: 1 files
+    SOL 8,1: 2 files
+    SOL 9,1: 2 files

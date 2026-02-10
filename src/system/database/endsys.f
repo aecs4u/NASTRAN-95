@@ -7,12 +7,12 @@ C          IF SPERLK = 0, WE ARE IN NASTRAN MULTI-LINK COMPUTATION
 C          IF SPERLK = NON-ZERO, WE ARE IN NASTRAN SUPERLINK
 C          SPERLK IS THE 95TH WORD OF /SYSTEM/
 C
-      EXTERNAL        LSHIFT,RSHIFT,ANDF,ORF
+      EXTERNAL        LSHIFT,RSHIFT,ANDF,ORF,LINK
       LOGICAL         BITPAS
       INTEGER         ANDF,FIST,SAVE,SCRN1,SCRN2,THCRMK,POOL,SPERLK,
      1                NOPREF(2),RSHIFT,BUF,MSGBUF(8),BCDNUM(10),UNITS,
      2                TENS,ORF,UNITAB(75),FCB(75),DATABF,MSG(2),NAME(2),
-     3                FILE,FILEX,LNKNUM(15),COMM,XF1AT,PREFAC
+     3                FILE,FILEX,LNKNUM(15),COMM,XF1AT,PREFAC,ZERO(2)
       CHARACTER       UFM*23,UWM*25,UIM*29,SFM*25,FORTXX*7
       COMMON /XMSSG / UFM,UWM,UIM,SFM
       COMMON /MACHIN/ MACH
@@ -62,6 +62,7 @@ C
      1                4H 6  , 4H 7  , 4H 8  , 4H 9  , 4H10  ,
      2                4H11  , 4H12  , 4H13  , 4H14  , 4H15  /
       DATA NAME     / 4HENDS,4HYS   /
+      DATA ZERO     / 0, 0 /
 C
 C
 C     PUNCH RESTART DICTIONAY
@@ -86,7 +87,7 @@ C
       IF (MSGBUF(2) .NE. 0) GO TO 15
       WRITE  (NOUT,12) SFM,JOBEND
    12 FORMAT (A25,', ILLEGAL LINK NUMBER ',A4,' ENCOUNTERED BY ENDSYS')
-      CALL MESAGE (-61,0,0)
+      CALL MESAGE (-61,0,ZERO)
    15 MSGBUF(4) = MSG(2)
 C
       IF (SPERLK .EQ. 0) GO TO 30
@@ -107,7 +108,7 @@ C     PREFAC(2)  = NOPREF(2)
       WRITE  (NOUT,23) SFM,I,JOBEND
    23 FORMAT (A25,', LOGICAL UNIT',I5,' WAS NOT CLOSED AT END OF ',A4)
 C     ITAB9(J) = 0
-      CALL MESAGE (-37,0,0)
+      CALL MESAGE (-37,0,ZERO)
    25 CONTINUE
       GO TO 400
 C
@@ -165,7 +166,7 @@ C
       CALL CLOSE (SAVE,1)
    50 CONTINUE
 C
-      IF (IFOUND .EQ. 0) CALL MESAGE (-39,0,0)
+      IF (IFOUND .EQ. 0) CALL MESAGE (-39,0,ZERO)
       I = -2
       IF (ITAB11(1)+ITAB11(-I) .EQ. I) ICFIAT = ICFIAT + I
 C
@@ -260,10 +261,7 @@ C
       I2 = I - I1*64
       I  = 10*I1 + I2 - 297
       I76= 76
-C     TODO: LINK intrinsic requires CHARACTER args in modern gfortran
-C     Original code: CALL LINK (I,ITAB10(I76),0)
-C     Temporarily disabled - may need to use C wrapper for link() syscall
-C      CALL LINK (I,ITAB10(I76),0)
+      CALL LINK (I,ITAB10(I76),0)
       GO TO 350
 C
 C
@@ -339,7 +337,7 @@ C
   225 WRITE  (NOUT,226) SFM,JOBSXX,SPERLK
   226 FORMAT (A25,', ILLEGAL LINK NUMBER ',A4,' ENCOUNTERED BY BGNSYS.',
      1        4X,'SPERLK=',I14)
-      CALL MESAGE (-61,0,0)
+      CALL MESAGE (-61,0,ZERO)
 C
   228 CALL PRESSW (JOBSXX,I)
       CALL CONMSG (MSGBUF,4,0)
