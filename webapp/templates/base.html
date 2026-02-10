@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}NASTRAN-95 Modernization{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <a href="/">NASTRAN-95 Modernization</a>
+            </div>
+            <ul class="navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/modernization">Modernization</a></li>
+                <li><a href="/tests">Tests</a></li>
+                <li><a href="/build">Build</a></li>
+                <li><a href="/docs">Docs</a></li>
+                <li><a href="/api/status" target="_blank">API</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 NASTRAN-95 Modernization Project | Powered by FastAPI</p>
+        </div>
+    </footer>
+
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

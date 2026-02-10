@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Build Status - NASTRAN-95{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Build System Status</h1>
+    <p>CMake configuration and library information</p>
+</div>
+
+<section class="kpi-section">
+    <div class="kpi-grid">
+        <div class="kpi-card {% if build.build_exists %}kpi-success{% else %}kpi-error{% endif %}">
+            <div class="kpi-value">{% if build.build_exists %}✓{% else %}✗{% endif %}</div>
+            <div class="kpi-label">Build Directory</div>
+        </div>
+        <div class="kpi-card {% if build.executable_exists %}kpi-success{% else %}kpi-error{% endif %}">
+            <div class="kpi-value">{% if build.executable_exists %}✓{% else %}✗{% endif %}</div>
+            <div class="kpi-label">Executable</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-value">{{ build.library_count }}</div>
+            <div class="kpi-label">Libraries</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-value">{{ build.cmake_files_count }}</div>
+            <div class="kpi-label">CMake Files</div>
+        </div>
+    </div>
+</section>
+
+{% if build.executable_exists %}
+<section class="executable-section">
+    <h2>Executable Information</h2>
+    <div class="info-grid">
+        <div class="info-item">
+            <strong>Path:</strong>
+            <code>{{ build.executable_path }}</code>
+        </div>
+        <div class="info-item">
+            <strong>Build Time:</strong>
+            <span>{{ build.build_time or 'Unknown' }}</span>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+{% if build.libraries %}
+<section class="libraries-section">
+    <h2>Libraries ({{ build.library_count }})</h2>
+    <div class="table-container">
+        <table class="libraries-table">
+            <thead>
+                <tr>
+                    <th>Library Name</th>
+                    <th>Size</th>
+                    <th>Path</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for lib in build.libraries %}
+                <tr>
+                    <td><code>{{ lib.name }}</code></td>
+                    <td>{{ "%.2f"|format(lib.size / 1024 / 1024) }} MB</td>
+                    <td><code>{{ lib.path }}</code></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endif %}
+
+<section class="build-commands-section">
+    <h2>Build Commands</h2>
+    <div class="command-list">
+        <div class="command-item">
+            <h3>Clean Build</h3>
+            <pre><code>rm -rf build && mkdir build && cd build
+cmake .. && cmake --build .</code></pre>
+        </div>
+        <div class="command-item">
+            <h3>Incremental Build</h3>
+            <pre><code>cd build && cmake --build .</code></pre>
+        </div>
+        <div class="command-item">
+            <h3>Run Tests</h3>
+            <pre><code>./test_rust_bridge.sh</code></pre>
+        </div>
+    </div>
+</section>
+{% endblock %}

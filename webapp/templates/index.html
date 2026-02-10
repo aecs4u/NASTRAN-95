@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block title %}NASTRAN-95 Modernization - Home{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h1>NASTRAN-95 Modernization Project</h1>
+    <p class="lead">Modernizing a legacy Fortran 77 finite element analysis code to modern standards</p>
+</div>
+
+<section class="kpi-section">
+    <h2>Project Status</h2>
+    <div class="kpi-grid">
+        <div class="kpi-card">
+            <div class="kpi-value">{{ kpis.overall_progress }}%</div>
+            <div class="kpi-label">Modernization Progress</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-value">{{ kpis.modernized_files }}</div>
+            <div class="kpi-label">Files Modernized</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-value">{{ test_summary.passed }}/{{ test_summary.total }}</div>
+            <div class="kpi-label">Tests Passing</div>
+        </div>
+        <div class="kpi-card {% if build_status.executable_exists %}kpi-success{% else %}kpi-warning{% endif %}">
+            <div class="kpi-value">{% if build_status.executable_exists %}✓{% else %}⚠{% endif %}</div>
+            <div class="kpi-label">Build Status</div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <h2>What We're Doing</h2>
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3>🔄 Fortran Modernization</h3>
+            <p>Converting fixed-form Fortran 77 to free-form Fortran 90/2008</p>
+            <ul>
+                <li>Remove IMPLICIT typing</li>
+                <li>Add explicit declarations</li>
+                <li>Modern array syntax</li>
+                <li>Module system</li>
+            </ul>
+        </div>
+        <div class="feature-card">
+            <h3>🦀 Rust Integration</h3>
+            <p>Integrating Rust/PyO3 bridge for input validation</p>
+            <ul>
+                <li>pyNastran validation</li>
+                <li>Safe Fortran/Rust interop</li>
+                <li>Error handling improvements</li>
+            </ul>
+        </div>
+        <div class="feature-card">
+            <h3>🏗️ Build System</h3>
+            <p>Modern CMake-based build system</p>
+            <ul>
+                <li>Modular organization</li>
+                <li>Automatic duplicate detection</li>
+                <li>Library dependencies</li>
+            </ul>
+        </div>
+        <div class="feature-card">
+            <h3>✅ Quality Assurance</h3>
+            <p>Comprehensive testing and validation</p>
+            <ul>
+                <li>{{ test_summary.total }} example tests</li>
+                <li>Symbol verification</li>
+                <li>Regression testing</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="quick-links-section">
+    <h2>Quick Links</h2>
+    <div class="quick-links">
+        <a href="/modernization" class="link-card">
+            <h3>📊 Modernization Status</h3>
+            <p>View detailed progress of file migrations</p>
+        </a>
+        <a href="/tests" class="link-card">
+            <h3>🧪 Test Results</h3>
+            <p>{{ test_summary.passed }}/{{ test_summary.total }} tests passing ({{ test_summary.percentage }}%)</p>
+        </a>
+        <a href="/build" class="link-card">
+            <h3>🔨 Build System</h3>
+            <p>View build configuration and library status</p>
+        </a>
+        <a href="/docs" class="link-card">
+            <h3>📚 Documentation</h3>
+            <p>Browse technical reports and guides</p>
+        </a>
+    </div>
+</section>
+
+<section class="git-info">
+    <h2>Git Status</h2>
+    <p><strong>Branch:</strong> {{ kpis.git_branch }}</p>
+    <p><strong>Commit:</strong> <code>{{ kpis.git_commit }}</code></p>
+</section>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Documentation - NASTRAN-95{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Documentation</h1>
+    <p>Technical reports, guides, and project documentation</p>
+</div>
+
+<section class="docs-section">
+    <h2>Available Documentation</h2>
+    <div class="docs-grid">
+        {% for doc in docs %}
+        <a href="{{ doc.path }}" class="doc-card">
+            <h3>📄 {{ doc.name }}</h3>
+            <p class="doc-meta">
+                <code>{{ doc.filename }}</code>
+                <span class="doc-size">{{ "%.1f"|format(doc.size / 1024) }} KB</span>
+            </p>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="doc-categories">
+    <h2>Documentation Categories</h2>
+    <div class="category-grid">
+        <div class="category-card">
+            <h3>🔧 Technical Reports</h3>
+            <ul>
+                <li>XCSA Fix Complete</li>
+                <li>Rust Bridge Debug Report</li>
+                <li>Phase 3 Migration</li>
+            </ul>
+        </div>
+        <div class="category-card">
+            <h3>📋 Guides</h3>
+            <ul>
+                <li>Migration Checklist</li>
+                <li>Fortran Modernization Plan</li>
+                <li>XCSA Modernization Notes</li>
+            </ul>
+        </div>
+        <div class="category-card">
+            <h3>📊 Architecture</h3>
+            <ul>
+                <li>Execution Flow</li>
+                <li>Call Flowcharts</li>
+                <li>Solver Abstraction Design</li>
+            </ul>
+        </div>
+        <div class="category-card">
+            <h3>🎯 Project Status</h3>
+            <ul>
+                <li>STATUS.md</li>
+                <li>README.md</li>
+                <li>Build System</li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

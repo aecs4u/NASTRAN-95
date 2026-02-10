@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}Modernization Status - NASTRAN-95{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Modernization Status</h1>
+    <p>Track progress of Fortran file migrations from legacy to modern standards</p>
+</div>
+
+<section class="kpi-section">
+    <div class="kpi-grid">
+        <div class="kpi-card">
+            <div class="kpi-value">{{ kpis.overall_progress }}%</div>
+            <div class="kpi-label">Overall Progress</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-value">{{ kpis.modernized_files }}</div>
+            <div class="kpi-label">Modernized Files</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-value">{{ kpis.pending_files }}</div>
+            <div class="kpi-label">Pending Files</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-value">{{ kpis.total_files }}</div>
+            <div class="kpi-label">Total Files</div>
+        </div>
+    </div>
+</section>
+
+<section class="progress-bar-section">
+    <div class="progress-bar">
+        <div class="progress-fill" style="width: {{ kpis.overall_progress }}%"></div>
+    </div>
+    <p class="progress-text">{{ kpis.modernized_files }} of {{ kpis.total_files }} files modernized</p>
+</section>
+
+<section class="files-section">
+    <h2>Modernized Files ({{ files_count }})</h2>
+    <div class="table-container">
+        <table class="files-table">
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>Category</th>
+                    <th>Type</th>
+                    <th>Lines</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for file in files %}
+                <tr>
+                    <td><code>{{ file.name }}</code></td>
+                    <td>{{ file.category }}</td>
+                    <td>{{ file.type }}</td>
+                    <td>{{ file.lines }}</td>
+                    <td><span class="badge badge-success">{{ file.status }}</span></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="archived-section">
+    <h2>Archived Legacy Files</h2>
+    <p>{{ kpis.archived_files }} legacy files moved to <code>src/legacy/mis/</code> for reference</p>
+</section>
+{% endblock %}

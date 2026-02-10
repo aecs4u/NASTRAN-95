@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}Test Results - NASTRAN-95{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Test Results</h1>
+    <p>Example input files and their test results</p>
+</div>
+
+<section class="kpi-section">
+    <div class="kpi-grid">
+        <div class="kpi-card kpi-success">
+            <div class="kpi-value">{{ passed_tests }}</div>
+            <div class="kpi-label">Passing Tests</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-value">{{ total_tests - passed_tests }}</div>
+            <div class="kpi-label">Pending Tests</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-value">{{ total_tests }}</div>
+            <div class="kpi-label">Total Tests</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-value">{{ "%.1f"|format((passed_tests / total_tests * 100) if total_tests > 0 else 0) }}%</div>
+            <div class="kpi-label">Pass Rate</div>
+        </div>
+    </div>
+</section>
+
+<section class="filter-section">
+    <h2>Filter Tests</h2>
+    <div class="filter-buttons">
+        <a href="/tests" class="filter-button {% if not current_status %}active{% endif %}">All</a>
+        <a href="/tests?status=passed" class="filter-button {% if current_status == 'passed' %}active{% endif %}">Passed</a>
+        <a href="/tests?status=pending" class="filter-button {% if current_status == 'pending' %}active{% endif %}">Pending</a>
+    </div>
+</section>
+
+<section class="tests-section">
+    <h2>Test Cases</h2>
+    <div class="table-container">
+        <table class="tests-table">
+            <thead>
+                <tr>
+                    <th>Test Name</th>
+                    <th>Input File</th>
+                    <th>Reference</th>
+                    <th>Output</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for test in tests %}
+                <tr>
+                    <td><strong>{{ test.name }}</strong></td>
+                    <td><code>{{ test.input_file }}</code></td>
+                    <td>
+                        {% if test.has_reference %}
+                        <span class="badge badge-info">{{ "%.1f"|format(test.reference_size / 1024) }} KB</span>
+                        {% else %}
+                        <span class="badge badge-warning">None</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if test.has_output %}
+                        <span class="badge badge-info">{{ "%.1f"|format(test.output_size / 1024) }} KB</span>
+                        {% else %}
+                        <span class="badge badge-warning">None</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if test.status == 'passed' %}
+                        <span class="badge badge-success">✓ Passed</span>
+                        {% else %}
+                        <span class="badge badge-warning">⏳ Pending</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}
