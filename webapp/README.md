@@ -20,7 +20,7 @@ FastAPI-based web interface for tracking NASTRAN-95 modernization progress.
 python3 -m webapp.main
 
 # With custom port
-python3 -m webapp.main --port 9000
+python3 -m webapp.main --port 8080
 
 # Development mode with auto-reload
 python3 -m webapp.main --reload
@@ -29,14 +29,14 @@ python3 -m webapp.main --reload
 ### Using uvicorn directly
 
 ```bash
-# Default (uses port 9000 from code)
+# Default (uses port 9002)
 uvicorn webapp.main:app
 
 # Custom port
-uvicorn webapp.main:app --port 9000
+uvicorn webapp.main:app --port 9002
 
 # Development mode
-uvicorn webapp.main:app --port 9000 --reload
+uvicorn webapp.main:app --port 9002 --reload
 
 # Expose to network
 uvicorn webapp.main:app --host 0.0.0.0 --port 9002
