@@ -18,6 +18,31 @@ This repository contains the NASTRAN-95 source code released under the [NASA Ope
 
 **NOTE:** There is no technical support available for this software.
 
+## 🌐 Web Interface
+
+**NEW**: Interactive web dashboard for tracking modernization progress!
+
+```bash
+# Start the webapp
+./scripts/start_webapp.sh --reload --open
+
+# Access at http://localhost:9002
+```
+
+**Features:**
+- 📊 **Project Dashboard** - Real-time KPIs and status overview
+- 🔄 **Modernization Tracking** - File migration progress (3 files modernized)
+- ✅ **Test Results** - 132 example test cases with filtering
+- 🔨 **Build Monitor** - CMake configuration and library status
+- 📚 **Documentation Browser** - Integrated markdown viewer
+- 🌐 **JSON API** - RESTful endpoints for automation
+
+**Quick Links:**
+- Dashboard: http://localhost:9002
+- API Status: http://localhost:9002/api/status
+- Health Check: http://localhost:9002/health
+- Full Documentation: [webapp/README.md](webapp/README.md)
+
 ## Documentation
 
 **[Documentation Index](DOCUMENTATION_INDEX.md)** - Complete guide to all documentation
