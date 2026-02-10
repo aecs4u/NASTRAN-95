@@ -34,4 +34,11 @@ _deps/
 *.f04
 *.f06
 *.log
+*.dic
+*.plt
+*.pun
 SCRATCH/
+scratch/
+
+# Test timing artifacts
+**/time.txt
