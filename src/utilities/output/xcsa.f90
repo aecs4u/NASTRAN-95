@@ -203,44 +203,18 @@ subroutine xcsa
 ! PRE-PARSE INPUT FILE WITH RUST BRIDGE
 ! This executes BEFORE card processing begins
 !==========================================
-  write(outtap,9001)
- 9001 format('0============================================================')
-  write(outtap,9011)
- 9011 format('0RUST BRIDGE: Starting validation')
-  write(outtap,9001)
+! Rust bridge validation (silent mode - debug output to file if needed)
   irust_ok = 0
   rust_inpfile = ' '
   call getenv('INPFILE', rust_inpfile)
-  write(outtap,9002) rust_inpfile(1:70)
- 9002 format('0INPFILE from environment: ', a70)
 
   if (rust_inpfile .ne. ' ') then
-    write(outtap,9003)
- 9003 format('0Calling parse_nastran_with_rust...')
     call parse_nastran_with_rust(rust_inpfile, rust_exec_data, &
                                   rust_case_data, rust_err_code)
-    write(outtap,9004) rust_err_code
- 9004 format('0Rust bridge returned with error code: ', i10)
-
     if (rust_err_code .eq. 0) then
       irust_ok = 1
-      write(outtap,9005)
- 9005 format('0SUCCESS: Rust/pyNastran validation passed!',/, &
-             '0Setting IRUST_OK = 1 to bypass MESSAGE 507 errors')
-    else
-      write(outtap,9006) rust_err_code
- 9006 format('0FAILED: Rust/pyNastran validation failed with code ', i10,/, &
-             '0IRUST_OK remains 0, MESSAGE 507 errors will appear')
     endif
-  else
-    write(outtap,9007)
- 9007 format('0WARNING: INPFILE environment variable not set',/, &
-           '0Skipping Rust bridge validation')
   endif
-
-  write(outtap,9008) irust_ok
- 9008 format('0Final IRUST_OK value: ', i10)
-  write(outtap,9001)
 !
 ! Card preparation
 !

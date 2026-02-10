@@ -1,4 +1,3 @@
- DEBUG: NASTRAN main program starting...
      NASTRAN TITLEOPT=-1                                                             
 
 
@@ -25,7 +24,7 @@
          COMPUTER SOFTWARE MANAGEMENT AND INFORMATION CENTER (COSMIC)
                  UNIVERSITY OF GEORGIA, ATHENS, GEORGIA 30602
                  PHONE: (706)542-3265      FAX: (706)542-4807
-1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     2
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     2
                                                                                                                                     
 0                                                                                                                                   
                                                                                                          
@@ -41,7 +40,7 @@
                                                                                                          
                          ===X=    TOP OF PAGE REQUEST IF 'X' IS REPLACED BY '='                          
                                                                                                          
-1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     3
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     3
                                                                                                                                     
 0        N A S T R A N    E X E C U T I V E    C O N T R O L    D E C K    E C H O                                                  
 0                                                                                                                                   
@@ -53,15 +52,11 @@
      $     THIS JOB WILL PRINT DIAG48 MESSAGES AND STOP                              
      $                                                                               
      DIAG  48,20                                                                     
-0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
-     IMHERE =  520
      $=================================================                              
      SOL   1                                                                         
-0*** USER FATAL MESSAGE  507, ILLEGAL SPECIFICATION OR FORMAT ON PRECEDING CARD.
-     IMHERE =  397
      TIME  2                                                                         
      CEND                                                                            
-1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     4
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     4
                                                                                                                                     
 0        N A S T R A N    D I A G   4 8                                                                                             
                                                                                                          
@@ -116,7 +111,7 @@
                             NEW METHODS                                                                  
                               10        UNPACK  UNPACK   UNPACK       YES        NO       NO             
                               11        UNPACK  GETSTR   UNPACK       YES        NO       NO             
-1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     5
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     5
                                                                                                                                     
 0        N A S T R A N    D I A G   4 8                                                                                             
 
@@ -172,7 +167,7 @@
                          94-008     MPYAD     COSMETIC CHANGE FOR OUTPUT OF DIAG 19.                     
                          94-009     NSINFO    USER INFORMATION MESSAGE 225 DOES NOT GO AWAY EVEN WHEN    
                                               TIME CONSTANTS ARE SUPPLIED IN THE "NASINFO" FILE TO       
-1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     6
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     6
                                                                                                                                     
 0        N A S T R A N    D I A G   4 8                                                                                             
 
@@ -228,7 +223,7 @@
                          3023).  IT IS INEFFICIENT TO ALLOCATE TOO MUCH OPEN CORE.  HOWEVER,             
                          THERE IS NO SUCH PENALTY FOR OVER-ALLOCATING MEMORY FOR THE IN-MEMORY           
                          DATA BASE.                                                                      
-1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, ** / PAGE     7
+1                                                                           /    95 SUN SOLARIS NASTRAN    / FEB 10, 26 / PAGE     7
                                                                                                                                     
 0        N A S T R A N    D I A G   4 8                                                                                             
 
@@ -270,7 +265,7 @@
                                         * * * END OF JOB * * *
 1
  JOB TITLE =                                                                     
- DATE:  2/10/**
- END TIME: 12:26:29
- TOTAL WALL CLOCK TIME      0 SEC.
+ DATE:  2/10/26
+ END TIME: 18: 1: 5
+ TOTAL WALL CLOCK TIME      3 SEC.
  
