@@ -46,12 +46,12 @@ uvicorn webapp.main:app --host 0.0.0.0 --port 9000
 
 ### Port Configuration
 
-**Default port**: 9000
+**Default port**: 9002
 
 Configure via (in order of precedence):
-1. **Command-line argument**: `--port 9000`
-2. **Environment variable**: `WEBAPP_PORT=9000`
-3. **Default**: 9000
+1. **Command-line argument**: `--port 9002`
+2. **Environment variable**: `WEBAPP_PORT=9002`
+3. **Default**: 9002
 
 ### Host Configuration
 
@@ -124,22 +124,22 @@ python3 -m webapp.main --reload
 ### Access from browser
 ```bash
 # Open in default browser (macOS)
-open http://localhost:9000
+open http://localhost:9002
 
 # Open in default browser (Linux)
-xdg-open http://localhost:9000
+xdg-open http://localhost:9002
 ```
 
 ### API Usage
 ```bash
 # Get overall status
-curl http://localhost:9000/api/status
+curl http://localhost:9002/api/status
 
 # Get test results
-curl http://localhost:9000/api/tests
+curl http://localhost:9002/api/tests
 
 # Health check
-curl http://localhost:9000/health
+curl http://localhost:9002/health
 ```
 
 ## Project Structure

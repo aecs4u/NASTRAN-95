@@ -354,8 +354,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "--port",
         type=int,
-        default=int(os.getenv("WEBAPP_PORT", "9000")),
-        help="Port to run the web server on (default: 9000, or WEBAPP_PORT env var)",
+        default=int(os.getenv("WEBAPP_PORT", "9002")),
+        help="Port to run the web server on (default: 9002, or WEBAPP_PORT env var)",
     )
     parser.add_argument(
         "--host",
